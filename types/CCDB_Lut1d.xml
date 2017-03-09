@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Lut1d" format="xml" namexml="Lut1d" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="unit">
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Field name="List_of_L_Points">
+    <cd:Record namexml="List_of_L_Points">
+      <cd:Attribute name="count"/>
+      <cd:Field name="L_Point">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="L_Point">
+            <cd:Field name="X">
+              <cd:Type namexml="X">
+                <cd:Float format="ascii">
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="V">
+              <cd:Type namexml="V">
+                <cd:Float format="ascii">
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

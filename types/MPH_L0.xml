@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<cd:Record name="MPH_L0" format="xml" namexml="MPH" last-modified="2014-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Main Product Header</cd:Description>
+  <cd:Field name="Product">
+    <cd:Text namexml="Product">
+      <cd:Description>The Logical File Name, i.e. the File Name excluding the extension</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Stage_Code">
+    <cd:Text namexml="Proc_Stage_Code">
+      <cd:Description>Processing stage code. OPER: Routine operations, TEST: Test, OFFL: Off-Line Processing, RPRO: Re-processing, CONS: Consolidated product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Ref_Doc">
+    <cd:Text namexml="Ref_Doc">
+      <cd:Description>Reference document describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Acquisition_Station">
+    <cd:Text namexml="Acquisition_Station">
+      <cd:Description>Acquisition station ID</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Center">
+    <cd:Text namexml="Proc_Center">
+      <cd:Description>Processing centre ID</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Time">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>Time of processing</cd:Description>
+      <cd:Text namexml="Proc_Time"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Software_Version">
+    <cd:Text namexml="Software_Version">
+      <cd:Description>Software version number of processing software. Format: ProcesserName/VV.rr</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Abs_Orbit_Start">
+    <cd:Type namexml="Abs_Orbit_Start">
+      <cd:Integer format="ascii">
+        <cd:Description>Absolute Orbit Number at sensing start time. If not used set to 000000</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Abs_Orbit_Stop">
+    <cd:Type namexml="Abs_Orbit_Stop">
+      <cd:Integer format="ascii">
+        <cd:Description>Absolute Orbit Number at sensing stop time. If not used set to 000000</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="State_Vector_Time">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>Time of state vector</cd:Description>
+      <cd:Text namexml="State_Vector_Time"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Delta_UT1">
+    <cd:Type namexml="Delta_UT1">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Universal Time CorrectioN: DUT1 = UT1-UTC. If not used set to +.000000</cd:Description>
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="X_Position">
+    <cd:Type namexml="X_Position">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>X position in Earth-fixed reference</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Y_Position">
+    <cd:Type namexml="Y_Position">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Y position in Earth-fixed reference</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Z_Position">
+    <cd:Type namexml="Z_Position">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Z position in Earth-fixed reference</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="X_Velocity">
+    <cd:Type namexml="X_Velocity">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>X velocity in Earth-fixed reference</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Y_Velocity">
+    <cd:Type namexml="Y_Velocity">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Y velocity in Earth-fixed reference</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Z_Velocity">
+    <cd:Type namexml="Z_Velocity">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Z velocity in Earth-fixed reference</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="State_Vector_Source">
+    <cd:Text namexml="State_Vector_Source">
+      <cd:Description>Source of Orbit State Vector Record. FP = FOS predicted; FR = FOS restituted</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Product_Err">
+    <cd:Type namexml="Product_Err">
+      <cd:Integer format="ascii">
+        <cd:Description>Product Error Flag set to 1 if errors have been reported in the product. The flag is set to 1 if at least one of the following fields of the SPH have reported errors: Num_Missing_ISPs, Num_Error_ISPs, Num_Discarded_ISPs</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="ProductErrCheck"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Tot_Size">
+    <cd:Type namexml="Tot_Size">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>bytes</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Total size of product</cd:Description>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

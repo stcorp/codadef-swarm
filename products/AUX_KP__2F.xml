@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_KP__2F" format="ascii" last-modified="2016-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension>numelements(asciiline)</cd:Dimension>
+    <cd:Record>       
+      <cd:Field name="year">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="month">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="day">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="bartels_seq">
+        <cd:Integer>
+          <cd:ByteSize>4</cd:ByteSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="bartels_day">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="kp">
+        <cd:Array>
+          <cd:Dimension>8</cd:Dimension>
+          <cd:Integer>
+            <cd:ByteSize>2</cd:ByteSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="kp_daily_sum">
+        <cd:Integer>
+          <cd:Mapping string="   " value="1000"/>
+          <cd:ByteSize>3</cd:ByteSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ap">
+        <cd:Array>
+          <cd:Dimension>8</cd:Dimension>
+          <cd:Integer>
+            <cd:Mapping string="   " value="1000"/>
+            <cd:ByteSize>3</cd:ByteSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ap_daily_mean">
+        <cd:Available><![CDATA[byteoffset(.) + 56 <= filesize() && substr(55, 1, bytes(., 56)) != "\n"]]></cd:Available>         
+        <cd:Integer>
+          <cd:Mapping string="   " value="1000"/>
+          <cd:ByteSize>3</cd:ByteSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cp">
+        <cd:Available><![CDATA[byteoffset(.) + 59 <= filesize() && exists(:/ap_daily_mean) && substr(58, 1, bytes(., 59)) != "\n"]]></cd:Available>         
+        <cd:Float>
+          <cd:Mapping string="   " value="nan"/>
+          <cd:ByteSize>3</cd:ByteSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="c9">
+        <cd:Available><![CDATA[byteoffset(.) + 62 <= filesize() && exists(:/cp) && substr(61, 1, bytes(., 62)) != "\n"]]></cd:Available>         
+        <cd:Integer>
+          <cd:Mapping string=" " value="10"/>
+          <cd:ByteSize>1</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sunspot_number">
+        <cd:Available><![CDATA[byteoffset(.) + 63 <= filesize() && exists(:/c9) && substr(62, 1, bytes(., 63)) != "\n"]]></cd:Available>
+        <cd:Integer>
+          <cd:Mapping string="   " value="1000"/>
+          <cd:ByteSize>3</cd:ByteSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="f10_7">
+        <cd:Available><![CDATA[byteoffset(.) + 66 <= filesize() && exists(:/sunspot_number) && substr(65, 1, bytes(., 66)) != "\n"]]></cd:Available>
+        <cd:Float>
+          <cd:Mapping string="     " value="nan"/>           
+          <cd:ByteSize>5</cd:ByteSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="flux_qualifier">
+        <cd:Available><![CDATA[byteoffset(.) + 71 <= filesize() && exists(:/f10_7) && substr(70, 1, bytes(., 71)) != "\n"]]></cd:Available>
+        <cd:Integer>
+          <cd:Mapping string=" " value="10"/>
+          <cd:ByteSize>1</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="newline">
+        <cd:AsciiLineSeparator/>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Array>
+</cd:ProductDefinition>

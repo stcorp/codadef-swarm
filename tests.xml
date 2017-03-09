@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<ct:Tests last-modified="2017-02-22" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <ct:Test name="BooleanBinTest" criticality="Error" description="The value should be True: '1' or False: '0'"><![CDATA[int(.) == 1 || int(.)==0]]></ct:Test>
+  <ct:Test name="BooleanXmlTest" criticality="Error" description="The value should be 'true' or 'false'"><![CDATA[str(.) == "true" || str(.)=="false" || str(.) == "True" || str(.)=="False"]]></ct:Test>
+  <ct:Test name="DataSetSizeSum" criticality="Error" description="The sum of the Data_Set_Size values with Data_Set_Type != 'R' in the DSDs should equal the MPH Tot_Size"><![CDATA[int(./MPH/Tot_Size) == add(./SPH/List_of_DSDs/DSD, if(str(./Data_Set_Type) != "R", int(./Data_Set_Size), 0))]]></ct:Test>
+  <ct:Test name="DataSetSizeValue" criticality="Error" description="The value of the Data_Set_Size field should be 0 if Data_Set_Type != 'M'"><![CDATA[if(str(./Data_Set_Type) != "M", int(./Data_Set_Size) == 0, true)]]></ct:Test>
+  <ct:Test name="FileNameCheckEEF" criticality="Error" description="The name of the EEF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EEF"]]></ct:Test>
+  <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
+  <ct:Test name="FileNameMatchFileClass" criticality="Error" description="The file class in the product name should be consistent with the file class field in the header"><![CDATA[substr(3, 4, str(.)) == str(../File_Class)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileType" criticality="Error" description="The file type in the product name should be consistent with the file type field in the header"><![CDATA[substr(8, 10, str(.)) == str(../File_Type)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileVersion" criticality="Error" description="The file version in the product name should be consistent with the file version field in the header"><![CDATA[int(substr(51, 4, str(.))) == int(../File_Version)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileVersionL2ProductReport" criticality="Error" description="The file version in the product name should be consistent with the file version field in the header"><![CDATA[int(substr(61, 4, str(.))) == int(../File_Version)]]></ct:Test>
+  <ct:Test name="FileNameMatchValidityStart" criticality="Error" description="The validity start time in the product name should be consistent with the validity start time field in the header"><![CDATA[substr(19, 15, str(.)) == substr(4, 4, str(../Validity_Period/Validity_Start)) + substr(9, 2, str(../Validity_Period/Validity_Start)) + substr(12, 5, str(../Validity_Period/Validity_Start)) + substr(18, 2, str(../Validity_Period/Validity_Start)) + substr(21, 2, str(../Validity_Period/Validity_Start))]]></ct:Test>
+  <ct:Test name="FileNameMatchValidityStop" criticality="Error" description="The validity stop time in the product name should be consistent with the validity stop time field in the header"><![CDATA[substr(35, 15, str(.)) == substr(4, 4, str(../Validity_Period/Validity_Stop)) + substr(9, 2, str(../Validity_Period/Validity_Stop)) + substr(12, 5, str(../Validity_Period/Validity_Stop)) + substr(18, 2, str(../Validity_Period/Validity_Stop)) + substr(21, 2, str(../Validity_Period/Validity_Stop))]]></ct:Test>
+
+  <ct:Test name="FixedValueACCA_AE_2_" criticality="Error" description="The value should be 'ACCA_AE_2_'"><![CDATA[str(.) == "ACCA_AE_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCA_FMi2_" criticality="Error" description="The value should be 'ACCA_FMi2_'"><![CDATA[str(.) == "ACCA_FMi2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCA_PR_1B" criticality="Error" description="The value should be 'ACCA_PR_1B'"><![CDATA[str(.) == "ACCA_PR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueACCACAL_2_" criticality="Error" description="The value should be 'ACCACAL_2_'"><![CDATA[str(.) == "ACCACAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCANOM_0_" criticality="Error" description="The value should be 'ACCANOM_0_'"><![CDATA[str(.) == "ACCANOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueACCAPOD_2_" criticality="Error" description="The value should be 'ACCAPOD_2_'"><![CDATA[str(.) == "ACCAPOD_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCASCI_1A" criticality="Error" description="The value should be 'ACCASCI_1A'"><![CDATA[str(.) == "ACCASCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueACCATEST0_" criticality="Error" description="The value should be 'ACCATEST0_'"><![CDATA[str(.) == "ACCATEST0_"]]></ct:Test>
+  <ct:Test name="FixedValueACCB_AE_2_" criticality="Error" description="The value should be 'ACCB_AE_2_'"><![CDATA[str(.) == "ACCB_AE_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCB_FMi2_" criticality="Error" description="The value should be 'ACCB_FMi2_'"><![CDATA[str(.) == "ACCB_FMi2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCB_PR_1B" criticality="Error" description="The value should be 'ACCB_PR_1B'"><![CDATA[str(.) == "ACCB_PR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueACCBCAL_2_" criticality="Error" description="The value should be 'ACCBCAL_2_'"><![CDATA[str(.) == "ACCBCAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCBNOM_0_" criticality="Error" description="The value should be 'ACCBNOM_0_'"><![CDATA[str(.) == "ACCBNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueACCBPOD_2_" criticality="Error" description="The value should be 'ACCBPOD_2_'"><![CDATA[str(.) == "ACCBPOD_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCBSCI_1A" criticality="Error" description="The value should be 'ACCBSCI_1A'"><![CDATA[str(.) == "ACCBSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueACCBTEST0_" criticality="Error" description="The value should be 'ACCBTEST0_'"><![CDATA[str(.) == "ACCBTEST0_"]]></ct:Test>
+  <ct:Test name="FixedValueACCC_AE_2_" criticality="Error" description="The value should be 'ACCC_AE_2_'"><![CDATA[str(.) == "ACCC_AE_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCC_FMi2_" criticality="Error" description="The value should be 'ACCC_FMi2_'"><![CDATA[str(.) == "ACCC_FMi2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCC_PR_1B" criticality="Error" description="The value should be 'ACCC_PR_1B'"><![CDATA[str(.) == "ACCC_PR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueACCCCAL_2_" criticality="Error" description="The value should be 'ACCCCAL_2_'"><![CDATA[str(.) == "ACCCCAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCCNOM_0_" criticality="Error" description="The value should be 'ACCCNOM_0_'"><![CDATA[str(.) == "ACCCNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueACCCPOD_2_" criticality="Error" description="The value should be 'ACCCPOD_2_'"><![CDATA[str(.) == "ACCCPOD_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCCSCI_1A" criticality="Error" description="The value should be 'ACCCSCI_1A'"><![CDATA[str(.) == "ACCCSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueACCCTEST0_" criticality="Error" description="The value should be 'ACCCTEST0_'"><![CDATA[str(.) == "ACCCTEST0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMAAUX_1B" criticality="Error" description="The value should be 'ASMAAUX_1B'"><![CDATA[str(.) == "ASMAAUX_1B"]]></ct:Test>
+  <ct:Test name="FixedValueASMABUR_0_" criticality="Error" description="The value should be 'ASMABUR_0_'"><![CDATA[str(.) == "ASMABUR_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMALAS_0_" criticality="Error" description="The value should be 'ASMALAS_0_'"><![CDATA[str(.) == "ASMALAS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMAMAG_0_" criticality="Error" description="The value should be 'ASMAMAG_0_'"><![CDATA[str(.) == "ASMAMAG_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMAPOW_0_" criticality="Error" description="The value should be 'ASMAPOW_0_'"><![CDATA[str(.) == "ASMAPOW_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMASCA_0_" criticality="Error" description="The value should be 'ASMASCA_0_'"><![CDATA[str(.) == "ASMASCA_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMASCI_1A" criticality="Error" description="The value should be 'ASMASCI_1A'"><![CDATA[str(.) == "ASMASCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueASMAVEC_0_" criticality="Error" description="The value should be 'ASMAVEC_0_'"><![CDATA[str(.) == "ASMAVEC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMBAUX_1B" criticality="Error" description="The value should be 'ASMBAUX_1B'"><![CDATA[str(.) == "ASMBAUX_1B"]]></ct:Test>
+  <ct:Test name="FixedValueASMBBUR_0_" criticality="Error" description="The value should be 'ASMBBUR_0_'"><![CDATA[str(.) == "ASMBBUR_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMBLAS_0_" criticality="Error" description="The value should be 'ASMBLAS_0_'"><![CDATA[str(.) == "ASMBLAS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMBMAG_0_" criticality="Error" description="The value should be 'ASMBMAG_0_'"><![CDATA[str(.) == "ASMBMAG_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMBPOW_0_" criticality="Error" description="The value should be 'ASMBPOW_0_'"><![CDATA[str(.) == "ASMBPOW_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMBSCA_0_" criticality="Error" description="The value should be 'ASMBSCA_0_'"><![CDATA[str(.) == "ASMBSCA_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMBSCI_1A" criticality="Error" description="The value should be 'ASMBSCI_1A'"><![CDATA[str(.) == "ASMBSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueASMBVEC_0_" criticality="Error" description="The value should be 'ASMBVEC_0_'"><![CDATA[str(.) == "ASMBVEC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMCAUX_1B" criticality="Error" description="The value should be 'ASMCAUX_1B'"><![CDATA[str(.) == "ASMCAUX_1B"]]></ct:Test>
+  <ct:Test name="FixedValueASMCBUR_0_" criticality="Error" description="The value should be 'ASMCBUR_0_'"><![CDATA[str(.) == "ASMCBUR_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMCLAS_0_" criticality="Error" description="The value should be 'ASMCLAS_0_'"><![CDATA[str(.) == "ASMCLAS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMCMAG_0_" criticality="Error" description="The value should be 'ASMCMAG_0_'"><![CDATA[str(.) == "ASMCMAG_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMCPOW_0_" criticality="Error" description="The value should be 'ASMCPOW_0_'"><![CDATA[str(.) == "ASMCPOW_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMCSCA_0_" criticality="Error" description="The value should be 'ASMCSCA_0_'"><![CDATA[str(.) == "ASMCSCA_0_"]]></ct:Test>
+  <ct:Test name="FixedValueASMCSCI_1A" criticality="Error" description="The value should be 'ASMCSCI_1A'"><![CDATA[str(.) == "ASMCSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueASMCVEC_0_" criticality="Error" description="The value should be 'ASMCVEC_0_'"><![CDATA[str(.) == "ASMCVEC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_APX_2F" criticality="Error" description="The value should be 'AUX_APX_2F'"><![CDATA[str(.) == "AUX_APX_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_COR_2_" criticality="Error" description="The value should be 'AUX_COR_2_'"><![CDATA[str(.) == "AUX_COR_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_COR_2F" criticality="Error" description="The value should be 'AUX_COR_2F'"><![CDATA[str(.) == "AUX_COR_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_DCB_2F" criticality="Error" description="The value should be 'AUX_DCB_2F'"><![CDATA[str(.) == "AUX_DCB_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_DST_2_" criticality="Error" description="The value should be 'AUX_DST_2_'"><![CDATA[str(.) == "AUX_DST_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_DST_2F" criticality="Error" description="The value should be 'AUX_DST_2F'"><![CDATA[str(.) == "AUX_DST_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_DSTIND" criticality="Error" description="The value should be 'AUX_DSTIND'"><![CDATA[str(.) == "AUX_DSTIND"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_F10_2_" criticality="Error" description="The value should be 'AUX_F10_2_'"><![CDATA[str(.) == "AUX_F10_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_F10_2F" criticality="Error" description="The value should be 'AUX_F10_2F'"><![CDATA[str(.) == "AUX_F10_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_GAUSSC" criticality="Error" description="The value should be 'AUX_GAUSSC'"><![CDATA[str(.) == "AUX_GAUSSC"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_GPSCLK" criticality="Error" description="The value should be 'AUX_GPSCLK'"><![CDATA[str(.) == "AUX_GPSCLK"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_GPSEPH" criticality="Error" description="The value should be 'AUX_GPSEPH'"><![CDATA[str(.) == "AUX_GPSEPH"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_IGR_2_" criticality="Error" description="The value should be 'AUX_IGR_2_'"><![CDATA[str(.) == "AUX_IGR_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_IGR_2F" criticality="Error" description="The value should be 'AUX_IGR_2F'"><![CDATA[str(.) == "AUX_IGR_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_IMF_2_" criticality="Error" description="The value should be 'AUX_IMF_2_'"><![CDATA[str(.) == "AUX_IMF_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_IMF_2F" criticality="Error" description="The value should be 'AUX_IMF_2F'"><![CDATA[str(.) == "AUX_IMF_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_IRZ_2F" criticality="Error" description="The value should be 'AUX_IRZ_2F'"><![CDATA[str(.) == "AUX_IRZ_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_KP__2_" criticality="Error" description="The value should be 'AUX_KP__2_'"><![CDATA[str(.) == "AUX_KP__2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_KP__2F" criticality="Error" description="The value should be 'AUX_KP__2F'"><![CDATA[str(.) == "AUX_KP__2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_KP_IND" criticality="Error" description="The value should be 'AUX_KP_IND'"><![CDATA[str(.) == "AUX_KP_IND"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_LIT_2_" criticality="Error" description="The value should be 'AUX_LIT_2_'"><![CDATA[str(.) == "AUX_LIT_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_LIT_2F" criticality="Error" description="The value should be 'AUX_LIT_2F'"><![CDATA[str(.) == "AUX_LIT_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_MCM_2_" criticality="Error" description="The value should be 'AUX_MCM_2_'"><![CDATA[str(.) == "AUX_MCM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_MTI_2_" criticality="Error" description="The value should be 'AUX_MTI_2_'"><![CDATA[str(.) == "AUX_MTI_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_OBS_2_" criticality="Error" description="The value should be 'AUX_OBS_2_'"><![CDATA[str(.) == "AUX_OBS_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_OBSM2_" criticality="Error" description="The value should be 'AUX_OBSM2_'"><![CDATA[str(.) == "AUX_OBSM2_"]]></ct:Test>  
+  <ct:Test name="FixedValueAUX_OCM_2_" criticality="Error" description="The value should be 'AUX_OCM_2_'"><![CDATA[str(.) == "AUX_OCM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_PAR_QC" criticality="Error" description="The value should be 'AUX_PAR_QC'"><![CDATA[str(.) == "AUX_PAR_QC"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_PGM_2F" criticality="Error" description="The value should be 'AUX_PGM_2F'"><![CDATA[str(.) == "AUX_PGM_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_PMF_2F" criticality="Error" description="The value should be 'AUX_PMF_2F'"><![CDATA[str(.) == "AUX_PMF_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_PSM_2F" criticality="Error" description="The value should be 'AUX_PSM_2F'"><![CDATA[str(.) == "AUX_PSM_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_SOLACT" criticality="Error" description="The value should be 'AUX_SOLACT'"><![CDATA[str(.) == "AUX_SOLACT"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_SWV_2F" criticality="Error" description="The value should be 'AUX_SWV_2F'"><![CDATA[str(.) == "AUX_SWV_2F"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_USLEAP" criticality="Error" description="The value should be 'AUX_USLEAP'"><![CDATA[str(.) == "AUX_USLEAP"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_USNEOP" criticality="Error" description="The value should be 'AUX_USNEOP'"><![CDATA[str(.) == "AUX_USNEOP"]]></ct:Test>
+  <ct:Test name="FixedValueDNSAWND_2_" criticality="Error" description="The value should be 'DNSAWND_2_'"><![CDATA[str(.) == "DNSAWND_2_"]]></ct:Test>
+  <ct:Test name="FixedValueDNSBWND_2_" criticality="Error" description="The value should be 'DNSBWND_2_'"><![CDATA[str(.) == "DNSBWND_2_"]]></ct:Test>
+  <ct:Test name="FixedValueDNSCWND_2_" criticality="Error" description="The value should be 'DNSCWND_2_'"><![CDATA[str(.) == "DNSCWND_2_"]]></ct:Test>
+  <ct:Test name="FixedValueDNSAPOD_2_" criticality="Error" description="The value should be 'DNSAPOD_2_'"><![CDATA[str(.) == "DNSAPOD_2_"]]></ct:Test>
+  <ct:Test name="FixedValueDNSBPOD_2_" criticality="Error" description="The value should be 'DNSBPOD_2_'"><![CDATA[str(.) == "DNSBPOD_2_"]]></ct:Test>
+  <ct:Test name="FixedValueDNSCPOD_2_" criticality="Error" description="The value should be 'DNSCPOD_2_'"><![CDATA[str(.) == "DNSCPOD_2_"]]></ct:Test>
+  <ct:Test name="FixedValueEEFATMS_2F" criticality="Error" description="The value should be 'EEFATMS_2F'"><![CDATA[str(.) == "EEFATMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueEEFBTMS_2F" criticality="Error" description="The value should be 'EEFBTMS_2F'"><![CDATA[str(.) == "EEFBTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueEEFCTMS_2F" criticality="Error" description="The value should be 'EEFCTMS_2F'"><![CDATA[str(.) == "EEFCTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueEFI_QL__2_" criticality="Error" description="The value should be 'EFI_QL__2_'"><![CDATA[str(.) == "EFI_QL__2_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIA_LP_1A" criticality="Error" description="The value should be 'EFIA_LP_1A'"><![CDATA[str(.) == "EFIA_LP_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIA_PL_1B" criticality="Error" description="The value should be 'EFIA_PL_1B'"><![CDATA[str(.) == "EFIA_PL_1B"]]></ct:Test>
+  <ct:Test name="FixedValueEFIALPC_0_" criticality="Error" description="The value should be 'EFIALPC_0_'"><![CDATA[str(.) == "EFIALPC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIANOM_0_" criticality="Error" description="The value should be 'EFIANOM_0_'"><![CDATA[str(.) == "EFIANOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIATIC_0_" criticality="Error" description="The value should be 'EFIATIC_0_'"><![CDATA[str(.) == "EFIATIC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIATII_1A" criticality="Error" description="The value should be 'EFIATII_1A'"><![CDATA[str(.) == "EFIATII_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIB_LP_1A" criticality="Error" description="The value should be 'EFIB_LP_1A'"><![CDATA[str(.) == "EFIB_LP_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIB_PL_1B" criticality="Error" description="The value should be 'EFIB_PL_1B'"><![CDATA[str(.) == "EFIB_PL_1B"]]></ct:Test>
+  <ct:Test name="FixedValueEFIBLPC_0_" criticality="Error" description="The value should be 'EFIBLPC_0_'"><![CDATA[str(.) == "EFIBLPC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIBNOM_0_" criticality="Error" description="The value should be 'EFIBNOM_0_'"><![CDATA[str(.) == "EFIBNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIBTIC_0_" criticality="Error" description="The value should be 'EFIBTIC_0_'"><![CDATA[str(.) == "EFIBTIC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFIBTII_1A" criticality="Error" description="The value should be 'EFIBTII_1A'"><![CDATA[str(.) == "EFIBTII_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIC_LP_1A" criticality="Error" description="The value should be 'EFIC_LP_1A'"><![CDATA[str(.) == "EFIC_LP_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIC_PL_1B" criticality="Error" description="The value should be 'EFIC_PL_1B'"><![CDATA[str(.) == "EFIC_PL_1B"]]></ct:Test>
+  <ct:Test name="FixedValueEFICLPC_0_" criticality="Error" description="The value should be 'EFICLPC_0_'"><![CDATA[str(.) == "EFICLPC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFICNOM_0_" criticality="Error" description="The value should be 'EFICNOM_0_'"><![CDATA[str(.) == "EFICNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFICTIC_0_" criticality="Error" description="The value should be 'EFICTIC_0_'"><![CDATA[str(.) == "EFICTIC_0_"]]></ct:Test>
+  <ct:Test name="FixedValueEFICTII_1A" criticality="Error" description="The value should be 'EFICTII_1A'"><![CDATA[str(.) == "EFICTII_1A"]]></ct:Test>
+  <ct:Test name="FixedValueFAC_TMS_2F" criticality="Error" description="The value should be 'FAC_TMS_2F'"><![CDATA[str(.) == "FAC_TMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueFACATMS_2F" criticality="Error" description="The value should be 'FACATMS_2F'"><![CDATA[str(.) == "FACATMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueFACBTMS_2F" criticality="Error" description="The value should be 'FACBTMS_2F'"><![CDATA[str(.) == "FACBTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueFACCTMS_2F" criticality="Error" description="The value should be 'FACCTMS_2F'"><![CDATA[str(.) == "FACCTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueGPSA_RN_1B" criticality="Error" description="The value should be 'GPSA_RN_1B'"><![CDATA[str(.) == "GPSA_RN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSA_RO_1B" criticality="Error" description="The value should be 'GPSA_RO_1B'"><![CDATA[str(.) == "GPSA_RO_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSAAGN_0_" criticality="Error" description="The value should be 'GPSAAGN_0_'"><![CDATA[str(.) == "GPSAAGN_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSAAGS_0_" criticality="Error" description="The value should be 'GPSAAGS_0_'"><![CDATA[str(.) == "GPSAAGS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSAGPS_0_" criticality="Error" description="The value should be 'GPSAGPS_0_'"><![CDATA[str(.) == "GPSAGPS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSANAV_0_" criticality="Error" description="The value should be 'GPSANAV_0_'"><![CDATA[str(.) == "GPSANAV_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSANAV_1B" criticality="Error" description="The value should be 'GPSANAV_1B'"><![CDATA[str(.) == "GPSANAV_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSANOIS0_" criticality="Error" description="The value should be 'GPSANOIS0_'"><![CDATA[str(.) == "GPSANOIS0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSANOM_1A" criticality="Error" description="The value should be 'GPSANOM_1A'"><![CDATA[str(.) == "GPSANOM_1A"]]></ct:Test>
+  <ct:Test name="FixedValueGPSAOBS_0_" criticality="Error" description="The value should be 'GPSAOBS_0_'"><![CDATA[str(.) == "GPSAOBS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSB_RN_1B" criticality="Error" description="The value should be 'GPSB_RN_1B'"><![CDATA[str(.) == "GPSB_RN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSB_RO_1B" criticality="Error" description="The value should be 'GPSB_RO_1B'"><![CDATA[str(.) == "GPSB_RO_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBAGN_0_" criticality="Error" description="The value should be 'GPSBAGN_0_'"><![CDATA[str(.) == "GPSBAGN_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBAGS_0_" criticality="Error" description="The value should be 'GPSBAGS_0_'"><![CDATA[str(.) == "GPSBAGS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBGPS_0_" criticality="Error" description="The value should be 'GPSBGPS_0_'"><![CDATA[str(.) == "GPSBGPS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBNAV_0_" criticality="Error" description="The value should be 'GPSBNAV_0_'"><![CDATA[str(.) == "GPSBNAV_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBNAV_1B" criticality="Error" description="The value should be 'GPSBNAV_1B'"><![CDATA[str(.) == "GPSBNAV_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBNOIS0_" criticality="Error" description="The value should be 'GPSBNOIS0_'"><![CDATA[str(.) == "GPSBNOIS0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBNOM_1A" criticality="Error" description="The value should be 'GPSBNOM_1A'"><![CDATA[str(.) == "GPSBNOM_1A"]]></ct:Test>
+  <ct:Test name="FixedValueGPSBOBS_0_" criticality="Error" description="The value should be 'GPSBOBS_0_'"><![CDATA[str(.) == "GPSBOBS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSC_RN_1B" criticality="Error" description="The value should be 'GPSC_RN_1B'"><![CDATA[str(.) == "GPSC_RN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSC_RO_1B" criticality="Error" description="The value should be 'GPSC_RO_1B'"><![CDATA[str(.) == "GPSC_RO_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCAGN_0_" criticality="Error" description="The value should be 'GPSCAGN_0_'"><![CDATA[str(.) == "GPSCAGN_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCAGS_0_" criticality="Error" description="The value should be 'GPSCAGS_0_'"><![CDATA[str(.) == "GPSCAGS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCGPS_0_" criticality="Error" description="The value should be 'GPSCGPS_0_'"><![CDATA[str(.) == "GPSCGPS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCNAV_0_" criticality="Error" description="The value should be 'GPSCNAV_0_'"><![CDATA[str(.) == "GPSCNAV_0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCNAV_1B" criticality="Error" description="The value should be 'GPSCNAV_1B'"><![CDATA[str(.) == "GPSCNAV_1B"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCNOIS0_" criticality="Error" description="The value should be 'GPSCNOIS0_'"><![CDATA[str(.) == "GPSCNOIS0_"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCNOM_1A" criticality="Error" description="The value should be 'GPSCNOM_1A'"><![CDATA[str(.) == "GPSCNOM_1A"]]></ct:Test>
+  <ct:Test name="FixedValueGPSCOBS_0_" criticality="Error" description="The value should be 'GPSCOBS_0_'"><![CDATA[str(.) == "GPSCOBS_0_"]]></ct:Test>
+  <ct:Test name="FixedValueHK_ANOM_0_" criticality="Error" description="The value should be 'HK_ANOM_0_'"><![CDATA[str(.) == "HK_ANOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueHK_AAOCS1A" criticality="Error" description="The value should be 'HK_AAOCS1A'"><![CDATA[str(.) == "HK_AAOCS1A"]]></ct:Test>
+  <ct:Test name="FixedValueHK_ABUS_1A" criticality="Error" description="The value should be 'HK_ABUS_1A'"><![CDATA[str(.) == "HK_ABUS_1A"]]></ct:Test>
+  <ct:Test name="FixedValueHK_BNOM_0_" criticality="Error" description="The value should be 'HK_BNOM_0_'"><![CDATA[str(.) == "HK_BNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueHK_BAOCS1A" criticality="Error" description="The value should be 'HK_BAOCS1A'"><![CDATA[str(.) == "HK_BAOCS1A"]]></ct:Test>
+  <ct:Test name="FixedValueHK_BBUS_1A" criticality="Error" description="The value should be 'HK_BBUS_1A'"><![CDATA[str(.) == "HK_BBUS_1A"]]></ct:Test>
+  <ct:Test name="FixedValueHK_CNOM_0_" criticality="Error" description="The value should be 'HK_CNOM_0_'"><![CDATA[str(.) == "HK_CNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueHK_CAOCS1A" criticality="Error" description="The value should be 'HK_CAOCS1A'"><![CDATA[str(.) == "HK_CAOCS1A"]]></ct:Test>
+  <ct:Test name="FixedValueHK_CBUS_1A" criticality="Error" description="The value should be 'HK_CBUS_1A'"><![CDATA[str(.) == "HK_CBUS_1A"]]></ct:Test>
+  <ct:Test name="FixedValueIBIATMS_2F" criticality="Error" description="The value should be 'IBIATMS_2F'"><![CDATA[str(.) == "IBIATMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueIBIBTMS_2F" criticality="Error" description="The value should be 'IBIBTMS_2F'"><![CDATA[str(.) == "IBIBTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueIBICTMS_2F" criticality="Error" description="The value should be 'IBICTMS_2F'"><![CDATA[str(.) == "IBICTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueLP_A_CA_1B" criticality="Error" description="The value should be 'LP_A_CA_1B'"><![CDATA[str(.) == "LP_A_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueLP_B_CA_1B" criticality="Error" description="The value should be 'LP_B_CA_1B'"><![CDATA[str(.) == "LP_B_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueLP_C_CA_1B" criticality="Error" description="The value should be 'LP_C_CA_1B'"><![CDATA[str(.) == "LP_C_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAG_QL__2_" criticality="Error" description="The value should be 'MAG_QL__2_'"><![CDATA[str(.) == "MAG_QL__2_"]]></ct:Test>
+  <ct:Test name="FixedValueMAGA_CA_1B" criticality="Error" description="The value should be 'MAGA_CA_1B'"><![CDATA[str(.) == "MAGA_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGA_HR_1B" criticality="Error" description="The value should be 'MAGA_HR_1B'"><![CDATA[str(.) == "MAGA_HR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGA_LR_1B" criticality="Error" description="The value should be 'MAGA_LR_1B'"><![CDATA[str(.) == "MAGA_LR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGAEUL_1B" criticality="Error" description="The value should be 'MAGAEUL_1B'"><![CDATA[str(.) == "MAGAEUL_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGAMAN_1B" criticality="Error" description="The value should be 'MAGAMAN_1B'"><![CDATA[str(.) == "MAGAMAN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGB_CA_1B" criticality="Error" description="The value should be 'MAGB_CA_1B'"><![CDATA[str(.) == "MAGB_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGB_HR_1B" criticality="Error" description="The value should be 'MAGB_HR_1B'"><![CDATA[str(.) == "MAGB_HR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGB_LR_1B" criticality="Error" description="The value should be 'MAGB_LR_1B'"><![CDATA[str(.) == "MAGB_LR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGBEUL_1B" criticality="Error" description="The value should be 'MAGBEUL_1B'"><![CDATA[str(.) == "MAGBEUL_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGBMAN_1B" criticality="Error" description="The value should be 'MAGBMAN_1B'"><![CDATA[str(.) == "MAGBMAN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGC_CA_1B" criticality="Error" description="The value should be 'MAGC_CA_1B'"><![CDATA[str(.) == "MAGC_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGC_HR_1B" criticality="Error" description="The value should be 'MAGC_HR_1B'"><![CDATA[str(.) == "MAGC_HR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGC_LR_1B" criticality="Error" description="The value should be 'MAGC_LR_1B'"><![CDATA[str(.) == "MAGC_LR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGCEUL_1B" criticality="Error" description="The value should be 'MAGCEUL_1B'"><![CDATA[str(.) == "MAGCEUL_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMAGCMAN_1B" criticality="Error" description="The value should be 'MAGCMAN_1B'"><![CDATA[str(.) == "MAGCMAN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMC1_VAL_2_" criticality="Error" description="The value should be 'MC1_VAL_2_'"><![CDATA[str(.) == "MC1_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMC1_VALi2_" criticality="Error" description="The value should be 'MC1_VALi2_'"><![CDATA[str(.) == "MC1_VALi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMC3_VAL_2_" criticality="Error" description="The value should be 'MC3_VAL_2_'"><![CDATA[str(.) == "MC3_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMC3_VALi2_" criticality="Error" description="The value should be 'MC3_VALi2_'"><![CDATA[str(.) == "MC3_VALi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_SHA_2C" criticality="Error" description="The value should be 'MCO_SHA_2C'"><![CDATA[str(.) == "MCO_SHA_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_SHA_2D" criticality="Error" description="The value should be 'MCO_SHA_2D'"><![CDATA[str(.) == "MCO_SHA_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_SHA_2F" criticality="Error" description="The value should be 'MCO_SHA_2F'"><![CDATA[str(.) == "MCO_SHA_2F"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_SHAi2C" criticality="Error" description="The value should be 'MCO_SHAi2C'"><![CDATA[str(.) == "MCO_SHAi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_SHAi2D" criticality="Error" description="The value should be 'MCO_SHAi2D'"><![CDATA[str(.) == "MCO_SHAi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_VAL_2_" criticality="Error" description="The value should be 'MCO_VAL_2_'"><![CDATA[str(.) == "MCO_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_VAL_2C" criticality="Error" description="The value should be 'MCO_VAL_2C'"><![CDATA[str(.) == "MCO_VAL_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_VAL_2D" criticality="Error" description="The value should be 'MCO_VAL_2D'"><![CDATA[str(.) == "MCO_VAL_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_VALi2C" criticality="Error" description="The value should be 'MCO_VALi2C'"><![CDATA[str(.) == "MCO_VALi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMCO_VALi2D" criticality="Error" description="The value should be 'MCO_VALi2D'"><![CDATA[str(.) == "MCO_VALi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMCR_1DM_2_" criticality="Error" description="The value should be 'MCR_1DM_2_'"><![CDATA[str(.) == "MCR_1DM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMCR_1DMi2_" criticality="Error" description="The value should be 'MCR_1DMi2_'"><![CDATA[str(.) == "MCR_1DMi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMCR_3DM_2_" criticality="Error" description="The value should be 'MCR_3DM_2_'"><![CDATA[str(.) == "MCR_3DM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMCR_3DMi2_" criticality="Error" description="The value should be 'MCR_3DMi2_'"><![CDATA[str(.) == "MCR_3DMi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0101" criticality="Error" description="The MDR ID should be '0101'"><![CDATA[int(.) == 0101]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0102" criticality="Error" description="The MDR ID should be '0102'"><![CDATA[int(.) == 0102]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0201" criticality="Error" description="The MDR ID should be '0201'"><![CDATA[int(.) == 0201]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0202" criticality="Error" description="The MDR ID should be '0202'"><![CDATA[int(.) == 0202]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0301" criticality="Error" description="The MDR ID should be '0301'"><![CDATA[int(.) == 0301]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0302" criticality="Error" description="The MDR ID should be '0302'"><![CDATA[int(.) == 0302]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0303" criticality="Error" description="The MDR ID should be '0303'"><![CDATA[int(.) == 0303]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0401" criticality="Error" description="The MDR ID should be '0401'"><![CDATA[int(.) == 0401]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0402" criticality="Error" description="The MDR ID should be '0402'"><![CDATA[int(.) == 0402]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0501" criticality="Error" description="The MDR ID should be '0501'"><![CDATA[int(.) == 0501]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0502" criticality="Error" description="The MDR ID should be '0502'"><![CDATA[int(.) == 0502]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0601" criticality="Error" description="The MDR ID should be '0601'"><![CDATA[int(.) == 0601]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0602" criticality="Error" description="The MDR ID should be '0602'"><![CDATA[int(.) == 0602]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0701" criticality="Error" description="The MDR ID should be '0701'"><![CDATA[int(.) == 0701]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0702" criticality="Error" description="The MDR ID should be '0702'"><![CDATA[int(.) == 0702]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0801" criticality="Error" description="The MDR ID should be '0801'"><![CDATA[int(.) == 0801]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0802" criticality="Error" description="The MDR ID should be '0802'"><![CDATA[int(.) == 0802]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0803" criticality="Error" description="The MDR ID should be '0803'"><![CDATA[int(.) == 0803]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0901" criticality="Error" description="The MDR ID should be '0901'"><![CDATA[int(.) == 0901]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0902" criticality="Error" description="The MDR ID should be '0902'"><![CDATA[int(.) == 0902]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5101" criticality="Error" description="The MDR ID should be '5101'"><![CDATA[int(.) == 5101]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5102" criticality="Error" description="The MDR ID should be '5102'"><![CDATA[int(.) == 5102]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5201" criticality="Error" description="The MDR ID should be '5201'"><![CDATA[int(.) == 5201]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5202" criticality="Error" description="The MDR ID should be '5202'"><![CDATA[int(.) == 5202]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5301" criticality="Error" description="The MDR ID should be '5301'"><![CDATA[int(.) == 5301]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5302" criticality="Error" description="The MDR ID should be '5302'"><![CDATA[int(.) == 5302]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5401" criticality="Error" description="The MDR ID should be '5401'"><![CDATA[int(.) == 5401]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5501" criticality="Error" description="The MDR ID should be '5501'"><![CDATA[int(.) == 5501]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5601" criticality="Error" description="The MDR ID should be '5601'"><![CDATA[int(.) == 5601]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5602" criticality="Error" description="The MDR ID should be '5602'"><![CDATA[int(.) == 5602]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5701" criticality="Error" description="The MDR ID should be '5701'"><![CDATA[int(.) == 5701]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5801" criticality="Error" description="The MDR ID should be '5801'"><![CDATA[int(.) == 5801]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5901" criticality="Error" description="The MDR ID should be '5901'"><![CDATA[int(.) == 5901]]></ct:Test>
+  <ct:Test name="FixedValueMDRID5902" criticality="Error" description="The MDR ID should be '5902'"><![CDATA[int(.) == 5902]]></ct:Test>
+  <ct:Test name="FixedValueMDRID6001" criticality="Error" description="The MDR ID should be '6001'"><![CDATA[int(.) == 6001]]></ct:Test>
+  <ct:Test name="FixedValueMDRID6101" criticality="Error" description="The MDR ID should be '6101'"><![CDATA[int(.) == 6101]]></ct:Test>
+  <ct:Test name="FixedValueACCAVAL_2_" criticality="Error" description="The value should be 'ACCAVAL_2_'"><![CDATA[str(.) == "ACCAVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCBVAL_2_" criticality="Error" description="The value should be 'ACCBVAL_2_'"><![CDATA[str(.) == "ACCBVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueACCCVAL_2_" criticality="Error" description="The value should be 'ACCCVAL_2_'"><![CDATA[str(.) == "ACCCVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMI1_VAL_2_" criticality="Error" description="The value should be 'MI1_VAL_2_'"><![CDATA[str(.) == "MI1_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMI1_VALi2_" criticality="Error" description="The value should be 'MI1_VALi2_'"><![CDATA[str(.) == "MI1_VALi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMI3_VAL_2_" criticality="Error" description="The value should be 'MI3_VAL_2_'"><![CDATA[str(.) == "MI3_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMI3_VAL_2a" criticality="Error" description="The value should be 'MI3_VAL_2a'"><![CDATA[str(.) == "MI3_VAL_2a"]]></ct:Test>
+  <ct:Test name="FixedValueMI3_VAL_2b" criticality="Error" description="The value should be 'MI3_VAL_2b'"><![CDATA[str(.) == "MI3_VAL_2b"]]></ct:Test>
+  <ct:Test name="FixedValueMI3_VALi2_" criticality="Error" description="The value should be 'MI3_VALi2_'"><![CDATA[str(.) == "MI3_VALi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMIN_1DM_2_" criticality="Error" description="The value should be 'MIN_1DM_2_'"><![CDATA[str(.) == "MIN_1DM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMIN_1DMi2_" criticality="Error" description="The value should be 'MIN_1DMi2_'"><![CDATA[str(.) == "MIN_1DMi2_"]]></ct:Test>
+  <ct:Test name="FixedValueMIN_3DM_2a" criticality="Error" description="The value should be 'MIN_3DM_2a'"><![CDATA[str(.) == "MIN_3DM_2a"]]></ct:Test>
+  <ct:Test name="FixedValueMIN_3DM_2b" criticality="Error" description="The value should be 'MIN_3DM_2b'"><![CDATA[str(.) == "MIN_3DM_2b"]]></ct:Test>
+  <ct:Test name="FixedValueMIN_3DMi2a" criticality="Error" description="The value should be 'MIN_3DMi2a'"><![CDATA[str(.) == "MIN_3DMi2a"]]></ct:Test>
+  <ct:Test name="FixedValueMIN_3DMi2b" criticality="Error" description="The value should be 'MIN_3DMi2b'"><![CDATA[str(.) == "MIN_3DMi2b"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_SHA_2C" criticality="Error" description="The value should be 'MIO_SHA_2C'"><![CDATA[str(.) == "MIO_SHA_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_SHA_2D" criticality="Error" description="The value should be 'MIO_SHA_2D'"><![CDATA[str(.) == "MIO_SHA_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_SHAi2C" criticality="Error" description="The value should be 'MIO_SHAi2C'"><![CDATA[str(.) == "MIO_SHAi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_SHAi2D" criticality="Error" description="The value should be 'MIO_SHAi2D'"><![CDATA[str(.) == "MIO_SHAi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_VAL_2_" criticality="Error" description="The value should be 'MIO_VAL_2_'"><![CDATA[str(.) == "MIO_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_VAL_2C" criticality="Error" description="The value should be 'MIO_VAL_2C'"><![CDATA[str(.) == "MIO_VAL_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_VAL_2D" criticality="Error" description="The value should be 'MIO_VAL_2D'"><![CDATA[str(.) == "MIO_VAL_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_VALi2C" criticality="Error" description="The value should be 'MIO_VALi2C'"><![CDATA[str(.) == "MIO_VALi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMIO_VALi2D" criticality="Error" description="The value should be 'MIO_VALi2D'"><![CDATA[str(.) == "MIO_VALi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_SHA_2C" criticality="Error" description="The value should be 'MLI_SHA_2C'"><![CDATA[str(.) == "MLI_SHA_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_SHA_2D" criticality="Error" description="The value should be 'MLI_SHA_2D'"><![CDATA[str(.) == "MLI_SHA_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_SHA_2E" criticality="Error" description="The value should be 'MLI_SHA_2E'"><![CDATA[str(.) == "MLI_SHA_2E"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_SHAi2C" criticality="Error" description="The value should be 'MLI_SHAi2C'"><![CDATA[str(.) == "MLI_SHAi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_SHAi2D" criticality="Error" description="The value should be 'MLI_SHAi2D'"><![CDATA[str(.) == "MLI_SHAi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_SHAi2E" criticality="Error" description="The value should be 'MLI_SHAi2E'"><![CDATA[str(.) == "MLI_SHAi2E"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VAL_2_" criticality="Error" description="The value should be 'MLI_VAL_2_'"><![CDATA[str(.) == "MLI_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VAL_2C" criticality="Error" description="The value should be 'MLI_VAL_2C'"><![CDATA[str(.) == "MLI_VAL_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VAL_2D" criticality="Error" description="The value should be 'MLI_VAL_2D'"><![CDATA[str(.) == "MLI_VAL_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VAL_2E" criticality="Error" description="The value should be 'MLI_VAL_2E'"><![CDATA[str(.) == "MLI_VAL_2E"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VALi2C" criticality="Error" description="The value should be 'MLI_VALi2C'"><![CDATA[str(.) == "MLI_VALi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VALi2D" criticality="Error" description="The value should be 'MLI_VALi2D'"><![CDATA[str(.) == "MLI_VALi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMLI_VALi2E" criticality="Error" description="The value should be 'MLI_VALi2E'"><![CDATA[str(.) == "MLI_VALi2E"]]></ct:Test>
+  <ct:Test name="FixedValueMMA_SHA_2C" criticality="Error" description="The value should be 'MMA_SHA_2C'"><![CDATA[str(.) == "MMA_SHA_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMMA_SHA_2F" criticality="Error" description="The value should be 'MMA_SHA_2F'"><![CDATA[str(.) == "MMA_SHA_2F"]]></ct:Test>
+  <ct:Test name="FixedValueMMA_SHAi2C" criticality="Error" description="The value should be 'MMA_SHAi2C'"><![CDATA[str(.) == "MMA_SHAi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMMA_VAL_2C" criticality="Error" description="The value should be 'MMA_VAL_2C'"><![CDATA[str(.) == "MMA_VAL_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMMA_VALi2C" criticality="Error" description="The value should be 'MMA_VALi2C'"><![CDATA[str(.) == "MMA_VALi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMODA_SC_1B" criticality="Error" description="The value should be 'MODA_SC_1B'"><![CDATA[str(.) == "MODA_SC_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMODB_SC_1B" criticality="Error" description="The value should be 'MODB_SC_1B'"><![CDATA[str(.) == "MODB_SC_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMODC_SC_1B" criticality="Error" description="The value should be 'MODC_SC_1B'"><![CDATA[str(.) == "MODC_SC_1B"]]></ct:Test>
+  <ct:Test name="FixedValueMPLAORBPRE" criticality="Error" description="The value should be 'MPLAORBPRE'"><![CDATA[str(.) == "MPLAORBPRE"]]></ct:Test>
+  <ct:Test name="FixedValueMPLBORBPRE" criticality="Error" description="The value should be 'MPLBORBPRE'"><![CDATA[str(.) == "MPLBORBPRE"]]></ct:Test>
+  <ct:Test name="FixedValueMPLCORBPRE" criticality="Error" description="The value should be 'MPLCORBPRE'"><![CDATA[str(.) == "MPLCORBPRE"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_EUL_2C" criticality="Error" description="The value should be 'MSW_EUL_2C'"><![CDATA[str(.) == "MSW_EUL_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_EUL_2D" criticality="Error" description="The value should be 'MSW_EUL_2D'"><![CDATA[str(.) == "MSW_EUL_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_EUL_2F" criticality="Error" description="The value should be 'MSW_EUL_2F'"><![CDATA[str(.) == "MSW_EUL_2F"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_EULi2C" criticality="Error" description="The value should be 'MSW_EULi2C'"><![CDATA[str(.) == "MSW_EULi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_EULi2D" criticality="Error" description="The value should be 'MSW_EULi2D'"><![CDATA[str(.) == "MSW_EULi2D"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_VAL_2_" criticality="Error" description="The value should be 'MSW_VAL_2_'"><![CDATA[str(.) == "MSW_VAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_VAL_2C" criticality="Error" description="The value should be 'MSW_VAL_2C'"><![CDATA[str(.) == "MSW_VAL_2C"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_VAL_2D" criticality="Error" description="The value should be 'MSW_VAL_2D'"><![CDATA[str(.) == "MSW_VAL_2D"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_VALi2C" criticality="Error" description="The value should be 'MSW_VALi2C'"><![CDATA[str(.) == "MSW_VALi2C"]]></ct:Test>
+  <ct:Test name="FixedValueMSW_VALi2D" criticality="Error" description="The value should be 'MSW_VALi2D'"><![CDATA[str(.) == "MSW_VALi2D"]]></ct:Test>
+  <ct:Test name="FixedValueQ3D_CI_i2_" criticality="Error" description="The value should be 'Q3D_CI_i2_'"><![CDATA[str(.) == "Q3D_CI_i2_"]]></ct:Test>
+  <ct:Test name="FixedValueREPA_ICMCV" criticality="Error" description="The value should be 'REPA_ICMCV'"><![CDATA[str(.) == "REPA_ICMCV"]]></ct:Test>
+  <ct:Test name="FixedValueREPB_ICMCV" criticality="Error" description="The value should be 'REPB_ICMCV'"><![CDATA[str(.) == "REPB_ICMCV"]]></ct:Test>
+  <ct:Test name="FixedValueREPC_ICMCV" criticality="Error" description="The value should be 'REPC_ICMCV'"><![CDATA[str(.) == "REPC_ICMCV"]]></ct:Test>
+  <ct:Test name="FixedValueREPA_DVTCV" criticality="Error" description="The value should be 'REPA_DVTCV'"><![CDATA[str(.) == "REPA_DVTCV"]]></ct:Test>
+  <ct:Test name="FixedValueREPB_DVTCV" criticality="Error" description="The value should be 'REPB_DVTCV'"><![CDATA[str(.) == "REPB_DVTCV"]]></ct:Test>
+  <ct:Test name="FixedValueREPC_DVTCV" criticality="Error" description="The value should be 'REPC_DVTCV'"><![CDATA[str(.) == "REPC_DVTCV"]]></ct:Test>
+  <ct:Test name="FixedValueSP3ACOM_2_" criticality="Error" description="The value should be 'SP3ACOM_2_'"><![CDATA[str(.) == "SP3ACOM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3AKIN_2_" criticality="Error" description="The value should be 'SP3AKIN_2_'"><![CDATA[str(.) == "SP3AKIN_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3AVAL_2_" criticality="Error" description="The value should be 'SP3AVAL_2_'"><![CDATA[str(.) == "SP3AVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3BCOM_2_" criticality="Error" description="The value should be 'SP3BCOM_2_'"><![CDATA[str(.) == "SP3BCOM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3BKIN_2_" criticality="Error" description="The value should be 'SP3BKIN_2_'"><![CDATA[str(.) == "SP3BKIN_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3BVAL_2_" criticality="Error" description="The value should be 'SP3BVAL_2_'"><![CDATA[str(.) == "SP3BVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3CCOM_2_" criticality="Error" description="The value should be 'SP3CCOM_2_'"><![CDATA[str(.) == "SP3CCOM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3CKIN_2_" criticality="Error" description="The value should be 'SP3CKIN_2_'"><![CDATA[str(.) == "SP3CKIN_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSP3CVAL_2_" criticality="Error" description="The value should be 'SP3CVAL_2_'"><![CDATA[str(.) == "SP3CVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRAATT_1B" criticality="Error" description="The value should be 'STRAATT_1B'"><![CDATA[str(.) == "STRAATT_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSTRANOM_0_" criticality="Error" description="The value should be 'STRANOM_0_'"><![CDATA[str(.) == "STRANOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRARED_0_" criticality="Error" description="The value should be 'STRARED_0_'"><![CDATA[str(.) == "STRARED_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRASCI_1A" criticality="Error" description="The value should be 'STRASCI_1A'"><![CDATA[str(.) == "STRASCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueSTRBATT_1B" criticality="Error" description="The value should be 'STRBATT_1B'"><![CDATA[str(.) == "STRBATT_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSTRBNOM_0_" criticality="Error" description="The value should be 'STRBNOM_0_'"><![CDATA[str(.) == "STRBNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRBRED_0_" criticality="Error" description="The value should be 'STRBRED_0_'"><![CDATA[str(.) == "STRBRED_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRBSCI_1A" criticality="Error" description="The value should be 'STRBSCI_1A'"><![CDATA[str(.) == "STRBSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueSTRCATT_1B" criticality="Error" description="The value should be 'STRCATT_1B'"><![CDATA[str(.) == "STRCATT_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSTRCNOM_0_" criticality="Error" description="The value should be 'STRCNOM_0_'"><![CDATA[str(.) == "STRCNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRCRED_0_" criticality="Error" description="The value should be 'STRCRED_0_'"><![CDATA[str(.) == "STRCRED_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTRCSCI_1A" criticality="Error" description="The value should be 'STRCSCI_1A'"><![CDATA[str(.) == "STRCSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueTDWAVAL_2_" criticality="Error" description="The value should be 'TDWAVAL_2_'"><![CDATA[str(.) == "TDWAVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueTDWBVAL_2_" criticality="Error" description="The value should be 'TDWBVAL_2_'"><![CDATA[str(.) == "TDWBVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueTDWCVAL_2_" criticality="Error" description="The value should be 'TDWCVAL_2_'"><![CDATA[str(.) == "TDWCVAL_2_"]]></ct:Test>
+  <ct:Test name="FixedValueTECATMS_2F" criticality="Error" description="The value should be 'TECATMS_2F'"><![CDATA[str(.) == "TECATMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueTECBTMS_2F" criticality="Error" description="The value should be 'TECBTMS_2F'"><![CDATA[str(.) == "TECBTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueTECCTMS_2F" criticality="Error" description="The value should be 'TECCTMS_2F'"><![CDATA[str(.) == "TECCTMS_2F"]]></ct:Test>
+  <ct:Test name="FixedValueTIIA_CA_1B" criticality="Error" description="The value should be 'TIIA_CA_1B'"><![CDATA[str(.) == "TIIA_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueTIIA_DC_1B" criticality="Error" description="The value should be 'TIIA_DC_1B'"><![CDATA[str(.) == "TIIA_DC_1B"]]></ct:Test>
+  <ct:Test name="FixedValueTIIB_CA_1B" criticality="Error" description="The value should be 'TIIB_CA_1B'"><![CDATA[str(.) == "TIIB_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueTIIB_DC_1B" criticality="Error" description="The value should be 'TIIB_DC_1B'"><![CDATA[str(.) == "TIIB_DC_1B"]]></ct:Test>
+  <ct:Test name="FixedValueTIIC_CA_1B" criticality="Error" description="The value should be 'TIIC_CA_1B'"><![CDATA[str(.) == "TIIC_CA_1B"]]></ct:Test>
+  <ct:Test name="FixedValueTIIC_DC_1B" criticality="Error" description="The value should be 'TIIC_DC_1B'"><![CDATA[str(.) == "TIIC_DC_1B"]]></ct:Test>
+  <ct:Test name="FixedValueVFMAAUX_1B" criticality="Error" description="The value should be 'VFMAAUX_1B'"><![CDATA[str(.) == "VFMAAUX_1B"]]></ct:Test>
+  <ct:Test name="FixedValueVFMAN_1_0_" criticality="Error" description="The value should be 'VFMAN_1_0_'"><![CDATA[str(.) == "VFMAN_1_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMAN10_0_" criticality="Error" description="The value should be 'VFMAN10_0_'"><![CDATA[str(.) == "VFMAN10_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMANOM_0_" criticality="Error" description="The value should be 'VFMANOM_0_'"><![CDATA[str(.) == "VFMANOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMASCI_1A" criticality="Error" description="The value should be 'VFMASCI_1A'"><![CDATA[str(.) == "VFMASCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueVFMBAUX_1B" criticality="Error" description="The value should be 'VFMBAUX_1B'"><![CDATA[str(.) == "VFMBAUX_1B"]]></ct:Test>
+  <ct:Test name="FixedValueVFMBN_1_0_" criticality="Error" description="The value should be 'VFMBN_1_0_'"><![CDATA[str(.) == "VFMBN_1_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMBN10_0_" criticality="Error" description="The value should be 'VFMBN10_0_'"><![CDATA[str(.) == "VFMBN10_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMBNOM_0_" criticality="Error" description="The value should be 'VFMBNOM_0_'"><![CDATA[str(.) == "VFMBNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMBSCI_1A" criticality="Error" description="The value should be 'VFMBSCI_1A'"><![CDATA[str(.) == "VFMBSCI_1A"]]></ct:Test>
+  <ct:Test name="FixedValueVFMCAUX_1B" criticality="Error" description="The value should be 'VFMCAUX_1B'"><![CDATA[str(.) == "VFMCAUX_1B"]]></ct:Test>
+  <ct:Test name="FixedValueVFMCN_1_0_" criticality="Error" description="The value should be 'VFMCN_1_0_'"><![CDATA[str(.) == "VFMCN_1_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMCN10_0_" criticality="Error" description="The value should be 'VFMCN10_0_'"><![CDATA[str(.) == "VFMCN10_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMCNOM_0_" criticality="Error" description="The value should be 'VFMCNOM_0_'"><![CDATA[str(.) == "VFMCNOM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueVFMCSCI_1A" criticality="Error" description="The value should be 'VFMCSCI_1A'"><![CDATA[str(.) == "VFMCSCI_1A"]]></ct:Test>
+
+  <ct:Test name="ByteOrderValid" criticality="Error" description="If Data_Set_Type is 'M' this value should be '3210' or '0123', else it should be '0000'"><![CDATA[if(str(../Data_Set_Type) == "M", str(.) == "0123" || str(.) == "3210", str(.) == "0000")]]></ct:Test>
+  <ct:Test name="ByteOrderValidL0" criticality="Error" description="If Data_Set_Type is 'M' this value should be '3210' or '0123', else it should be an empty string"><![CDATA[if(str(../Data_Set_Type) == "M", str(.) == "0123" || str(.) == "3210", str(.) == "")]]></ct:Test>
+  <ct:Test name="FixedValueByteOrder0123ForMDSD" criticality="Error" description="Little endian expected - the value should be '0123'"><![CDATA[str(../Data_Set_Type) != "M" || str(.) == "0123"]]></ct:Test>
+  <ct:Test name="FixedValueByteOrder3210ForMDSD" criticality="Error" description="Big endian expected - the value should be '3210'"><![CDATA[str(../Data_Set_Type) != "M" || str(.) == "3210"]]></ct:Test>
+  <ct:Test name="FixedValueSwarm" criticality="Error" description="The value should be 'Swarm'"><![CDATA[str(.) == "Swarm"]]></ct:Test>
+
+  <ct:Test name="PhysicalFileSizeCheck" criticality="Error" description="The value of this field should match the actual file size"><![CDATA[filesize() == int(.)]]></ct:Test>
+  <ct:Test name="RangeLatitude6" criticality="Error" description="The latitude (in 1E6 degrees) should be &gt;= -90E6 and &lt;= 90E6"><![CDATA[float(.) >= -90.0E6 && float(.) <= 90.0E6]]></ct:Test>
+  <ct:Test name="RangeLongitude6" criticality="Error" description="The longitude (in 1E6 degrees) should be &gt;= 0 and &lt;= 360E6"><![CDATA[float(.) >= 0 && float(.) <= 360.0E6]]></ct:Test>
+  <ct:Test name="RangeMicroSecond" criticality="Warning" description="This value should hold the number of microseconds since the start of the second, maximum value 999999"><![CDATA[int(.) >= 0 && int(.) <= 999999]]></ct:Test>
+  <ct:Test name="RangeSecond" criticality="Warning" description="This value should hold the number of seconds since the start of the day, maximum value 86400"><![CDATA[int(.) >= 0 && int(.) <= 86400]]></ct:Test>
+  <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before (or equal to) validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
+  <ct:Test name="ValueOfCountAttributeForParent" criticality="Error" description="The value for the count attribute of the parent List_of_... element should equal the number of occurences of this element"><![CDATA[int(str(..@count)) == numelements(.)]]></ct:Test>
+
+  <ct:Test name="ProductErrCheck" criticality="Error" description="The value should be 0"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="FixedValuePID4" criticality="Error" description="The value should be 4"><![CDATA[int(.) == 4]]></ct:Test>
+  <ct:Test name="FixedValuePID31" criticality="Error" description="The value should be 31"><![CDATA[int(.) == 31]]></ct:Test>
+  <ct:Test name="FixedValuePID32" criticality="Error" description="The value should be 32"><![CDATA[int(.) == 32]]></ct:Test>
+  <ct:Test name="FixedValuePID33" criticality="Error" description="The value should be 33"><![CDATA[int(.) == 33]]></ct:Test>
+  <ct:Test name="FixedValuePID34" criticality="Error" description="The value should be 34"><![CDATA[int(.) == 34]]></ct:Test>
+  <ct:Test name="FixedValuePID35" criticality="Error" description="The value should be 35"><![CDATA[int(.) == 35]]></ct:Test>
+  <ct:Test name="FixedValuePID36" criticality="Error" description="The value should be 36"><![CDATA[int(.) == 36]]></ct:Test>
+  <ct:Test name="FixedValuePID41" criticality="Error" description="The value should be 41"><![CDATA[int(.) == 41]]></ct:Test>
+  <ct:Test name="FixedValuePID42" criticality="Error" description="The value should be 42"><![CDATA[int(.) == 42]]></ct:Test>
+  <ct:Test name="FixedValuePID43" criticality="Error" description="The value should be 43"><![CDATA[int(.) == 43]]></ct:Test>
+  <ct:Test name="FixedValuePID56" criticality="Error" description="The value should be 56"><![CDATA[int(.) == 56]]></ct:Test>
+  <ct:Test name="FixedValuePID57" criticality="Error" description="The value should be 57"><![CDATA[int(.) == 57]]></ct:Test>
+  <ct:Test name="FixedValuePID58" criticality="Error" description="The value should be 58"><![CDATA[int(.) == 58]]></ct:Test>
+  <ct:Test name="FixedValuePID61" criticality="Error" description="The value should be 61"><![CDATA[int(.) == 61]]></ct:Test>
+  <ct:Test name="FixedValuePID62" criticality="Error" description="The value should be 62"><![CDATA[int(.) == 62]]></ct:Test>
+  <ct:Test name="FixedValuePID71" criticality="Error" description="The value should be 71"><![CDATA[int(.) == 71]]></ct:Test>
+  <ct:Test name="FixedValuePID70" criticality="Error" description="The value should be 70"><![CDATA[int(.) == 70]]></ct:Test>
+  <ct:Test name="FixedValuePID72" criticality="Error" description="The value should be 72"><![CDATA[int(.) == 72]]></ct:Test>
+  <ct:Test name="FixedValuePID73" criticality="Error" description="The value should be 73"><![CDATA[int(.) == 73]]></ct:Test>
+  <ct:Test name="FixedValuePID74" criticality="Error" description="The value should be 74"><![CDATA[int(.) == 74]]></ct:Test>
+  <ct:Test name="FixedValuePID75" criticality="Error" description="The value should be 75"><![CDATA[int(.) == 75]]></ct:Test>
+  <ct:Test name="FixedValuePID80" criticality="Error" description="The value should be 80"><![CDATA[int(.) == 80]]></ct:Test>
+  <ct:Test name="FixedValuePID90" criticality="Error" description="The value should be 90"><![CDATA[int(.) == 90]]></ct:Test>
+
+  <ct:Test name="RangeDay" criticality="Warning" description="The value should be greater than or equal to 0"><![CDATA[int(.) >= 0]]></ct:Test>
+  <ct:Test name="RangeMilliSecond" criticality="Warning" description="The value should be within [0,86399999]"><![CDATA[int(.) >= 0 && int(.) <= 86399999]]></ct:Test>
+  <ct:Test name="RangeMicroSecondMilliSecond" criticality="Warning" description="The value should be within [0,999]"><![CDATA[int(.) >= 0 && int(.) <= 999]]></ct:Test>
+
+  <ct:Test name="RangeACC2_4407" criticality="Warning" description="Current value should be within thresholds [17039,48496]"><![CDATA[(int(.) >= 65535*(-3+6.25)/(12.5)) && (int(.) <= 65535*(3+6.25)/(12.5))]]></ct:Test>
+  <ct:Test name="RangeACC2_4408" criticality="Warning" description="Current value should be within thresholds [13125,52293]"><![CDATA[(int(.) >= 65535*(-3+5.010658754)/10.039150586) && (int(.) <= 65535*(3+5.010658754)/10.039150586)]]></ct:Test>
+  <ct:Test name="RangeACC2_4409" criticality="Warning" description="Current value should be within thresholds [13095,52348]"><![CDATA[(int(.) <= 65535*(3+5.001611881)/10.017296935) && (int(.) >= 65535*(-3+5.001611881)/10.017296935)]]></ct:Test>
+  <ct:Test name="RangeACC2_4410" criticality="Warning" description="Current value should be within thresholds [13069,52397]"><![CDATA[(int(.) >= 65535*(-3+4.993942136)/9.998382671) && (int(.) <= 65535*(3+4.993942136)/9.998382671)]]></ct:Test>
+  <ct:Test name="RangeACC2_4411" criticality="Warning" description="Current value should be within thresholds [13065,52416]"><![CDATA[(int(.) >= 65535*(-3+4.992216217)/9.992596237) && (int(.) <= 65535*(3+4.992216217)/9.992596237)]]></ct:Test>
+  <ct:Test name="RangeACC2_4412" criticality="Warning" description="Current value should be within thresholds [13056,52435]"><![CDATA[(int(.) >= 65535*(-3+4.989414919)/9.985557095) && (int(.) <= 65535*(3+4.989414919)/9.985557095)]]></ct:Test>
+  <ct:Test name="RangeACC3_4413" criticality="Warning" description="Current value should be within thresholds [13558,57399]"><![CDATA[(int(.) >= 65535*(-70+100)/145) && (int(.) <= 65535*(27+100)/145)]]></ct:Test>
+  <ct:Test name="RangeACC4_4424" criticality="Warning" description="Current value should be within thresholds [50226,58982]"><![CDATA[(int(.) >= 65535*(3.33+6.25)/12.5) && (int(.) <= 65535*(5.0+6.25)/12.5)]]></ct:Test>
+  <ct:Test name="RangeACC5_4424" criticality="Warning" description="Current value should be within thresholds [6553,15309]"><![CDATA[(int(.) >= 65535*(-5.0+6.25)/12.5) && (int(.) <= 65535*(-3.33+6.25)/12.5)]]></ct:Test>
+  <ct:Test name="RangeACC6_4420" criticality="Warning" description="Current value should be within thresholds [56360,57234]"><![CDATA[(int(.) >= 65535*(10.8+15)/30.0) && (int(.) <= 65535*(11.2+15)/30.0)]]></ct:Test>
+  <ct:Test name="RangeACC7_4401" criticality="Warning" description="Current value should be within thresholds [0,16777215]"><![CDATA[(int(.) >= 16777215*(-2.492492+2.492492)/4.984984) && (int(.) <= 16777215*(2.492492+2.492492)/4.984984)]]></ct:Test>
+  <ct:Test name="RangeACC7_4402" criticality="Warning" description="Current value should be within thresholds [0,16777215]"><![CDATA[(int(.) >= 16777215*(-2.492492+2.492492)/4.984984) && (int(.) <= 16777215*(2.492492+2.492492)/4.984984)]]></ct:Test>
+  <ct:Test name="RangeACC7_4403" criticality="Warning" description="Current value should be within thresholds [0,16777215]"><![CDATA[(int(.) >= 16777215*(-2.492492+2.492492)/4.984984) && (int(.) <= 16777215*(2.492492+2.492492)/4.984984)]]></ct:Test>
+  <ct:Test name="RangeACC7_4404" criticality="Warning" description="Current value should be within thresholds [0,16777215]"><![CDATA[(int(.) >= 16777215*(-2.492492+2.492492)/4.984984) && (int(.) <= 16777215*(2.492492+2.492492)/4.984984)]]></ct:Test>
+  <ct:Test name="RangeACC7_4405" criticality="Warning" description="Current value should be within thresholds [0,16777215]"><![CDATA[(int(.) >= 16777215*(-2.492492+2.492492)/4.984984) && (int(.) <= 16777215*(2.492492+2.492492)/4.984984)]]></ct:Test>
+  <ct:Test name="RangeACC7_4406" criticality="Warning" description="Current value should be within thresholds [0,16777215]"><![CDATA[(int(.) >= 16777215*(-2.492492+2.492492)/4.984984) && (int(.) <= 16777215*(2.492492+2.492492)/4.984984)]]></ct:Test>
+
+  <ct:Test name="CheckSTR3" criticality="Warning" description="Value should be 0"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="CheckSTR2" criticality="Warning" description="Value should be less than 5"><![CDATA[abs(int(.)) <= 5]]></ct:Test>
+
+  <ct:Test name="CheckSTR13CU10" criticality="Warning" description="Quaternion is not of unity length"><![CDATA[abs(int(./S1T00051)*int(./S1T00051) + int(./S1T00052)*int(./S1T00052) + int(./S1T00053)*int(./S1T00053) + int(./S1T00054)*int(./S1T00054) - ((1 + 9E-18)*(2147483647*2147483647))) <= 6E-9*(2147483647*2147483647)]]></ct:Test>
+  <ct:Test name="CheckSTR15CU10" criticality="Warning" description="Value should be 0"><![CDATA[(int(./S1T00055) == 1 && int(./S1T00063) == 0) || (int(./S1T00055) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR9CU10" criticality="Warning" description="Value should be less than 16"><![CDATA[(int(./S1T00061) == 1 && int(./S1T00065) <= 16) || (int(./S1T00061) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR13CU20" criticality="Warning" description="Quaternion is not of unity length"><![CDATA[abs(int(./S1T02051)*int(./S1T02051) + int(./S1T02052)*int(./S1T02052) + int(./S1T02053)*int(./S1T02053) + int(./S1T02054)*int(./S1T02054) - ((1 + 9E-18)*(2147483647*2147483647))) <= 6E-9*(2147483647*2147483647)]]></ct:Test>
+  <ct:Test name="CheckSTR15CU20" criticality="Warning" description="Value should be 0"><![CDATA[(int(./S1T02055) == 1 && int(./S1T02063) == 0) || (int(./S1T02055) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR9CU20" criticality="Warning" description="Value should be less than 16"><![CDATA[(int(./S1T02061) == 1 && int(./S1T02065) <= 16) || (int(./S1T02061) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR13CU30" criticality="Warning" description="Quaternion is not of unity length"><![CDATA[abs(int(./S1T03051)*int(./S1T03051) + int(./S1T03052)*int(./S1T03052) + int(./S1T03053)*int(./S1T03053) + int(./S1T03054)*int(./S1T03054) - ((1 + 9E-18)*(2147483647*2147483647))) <= 6E-9*(2147483647*2147483647)]]></ct:Test>
+  <ct:Test name="CheckSTR15CU30" criticality="Warning" description="Value should be 0"><![CDATA[(int(./S1T03055) == 1 && int(./S1T03063) == 0) || (int(./S1T03055) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR9CU30" criticality="Warning" description="Value should be less than 16"><![CDATA[(int(./S1T03061) == 1 && int(./S1T03065) <= 16) || (int(./S1T03061) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR13CU12" criticality="Warning" description="Quaternion is not of unity length"><![CDATA[abs(int(./S2T00051)*int(./S2T00051) + int(./S2T00052)*int(./S2T00052) + int(./S2T00053)*int(./S2T00053) + int(./S2T00054)*int(./S2T00054) - ((1 + 9E-18)*(2147483647*2147483647))) <= 6E-9*(2147483647*2147483647)]]></ct:Test>
+  <ct:Test name="CheckSTR15CU12" criticality="Warning" description="Value should be 0"><![CDATA[(int(./S2T00055) == 1 && int(./S2T00063) == 0) || (int(./S2T00055) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR9CU12" criticality="Warning" description="Value should be less than 16"><![CDATA[(int(./S2T00061) == 1 && int(./S2T00065) <= 16) || (int(./S2T00061) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR13CU22" criticality="Warning" description="Quaternion is not of unity length"><![CDATA[abs(int(./S2T02051)*int(./S2T02051) + int(./S2T02052)*int(./S2T02052) + int(./S2T02053)*int(./S2T02053) + int(./S2T02054)*int(./S2T02054) - ((1 + 9E-18)*(2147483647*2147483647))) <= 6E-9*(2147483647*2147483647)]]></ct:Test>
+  <ct:Test name="CheckSTR15CU22" criticality="Warning" description="Value should be 0"><![CDATA[(int(./S2T02055) == 1 && int(./S2T02063) == 0) || (int(./S2T02055) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR9CU22" criticality="Warning" description="Value should be less than 16"><![CDATA[(int(./S2T02061) == 1 && int(./S2T02065) <= 16) || (int(./S2T02061) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR13CU32" criticality="Warning" description="Quaternion is not of unity length"><![CDATA[abs(int(./S2T03051)*int(./S2T03051) + int(./S2T03052)*int(./S2T03052) + int(./S2T03053)*int(./S2T03053) + int(./S2T03054)*int(./S2T03054) - ((1 + 9E-18)*(2147483647*2147483647))) <= 6E-9*(2147483647*2147483647)]]></ct:Test>
+  <ct:Test name="CheckSTR15CU32" criticality="Warning" description="Value should be 0"><![CDATA[(int(./S2T03055) == 1 && int(./S2T03063) == 0) || (int(./S2T03055) != 1)]]></ct:Test>
+  <ct:Test name="CheckSTR9CU32" criticality="Warning" description="Value should be less than 16"><![CDATA[(int(./S2T03061) == 1 && int(./S2T03065) <= 16) || (int(./S2T03061) != 1)]]></ct:Test>
+
+  <ct:Test name="CheckVFM2" criticality="Warning" description="Time value should be equal to value in data_field header"><![CDATA[(int(./days) == int(../data_field_header/Time/days)) && (int(./milliseconds) == int(../data_field_header/Time/milliseconds)) && (int(../VST00013) == int(../data_field_header/Time/microseconds))]]></ct:Test>
+  <ct:Test name="CheckVFM6" criticality="Warning" description="Value should be within [0,700000000] (70000 nT)"><![CDATA[abs(int(.)/10000.0) <= 70000]]></ct:Test>
+  <ct:Test name="CheckVFM6Float" criticality="Warning" description="Value should be within [0, 70000 nT]"><![CDATA[abs(float(.)) <= 70000]]></ct:Test>
+
+  <ct:Test name="RangeEFI10a" criticality="Warning" description="Value should be less than or equal to 0"><![CDATA[int(.) <= 0]]></ct:Test>
+  <ct:Test name="RangeEFI12a" criticality="Warning" description="Value should be less than or equal to 400000 (4000 m/s)"><![CDATA[abs(int(.)/100.0) <= 4000]]></ct:Test>
+  <ct:Test name="RangeEFI13a" criticality="Warning" description="Value should be less than or equal to 200000000 (200 mV/m)"><![CDATA[abs(int(.)/1000000.0) <= 200 ]]></ct:Test>
+  <ct:Test name="RangeEFI14a" criticality="Warning" description="Value should be within [50000,250000] (500 to 2500 K)"><![CDATA[int(.)/100.0 >= 500 && int(.)/100.0 <= 2500]]></ct:Test>
+  <ct:Test name="RangeEFI15a" criticality="Warning" description="Value should be within [-3000,3000] (-3 to 3 V)"><![CDATA[abs(int(.)/1000.0) <= 3]]></ct:Test>
+  <ct:Test name="RangeEFI12aFloat" criticality="Warning" description="Value should be less than or equal to 4000 m/s"><![CDATA[abs(float(.)) <= 4000]]></ct:Test>
+  <ct:Test name="RangeEFI13aFloat" criticality="Warning" description="Value should be less than or equal to 200 mV/m"><![CDATA[abs(float(.)) <= 200 ]]></ct:Test>
+  <ct:Test name="RangeEFI14aFloat" criticality="Warning" description="Value should be within [500 to 2500 K]"><![CDATA[float(.) >= 500 && float(.) <= 2500]]></ct:Test>
+  <ct:Test name="RangeEFI15aFloat" criticality="Warning" description="Value should be within [-3 to 3 V]"><![CDATA[abs(float(.)) <= 3]]></ct:Test>
+  <ct:Test name="3DFlagValid" criticality="Warning" description="Value should be 1 or 3"><![CDATA[int(.) == 1 || int(.) == 3]]></ct:Test>
+  <ct:Test name="CheckMantleConductivityModelIs1D" criticality="Warning" description="Model should be 1D (3DFlag = 1)"><![CDATA[!exists(/layer, int(./flag3D) != 1)]]></ct:Test>
+  <ct:Test name="CheckMantleConductivityModelIs3D" criticality="Warning" description="Model should be 3D (3DFlag = 3)"><![CDATA[!exists(/layer, int(./flag3D) != 3)]]></ct:Test>
+  <ct:Test name="CheckMantleConductivityModelHasOneLayer" criticality="Warning" description="Number of layers should be 1"><![CDATA[int(/N_layer) == 1]]></ct:Test>
+  <ct:Test name="CheckCResponseMapIs1D" criticality="Warning" description="Model should be 1D (3DFlag == 1)"><![CDATA[int(.) == 1]]></ct:Test>
+  <ct:Test name="CheckCResponseMapIs3D" criticality="Warning" description="Model should be 3D (3DFlag == 3)"><![CDATA[int(.) == 3]]></ct:Test>
+  <ct:Test name="FixedValueASCII" criticality="Warning" description="The value should be 'ASCII'"><![CDATA[str(.) == "ASCII"]]></ct:Test>
+  <ct:Test name="FixedValueCDF" criticality="Warning" description="The value should be 'CDF'"><![CDATA[str(.) == "CDF"]]></ct:Test>
+  <ct:Test name="FixedValuePDF" criticality="Warning" description="The value should be 'PDF'"><![CDATA[str(.) == "PDF"]]></ct:Test>
+  <ct:CrossFileTest name="MPH_Tot_Size" criticality="Error" description="Tot_Size value in MPH of Header file does not match Data Block file size">
+    <ct:ValueExpressionDbl><![CDATA[filesize()]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Tot_Size)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+</ct:Tests>

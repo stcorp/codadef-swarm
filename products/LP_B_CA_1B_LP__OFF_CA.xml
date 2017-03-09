@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="LP_B_CA_1B_LP__OFF_CA" format="cdf" last-modified="2016-04-20">
+  <cd:NamedType id="LP__OFF_CA_cdf_v0"/>
+</cd:ProductDefinition>

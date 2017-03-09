@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MIN_1DMi2_" format="ascii" last-modified="2012-07-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="DBL_MantleConductivity"/>
+  <ct:NamedTest id="CheckMantleConductivityModelIs1D" />
+  <cd:ProductVariable name="num_layers">
+    <cd:Init><![CDATA[$num_layers = int(/N_layer)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_colatitude_nodes">
+    <cd:Init><![CDATA[$num_colatitude_nodes = int(/N_theta)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_longitude_nodes">
+    <cd:Init><![CDATA[$num_longitude_nodes = int(/N_phi)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

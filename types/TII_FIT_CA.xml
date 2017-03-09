@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="TII_FIT_CA" last-modified="2011-03-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID6101"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill_1">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of first observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+    <ct:NamedTest id="RangeDay"/>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of first observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+    <ct:NamedTest id="RangeSecond"/>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of first observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+    <ct:NamedTest id="RangeMicroSecond"/>
+  </cd:Field>
+  <cd:Field name="x0">
+    <cd:Array>
+      <cd:Description>Estimate of the x position of the image center. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="y0">
+    <cd:Array>
+      <cd:Description>Estimate of the y position of the image center. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="phi0">
+    <cd:Array>
+      <cd:Description>Estimate of mean azimuthal position of data points. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6 degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="r0">
+    <cd:Array>
+      <cd:Description>Radius of best-fit circle. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rms">
+    <cd:Array>
+      <cd:Description>Goodness of fit (rms error). Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Samples">
+    <cd:Array>
+      <cd:Description>Number of data points used in fit. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Number of data points used in fit</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Success">
+    <cd:Array>
+      <cd:Description>Flag indicating whether fit succeeded or not, 1 = success. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Number of data points used in fit</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="r1">
+    <cd:Array>
+      <cd:Description>Average of r1. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="r1_r1">
+    <cd:Array>
+      <cd:Description>Average of r1*r1. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="r1_y2">
+    <cd:Array>
+      <cd:Description>Average of r1*y2. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="U_SC">
+    <cd:Array>
+      <cd:Description>Average of U_SC {spacecraft potential}. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6 V</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6">
+          <cd:Unit>V</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dVgf">
+    <cd:Array>
+      <cd:Description>Average of (Vg - Vf) {deflection minus faceplate voltage}. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6 V</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6">
+          <cd:Unit>V</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Qram">
+    <cd:Array>
+      <cd:Description>Average of (v_SC - v_cr)^2 {ram-directed plasma flow velocity, squared}. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m2/s2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="r1_samples">
+    <cd:Array>
+      <cd:Description>Number of samples used in averages. Sensor order: H, V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

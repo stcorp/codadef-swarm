@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_CURR_HK" last-modified="2013-03-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID0902"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="t">
+    <cd:Time format="binary" timeformat="float(./day) * 86400 + float(./sec) + float(./microsec) * 1e-6">
+      <cd:Record>
+        <cd:Description>Time of observation</cd:Description>
+        <cd:Field name="day">
+          <cd:Integer>
+            <cd:Unit>days since 2000-01-01</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeDay"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="sec">
+          <cd:Integer>
+            <cd:Unit>s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeSecond"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="microsec">
+          <cd:Integer>
+            <cd:Unit>1E-6 s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeMicroSecond"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="I_SP">
+    <cd:Array>
+      <cd:Description>Solar array currents</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="Name">
+          <cd:Text>
+            <cd:Description>Name of the Current Channel</cd:Description>
+            <cd:ByteSize>30</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="current">
+          <cd:Integer>
+            <cd:Description>Numeric value associated to the current channel</cd:Description>
+            <cd:Unit>1E-3 mA</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:Conversion numerator="1" denominator="1E3">
+              <cd:Unit>mA</cd:Unit>
+            </cd:Conversion>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="I_other">
+    <cd:Array>
+      <cd:Description>Bus currents</cd:Description>
+      <cd:Dimension>41</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="Name">
+          <cd:Text>
+            <cd:Description>Name of the Current Channel</cd:Description>
+            <cd:ByteSize>30</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="current">
+          <cd:Integer>
+            <cd:Description>Numeric value associated to the current channel</cd:Description>
+            <cd:Unit>1E-3 mA</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:Conversion numerator="1" denominator="1E3">
+              <cd:Unit>mA</cd:Unit>
+            </cd:Conversion>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="I_bat">
+    <cd:Array>
+      <cd:Description>Batteries, charge/discharge currents</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="Name">
+          <cd:Text>
+            <cd:Description>Name of the Current Channel</cd:Description>
+            <cd:ByteSize>30</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="current">
+          <cd:Integer>
+            <cd:Description>Numeric value associated to the current channel</cd:Description>
+            <cd:Unit>1E-3 mA</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:Conversion numerator="1" denominator="1E3">
+              <cd:Unit>mA</cd:Unit>
+            </cd:Conversion>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="I_batAvg">
+    <cd:Integer>
+      <cd:Description>Batteries, charge/discharge currents (Average)</cd:Description>
+      <cd:Unit>1E-3 mA</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>mA</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

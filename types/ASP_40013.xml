@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_40013" last-modified="2009-07-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for ACC ScienceData</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00101">
+            <cd:Integer>
+              <cd:Description>ACC HkPositionLinearX</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00102">
+            <cd:Integer>
+              <cd:Description>ACC HkPositionLinearY</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00103">
+            <cd:Integer>
+              <cd:Description>ACC HkPositionLinearZ</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00104">
+            <cd:Integer>
+              <cd:Description>ACC HkPositionAngularX</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00105">
+            <cd:Integer>
+              <cd:Description>ACC HkPositionAngularY</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00106">
+            <cd:Integer>
+              <cd:Description>ACC HkPositionAngularZ</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00107">
+            <cd:Integer>
+              <cd:Description>ACC HkTempPosDetX1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00108">
+            <cd:Integer>
+              <cd:Description>ACC HkTempPosDetX2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00109">
+            <cd:Integer>
+              <cd:Description>ACC HkTempPosDetY1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00110">
+            <cd:Integer>
+              <cd:Description>ACC HkTempPosDetY2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00111">
+            <cd:Integer>
+              <cd:Description>ACC HkTempPosDetZ1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00112">
+            <cd:Integer>
+              <cd:Description>ACC HkTempPosDetZ2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00113">
+            <cd:Integer>
+              <cd:Description>ACC HkLtc1043Voltp</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00114">
+            <cd:Integer>
+              <cd:Description>ACC HkLtc1043Voltm</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00129">
+            <cd:Integer>
+              <cd:Description>ACC HkVoltPolarization</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00141">
+            <cd:Integer>
+              <cd:Description>ACC HkSwRunning</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00140">
+            <cd:Integer>
+              <cd:Description>ACC HkInstrumentNum</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00133">
+            <cd:Integer>
+              <cd:Description>ACC HkInstrumentMode</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00152">
+            <cd:Integer>
+              <cd:Description>ACC HkCrossSwitchStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00151">
+            <cd:Integer>
+              <cd:Description>ACC HkAdInitResult</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00150">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYangularZ</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00149">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYangularY</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00148">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYangularX</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00147">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYlinearZ</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00146">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYlinearY</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00145">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYlinearX</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_265">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="CST00157">
+            <cd:Integer>
+              <cd:Description>ACC HkHkDataAcqPhase</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00156">
+            <cd:Integer>
+              <cd:Description>ACC HkHkAdReinitInPrgrs</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00155">
+            <cd:Integer>
+              <cd:Description>ACC HkAdReinitInPrgrs</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00154">
+            <cd:Integer>
+              <cd:Description>ACC HkHkAdInitResult</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00153">
+            <cd:Integer>
+              <cd:Description>ACC HkDRDYHk</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_273">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="CST00270">
+            <cd:Integer>
+              <cd:Description>ACC Ad7710CopyLastMeas</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00269">
+            <cd:Integer>
+              <cd:Description>ACC Ad7710SefFdirEna</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00268">
+            <cd:Integer>
+              <cd:Description>ACC Ltc1043LatchUpDetec</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00168">
+            <cd:Integer>
+              <cd:Description>ACC HkLockStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00167">
+            <cd:Integer>
+              <cd:Description>ACC HkUnlockingPlugStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00166">
+            <cd:Integer>
+              <cd:Description>ACC HkAutoReinitOfHkAd</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00165">
+            <cd:Integer>
+              <cd:Description>ACC HkAutoReinitOfAccAd</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00207">
+            <cd:Integer>
+              <cd:Description>ACC ScMeasTimeStamp</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00201">
+            <cd:Integer>
+              <cd:Description>ACC ScAccelLinearX</cd:Description>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00202">
+            <cd:Integer>
+              <cd:Description>ACC ScAccelLinearY</cd:Description>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00203">
+            <cd:Integer>
+              <cd:Description>ACC ScAccelLinearZ</cd:Description>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00204">
+            <cd:Integer>
+              <cd:Description>ACC ScAccelAngularX</cd:Description>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00205">
+            <cd:Integer>
+              <cd:Description>ACC ScAccelAngularY</cd:Description>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="CST00206">
+            <cd:Integer>
+              <cd:Description>ACC ScAccelAngularZ</cd:Description>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>24</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID61" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

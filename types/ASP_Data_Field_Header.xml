@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_Data_Field_Header" last-modified="2009-07-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>SWARM Data Field Header for Source Packats</cd:Description>
+  <cd:Field name="Filler1">
+    <cd:Raw>
+      <cd:BitSize>1</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PUS_Version_Number">
+    <cd:Integer>
+      <cd:BitSize>3</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Filler2">
+    <cd:Raw>
+      <cd:BitSize>4</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Service_Type">
+    <cd:Integer>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Service_Subtype">
+    <cd:Integer>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sync_Status">
+    <cd:Integer>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Time">
+    <cd:Type namexml="Time">
+      <cd:Time format="binary" timeformat="binary_eps_datetime_long">
+        <cd:Description>Absolute Time</cd:Description>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

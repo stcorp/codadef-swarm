@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_MTI_2_" format="ascii" last-modified="2012-07-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="pre_comments">
+      <cd:Array>
+        <cd:Dimension>$num_header_lines</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>
+          </cd:Field>
+          <cd:Field name="newline_1">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="num_tidal_constituents">
+      <cd:Integer>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="newline_2">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="T_1">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_2">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_3">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_4">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_5">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_6">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_7">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="T_8">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="newline_3">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="coefficients">
+      <cd:Array>
+        <cd:Dimension>2115</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="degree">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="order">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="K2_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="K2_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="S2_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="S2_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="M2_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="M2_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="N2_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="N2_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="K1_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="K1_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="P1_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="P1_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="O1_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="O1_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="Q2_re">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="Q2_im">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="newline_4">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_header_lines">
+    <cd:Init><![CDATA[$num_header_lines = unboundindex(/pre_comments, byteoffset(.) >= filesize() || str(., 1) != "#")]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

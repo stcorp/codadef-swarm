@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MAGBMAN_1B" format="binary" last-modified="2009-10-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="VFM_MAN_RP">
+      <cd:NamedType id="VFM_MAN_RP"/>
+    </cd:Field>
+    <cd:Field name="ASM_VFM_IC">
+      <cd:Array>
+        <cd:Dimension>2</cd:Dimension>
+        <cd:NamedType id="ASM_VFM_IC"/>
+      </cd:Array>
+    </cd:Field>
+    <ct:NamedTest id="FixedValueMDRID5902" path="ASM_VFM_IC[]/MDR_ID"/>
+  </cd:Record>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

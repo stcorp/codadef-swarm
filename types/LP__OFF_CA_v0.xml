@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="LP__OFF_CA_v0" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID6001"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe1_I_Bias_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 1 current bias offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe1_I_Slope_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 1 current slope offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe1_I_Fit_Error">
+    <cd:Integer>
+      <cd:Description>Probe 1 current sweep fit error</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe1_U_Bias_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 1 voltage bias offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe1_U_Slope_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 1 voltage slope offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe1_U_Fit_Error">
+    <cd:Integer>
+      <cd:Description>Probe 1 voltage sweep fit error</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe2_I_Bias_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 2 current bias offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe2_I_Slope_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 2 current slope offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe2_I_Fit_Error">
+    <cd:Integer>
+      <cd:Description>Probe 2 current sweep fit error</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe2_U_Bias_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 2 voltage bias offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe2_U_Slope_Offset">
+    <cd:Integer>
+      <cd:Description>Probe 2 voltage slope offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Probe2_U_Fit_Error">
+    <cd:Integer>
+      <cd:Description>Probe 2 voltage sweep fit error</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_I_Bias_Offset">
+    <cd:Integer>
+      <cd:Description>Face Plate current bias offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_I_Slope_Offset">
+    <cd:Integer>
+      <cd:Description>Face Plate current slope offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_I_Fit_Error">
+    <cd:Integer>
+      <cd:Description>Face Plate current sweep fit error</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_U_Bias_Offset">
+    <cd:Integer>
+      <cd:Description>Face Plate voltage bias offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_U_Slope_Offset">
+    <cd:Integer>
+      <cd:Description>Face Plate voltage slope offset</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_U_Fit_Error">
+    <cd:Integer>
+      <cd:Description>Face Plate voltage sweep fit error</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FP_I_offset">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Face Plate current offset measurements</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FP_U_offset">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Face Plate bias offset measurements</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P1_I_offset">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 1 current offset measurements</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P1_U_offset">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 1 bias offset measurements</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P1_ref_ADC2">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 1 reference ADC2</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P1_ground">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 1 ground</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P2_I_offset">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 2 current offset measurements</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P2_U_offset">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 2 bias offset measurements</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P2_ref_ADC2">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 2 reference ADC2</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P2_ground">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Probe 2 ground</cd:Description>
+        <cd:Unit/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P1_Slope">
+    <cd:Integer>
+      <cd:Description>Probe 1 slope offset, determined on-board</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P1_Bias">
+    <cd:Integer>
+      <cd:Description>Probe 1 bias offset, determined on-board</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P1_Error">
+    <cd:Integer>
+      <cd:Description>Probe 1 sweep fit error, determined on-board</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P2_Slope">
+    <cd:Integer>
+      <cd:Description>Probe 2 slope offset, determined on-board</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P2_Bias">
+    <cd:Integer>
+      <cd:Description>Probe 2 bias offset, determined on-board</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P2_Error">
+    <cd:Integer>
+      <cd:Description>Probe 2 sweep fit error, determined on-board</cd:Description>
+      <cd:Unit>1E-8 V</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E8">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

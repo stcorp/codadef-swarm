@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="HK_CNOM_0_" format="binary" last-modified="2017-01-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Union format="binary">
+      <cd:FieldExpression><![CDATA[if(int(:/source_packet/data/SID) == 6, 0, if(int(:/source_packet/data/SID) == 7, 1, if(int(:/source_packet/data/SID) == 8, 2, if(int(:/source_packet/data/SID) == 46, 3, if(int(:/source_packet/data/SID) == 47, 4, -1)))))]]></cd:FieldExpression>
+      <cd:Field name="AOC">
+        <cd:NamedType id="ASP_14006"/>
+      </cd:Field>
+      <cd:Field name="OPS">
+        <cd:NamedType id="ASP_14007"/>
+      </cd:Field>
+      <cd:Field name="TNK">
+        <cd:NamedType id="ASP_14008"/>
+      </cd:Field>
+      <cd:Field name="STR">
+        <cd:NamedType id="ASP_61076"/>
+      </cd:Field>
+      <cd:Field name="TTC">
+        <cd:NamedType id="ASP_14002"/>
+      </cd:Field>      
+    </cd:Union>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedTest id="RangeDay" path="[]/AOC/source_packet/data/AST52095"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/AOC/source_packet/data/AST52096"/>
+  <ct:NamedTest id="RangeDay" path="[]/AOC/source_packet/data/AST52121"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/AOC/source_packet/data/AST52122"/>
+  <ct:NamedTest id="RangeDay" path="[]/AOC/source_packet/data/TTT52354"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/AOC/source_packet/data/TTT52355"/>
+  <ct:NamedTest id="RangeDay" path="[]/AOC/source_packet/data/TTT52358"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/AOC/source_packet/data/TTT52359"/>
+  <ct:NamedTest id="RangeDay" path="[]/AOC/source_packet/data/TTT52374"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/AOC/source_packet/data/TTT52375"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52382"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52383"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52386"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52387"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52806"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52807"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52810"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52811"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52814"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52815"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52818"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52819"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52894"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52895"/>
+  <ct:NamedTest id="RangeDay" path="[]/OPS/source_packet/data/TTT52822"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/OPS/source_packet/data/TTT52823"/>
+  <ct:NamedTest id="RangeDay" path="[]/TNK/source_packet/data/TTT52374"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/TNK/source_packet/data/TTT52375"/>
+  <ct:NamedTest id="RangeDay" path="[]/TNK/source_packet/data/TTT52378"/>
+  <ct:NamedTest id="RangeMilliSecond" path="[]/TNK/source_packet/data/TTT52379"/>
+</cd:ProductDefinition>

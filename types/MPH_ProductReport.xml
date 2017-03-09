@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<cd:Record name="MPH_ProductReport" format="xml" namexml="MPH" last-modified="2012-08-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Main Product Header</cd:Description>
+  <cd:Field name="Ref_Doc">
+    <cd:Text namexml="Ref_Doc">
+      <cd:Description>Reference document describing the product, shall be SW-DS-DTU-GS-0001</cd:Description>
+    </cd:Text>
+  </cd:Field>
+</cd:Record>

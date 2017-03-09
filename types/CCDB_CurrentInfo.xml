@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_CurrentInfo" format="xml" namexml="CurrentInfo" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Field name="ID">
+    <cd:Text namexml="ID">
+      <cd:Description>Identifier of HK data field</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="name">
+    <cd:Text namexml="name">
+      <cd:Description>Descriptive name</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="I_xfer">
+    <cd:Record namexml="I_xfer">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="List_of_L_Points">
+        <cd:Record namexml="List_of_L_Points">
+          <cd:Attribute name="count"/>
+          <cd:Field name="L_Point">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="L_Point">
+                <cd:Field name="X">
+                  <cd:Type namexml="X">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="V">
+                  <cd:Type namexml="V">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="dB_ASM">
+    <cd:Record namexml="dB_ASM">
+      <cd:Description>Electrically induced magnetic stray field vector at ASM sensor position</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dB_VFM">
+    <cd:Record namexml="dB_VFM">
+      <cd:Description>Electrically induced magnetic stray field vector at VFM sensor position</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dB_Body">
+    <cd:Record namexml="dB_Body">
+      <cd:Description>Electrically induced magnetic stray field vector at position on S/C body</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

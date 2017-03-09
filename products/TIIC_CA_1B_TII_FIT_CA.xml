@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="TIIC_CA_1B_TII_FIT_CA" format="cdf" last-modified="2016-04-20">
+  <cd:NamedType id="TII_FIT_CA_cdf_v0"/>
+</cd:ProductDefinition>

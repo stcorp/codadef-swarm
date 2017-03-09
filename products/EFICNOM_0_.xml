@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="EFICNOM_0_" format="binary" last-modified="2012-05-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Union format="binary">
+      <cd:FieldExpression><![CDATA[if(int(:/source_packet/data/SID) == 13, 0, if(int(:/source_packet/data/SID) == 14, 1, if(int(:/source_packet/data/SID) == 11, 2, if(int(:/source_packet/data/SID) == 16, 3, if(int(:/source_packet/data/SID) == 12, 4, if(int(:/source_packet/data/SID) == 15, 5, -1))))))]]></cd:FieldExpression>
+      <cd:Field name="SCI">
+        <cd:NamedType id="ASP_51918"/>
+      </cd:Field>
+      <cd:Field name="CON">
+        <cd:NamedType id="ASP_51928"/>
+      </cd:Field>
+      <cd:Field name="SWE">
+        <cd:NamedType id="ASP_51902"/>
+      </cd:Field>
+      <cd:Field name="OFF">
+        <cd:NamedType id="ASP_51906"/>
+      </cd:Field>
+      <cd:Field name="FIM">
+        <cd:NamedType id="ASP_51910"/>
+      </cd:Field>
+      <cd:Field name="FIC">
+        <cd:NamedType id="ASP_51914"/>
+      </cd:Field>
+    </cd:Union>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedTest id="RangeEFI10a" path="[]/SCI/source_packet/data/EST13015_13102[]"/>
+</cd:ProductDefinition>

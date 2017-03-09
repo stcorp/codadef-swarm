@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_IMF_2F" format="ascii" last-modified="2012-07-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_header_lines]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="data">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_data_lines]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="year">
+            <cd:Integer>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="month">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="day">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space">
+            <cd:Text>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>  </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="hour">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="minute">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="mjd">
+            <cd:Integer>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="seconds_of_day">
+            <cd:Integer>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="s">
+            <cd:Integer>
+              <cd:ByteSize>5</cd:ByteSize>
+              <cd:NativeType>int16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="bx">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="by">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="bz">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="bt">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="lat">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="long">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_header_lines">
+    <cd:Init><![CDATA[$num_header_lines = index(asciiline, str(., 1) != ":" && str(., 1) != "#")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_data_lines">
+    <cd:Init><![CDATA[$num_data_lines = numelements(asciiline) - $num_header_lines]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

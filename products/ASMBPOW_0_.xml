@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="ASMBPOW_0_" format="binary" last-modified="2010-07-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Union format="binary">
+      <cd:FieldExpression><![CDATA[if(int(:/source_packet/data/SID) == 16, 0, -1)]]></cd:FieldExpression>
+      <cd:Field name="POW">
+        <cd:NamedType id="ASP_45161"/>
+      </cd:Field>
+    </cd:Union>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

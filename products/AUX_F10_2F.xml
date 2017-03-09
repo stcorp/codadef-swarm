@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_F10_2F" format="ascii" last-modified="2012-05-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Array>
+        <cd:Dimension>$num_header_lines</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="data">
+      <cd:Array>
+        <cd:Dimension>$num_rows</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="year">
+            <cd:Integer>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_1">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="month">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_2">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="day">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_3">
+            <cd:Text>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>  </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="radio_flux">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_4">
+            <cd:Text>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>    </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="sunspot_number">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_5">
+            <cd:Text>
+              <cd:ByteSize>5</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>     </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="sunspot_area">
+            <cd:Integer>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_6">
+            <cd:Text>
+              <cd:ByteSize>6</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>      </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="new_regions">
+            <cd:Integer>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_7">
+            <cd:Text>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>    </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="solar_mean_field">
+            <cd:Integer>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>int16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_8">
+            <cd:Text>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>   </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="xray_bkgd_flux">
+            <cd:Text>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="space_9">
+            <cd:Text>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:FixedValue>  </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="xray_c">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_10">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="xray_m">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_11">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="xray_x">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_12">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="xray_s">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_13">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="optical_1">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_14">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="optical_2">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="space_15">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+              <cd:FixedValue> </cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="optical_3">
+            <cd:Integer>
+              <cd:ByteSize>2</cd:ByteSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+      <cd:BitOffset><![CDATA[$table_offset]]></cd:BitOffset>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="table_line_index">
+    <cd:Init><![CDATA[$table_line_index = index(asciiline, str(., 1) == "1" || str(., 1) == "2")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_header_lines">
+    <cd:Init><![CDATA[$num_header_lines = if($table_line_index >= 0, $table_line_index, numelements(asciiline))]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="table_offset">
+    <cd:Init><![CDATA[$table_offset = if($table_line_index >= 0, bitoffset(asciiline[$table_line_index]), 8 * (filesize() - 1))]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_rows">
+    <cd:Init><![CDATA[$num_rows = numelements(asciiline) - $num_header_lines]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

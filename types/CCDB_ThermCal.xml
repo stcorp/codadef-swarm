@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_ThermCal" format="xml" namexml="ThermCal" last-modified="2011-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Field name="ID">
+    <cd:Text namexml="ID">
+      <cd:Description>PCF Name of the thermistor</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="name">
+    <cd:Text namexml="name">
+      <cd:Description>PCF Description of the thermistor</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="K1">
+    <cd:Type namexml="K1">
+      <cd:Float format="ascii">
+        <cd:Description>OBC Thermistor Calibration Factor 1</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="K2">
+    <cd:Type namexml="K2">
+      <cd:Float format="ascii">
+        <cd:Description>OBC Thermistor Calibration Factor 2</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="K3">
+    <cd:Type namexml="K3">
+      <cd:Float format="ascii">
+        <cd:Description>OBC Thermistor Calibration Factor 3</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="a">
+    <cd:Type namexml="a">
+      <cd:Float format="ascii">
+        <cd:Description>Steinhart coefficient a</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="b">
+    <cd:Type namexml="b">
+      <cd:Float format="ascii">
+        <cd:Description>Steinhart coefficient b</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="c">
+    <cd:Type namexml="c">
+      <cd:Float format="ascii">
+        <cd:Description>Steinhart coefficient c</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

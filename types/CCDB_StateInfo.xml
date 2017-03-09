@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_StateInfo" format="xml" namexml="StateInfo" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Field name="ID">
+    <cd:Text namexml="ID">
+      <cd:Description>Identifier of HK data field</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="name">
+    <cd:Text namexml="name">
+      <cd:Description>Descriptive name</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="type">
+    <cd:Type namexml="type">
+      <cd:Integer format="ascii">
+        <cd:Description>Type</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="val1">
+    <cd:Type namexml="val1">
+      <cd:Float format="ascii">
+        <cd:Description>Value or Value(1)</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="val2">
+    <cd:Type namexml="val2">
+      <cd:Float format="ascii">
+        <cd:Description>Value(2)</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="dB_ASM">
+    <cd:Record namexml="dB_ASM">
+      <cd:Description>Change in magnetic stray field vector at ASM sensor position</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dB_VFM">
+    <cd:Record namexml="dB_VFM">
+      <cd:Description>Change in magnetic stray field vector at VFM sensor position</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dB_Body">
+    <cd:Record namexml="dB_Body">
+      <cd:Description>Change in magnetic stray field vector at position on S/C body</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

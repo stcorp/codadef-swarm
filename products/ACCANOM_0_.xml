@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="ACCANOM_0_" format="binary" last-modified="2010-07-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Union format="binary">
+      <cd:FieldExpression><![CDATA[if(int(:/source_packet/data/SID) == 11, 0, -1)]]></cd:FieldExpression>
+      <cd:Field name="NOM">
+        <cd:NamedType id="ASP_40013"/>
+      </cd:Field>
+    </cd:Union>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedTest id="RangeACC2_4407" path="[]/NOM/source_packet/data/CST00101"/>
+  <ct:NamedTest id="RangeACC2_4408" path="[]/NOM/source_packet/data/CST00102"/>
+  <ct:NamedTest id="RangeACC2_4409" path="[]/NOM/source_packet/data/CST00103"/>
+  <ct:NamedTest id="RangeACC2_4410" path="[]/NOM/source_packet/data/CST00104"/>
+  <ct:NamedTest id="RangeACC2_4411" path="[]/NOM/source_packet/data/CST00105"/>
+  <ct:NamedTest id="RangeACC2_4412" path="[]/NOM/source_packet/data/CST00106"/>
+  <ct:NamedTest id="RangeACC3_4413" path="[]/NOM/source_packet/data/CST00107"/>
+  <ct:NamedTest id="RangeACC3_4413" path="[]/NOM/source_packet/data/CST00108"/>
+  <ct:NamedTest id="RangeACC3_4413" path="[]/NOM/source_packet/data/CST00109"/>
+  <ct:NamedTest id="RangeACC3_4413" path="[]/NOM/source_packet/data/CST00110"/>
+  <ct:NamedTest id="RangeACC3_4413" path="[]/NOM/source_packet/data/CST00111"/>
+  <ct:NamedTest id="RangeACC3_4413" path="[]/NOM/source_packet/data/CST00112"/>
+  <ct:NamedTest id="RangeACC4_4424" path="[]/NOM/source_packet/data/CST00113"/>
+  <ct:NamedTest id="RangeACC5_4424" path="[]/NOM/source_packet/data/CST00114"/>
+  <ct:NamedTest id="RangeACC6_4420" path="[]/NOM/source_packet/data/CST00129"/>
+  <ct:NamedTest id="RangeACC7_4401" path="[]/NOM/source_packet/data/CST00201"/>
+  <ct:NamedTest id="RangeACC7_4402" path="[]/NOM/source_packet/data/CST00202"/>
+  <ct:NamedTest id="RangeACC7_4403" path="[]/NOM/source_packet/data/CST00203"/>
+  <ct:NamedTest id="RangeACC7_4404" path="[]/NOM/source_packet/data/CST00204"/>
+  <ct:NamedTest id="RangeACC7_4405" path="[]/NOM/source_packet/data/CST00205"/>
+  <ct:NamedTest id="RangeACC7_4406" path="[]/NOM/source_packet/data/CST00206"/>
+</cd:ProductDefinition>

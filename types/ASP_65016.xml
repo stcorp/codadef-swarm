@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_65016" last-modified="2012-05-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for VFM ScienceData10TmUncompr</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00002">
+            <cd:Integer>
+              <cd:Description>VFM Model</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00003">
+            <cd:Integer>
+              <cd:Description>VFM HkSource</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00004">
+            <cd:Integer>
+              <cd:Description>VFM TIntegrity</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00005">
+            <cd:Integer>
+              <cd:Description>VFM UnitSideType</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00006">
+            <cd:Integer>
+              <cd:Description>VFM SamplingFreq</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00007">
+            <cd:Integer>
+              <cd:Description>VFM Cntrl</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_30">
+            <cd:Raw>
+              <cd:BitSize>4</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="VST00008">
+            <cd:Integer>
+              <cd:Description>VFM CompressionType</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00009">
+            <cd:Integer>
+              <cd:Description>VFM SciHkTempCsc</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00010">
+            <cd:Integer>
+              <cd:Description>VFM TimeMsbPart</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00011">
+            <cd:Integer>
+              <cd:Description>VFM TimeLsbPart</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00012">
+              <cd:Time format="binary" timeformat="binary_eps_datetime">
+                <cd:Description>VFM TCdsDyMSecOfDy</cd:Description>
+	        <ct:NamedTest id="CheckVFM2"/>
+              </cd:Time>
+          </cd:Field>
+          <cd:Field name="VST00013">
+            <cd:Integer>
+              <cd:Description>VFM TCdsMuSecOfMSec</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00014">
+            <cd:Integer>
+              <cd:Description>VFM NCntr1Oct</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST01015">
+            <cd:Integer>
+              <cd:Description>VFM PpsDeltaTMsb</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00015">
+            <cd:Integer>
+              <cd:Description>VFM PpsDeltaTLsb</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="VST00016_00319">
+          <cd:Array>
+          <cd:Description>VFM BXYZ</cd:Description>
+          <cd:Dimension>30</cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>24</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID42" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

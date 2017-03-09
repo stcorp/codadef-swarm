@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_GPS_GPS" last-modified="2014-11-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID0702"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="t_MNS_UTC">
+    <cd:Time format="binary" timeformat="float(./day) * 86400 + float(./sec) + float(./microsec) * 1e-6">
+      <cd:Record>
+        <cd:Description>Timestamp at UTC</cd:Description>
+        <cd:Field name="day">
+          <cd:Integer>
+            <cd:Unit>days since 2000-01-01</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeDay"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="sec">
+          <cd:Integer>
+            <cd:Unit>s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeSecond"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="microsec">
+          <cd:Integer>
+            <cd:Unit>1E-6 s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeMicroSecond"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="t_MNS_GPS">
+    <cd:Record>
+      <cd:Description>Timestamp at GPST</cd:Description>
+      <cd:Field name="day">
+        <cd:Integer>
+          <cd:Unit>days</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <ct:NamedTest id="RangeDay"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="milisec">
+        <cd:Integer>
+          <cd:Unit>ms</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="nanosec">
+        <cd:Integer>
+          <cd:Unit>1E-3 ns</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+          <cd:Conversion numerator="1" denominator="1E3">
+            <cd:Unit>ns</cd:Unit>
+          </cd:Conversion>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="t_MNS_IMT">
+    <cd:Record>
+      <cd:Description>Timestamp at GPST-aligned IMT</cd:Description>
+      <cd:Field name="day">
+        <cd:Integer>
+          <cd:Unit>days</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <ct:NamedTest id="RangeDay"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="milisec">
+        <cd:Integer>
+          <cd:Unit>ms</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="nanosec">
+        <cd:Integer>
+          <cd:Unit>1E-3 ns</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+          <cd:Conversion numerator="1" denominator="1E3">
+            <cd:Unit>ns</cd:Unit>
+          </cd:Conversion>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="SV_ID">
+    <cd:Integer>
+      <cd:Description>Satellite Identifier</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill_1">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="t_GPS">
+    <cd:Integer>
+      <cd:Description>Timestamp of GPS transmit time at GPST</cd:Description>
+      <cd:Unit>1E-12 s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>uint64</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E12">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P_GPS">
+    <cd:Array>
+      <cd:Description>GPS Position</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_GPS">
+    <cd:Array>
+      <cd:Description>GPS Velocity</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="phi_GPS">
+    <cd:Integer>
+      <cd:Description>Azimuth of the GPS signal</cd:Description>
+      <cd:Unit>1E-7 rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="theta_GPS">
+    <cd:Integer>
+      <cd:Description>Elevation of the GPS signal</cd:Description>
+      <cd:Unit>1E-7 rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="L1">
+    <cd:Integer>
+      <cd:Description>L1 carrier range</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>uint64</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="L2">
+    <cd:Integer>
+      <cd:Description>L2 carrier range</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>uint64</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PR_CA">
+    <cd:Integer>
+      <cd:Description>CA pseudo range</cd:Description>
+      <cd:Unit>1E-4 m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>int64</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PR_P1">
+    <cd:Integer>
+      <cd:Description>P1 pseudo range</cd:Description>
+      <cd:Unit>1E-4 m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>int64</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PR_P2">
+    <cd:Integer>
+      <cd:Description>P2 pseudo range</cd:Description>
+      <cd:Unit>1E-4 m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>int64</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="A_L1">
+    <cd:Integer>
+      <cd:Description>Raw amplitude of L1 carrier (C/A code)</cd:Description>
+      <cd:Unit>1E-4 dBW</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>dBW</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="A_L2">
+    <cd:Integer>
+      <cd:Description>Raw amplitude of L2 carrier</cd:Description>
+      <cd:Unit>1E-4 dBW</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>dBW</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CNo_L1">
+    <cd:Integer>
+      <cd:Description>C/No of L1 carrier</cd:Description>
+      <cd:Unit>1E-4 dBHz</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>dBHz</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CNo_L2">
+    <cd:Integer>
+      <cd:Description>C/No of L2 carrier</cd:Description>
+      <cd:Unit>1E-4 dBHz</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>dBHz</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

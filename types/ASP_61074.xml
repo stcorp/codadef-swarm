@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_61074" last-modified="2009-07-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for STRE A Str2CcdAscAttitudeTm</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02051">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2AttitudeQ1</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02052">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2AttitudeQ2</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02053">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2AttitudeQ3</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02054">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2AttitudeQ4</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02055">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2Sequence</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02056">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2Correction</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02057">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2CameraId</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02058">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2HighRate</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02059">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2BBO</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02060">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2TimeRef</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02061">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2Valid</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02062">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2Residual</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02063">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2Locks</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02064">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2Objects</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02065">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2StarsFail</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02066">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2AgcFloor</cd:Description>
+              <cd:BitSize>12</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02067">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2AgcCeiling</cd:Description>
+              <cd:BitSize>12</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="S1T02068">
+                <cd:Type namexml="S1T02068">
+                    <cd:Time format="binary" timeformat="binary_eps_datetime">
+                        <cd:Description>STRE A Chu2CoiTstmpCds</cd:Description>
+                    </cd:Time>
+                </cd:Type>
+          </cd:Field>
+          <cd:Field name="S1T02272">
+            <cd:Integer>
+              <cd:Description>STRE A Chu2CoiTstmpMusec</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>24</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID80" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

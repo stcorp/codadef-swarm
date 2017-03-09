@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_ACC_PR_v1" last-modified="2015-01-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID5801"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of observation, days since 2000-01-01, UTC. "Observation" refers to the linear acceleration measurement; the angular acceleration measurement is approximately 0.12 s before.</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="a">
+    <cd:Array>
+      <cd:Description>Non-gravitational, linear acceleration, partly converted, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-11 m/s2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E11">
+          <cd:Unit>m/s2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="a_ang">
+    <cd:Array>
+      <cd:Description>Angular acceleration, partly converted, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-11 rad/s2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E11">
+          <cd:Unit>rad/s2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="p">
+    <cd:Array>
+      <cd:Description>Position of proof mass within cavity</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-9 m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E9">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="p_ang">
+    <cd:Array>
+      <cd:Description>Angular position of proof mass within cavity</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6 rad</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Temp">
+    <cd:Array>
+      <cd:Description>Temperature of ACC</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 degC</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2">
+          <cd:Unit>degC</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="VpLTC1043">
+    <cd:Integer>
+      <cd:Description>Positive voltage of LTC1043</cd:Description>
+      <cd:Unit>1E-3 V</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="VnLTC1043">
+    <cd:Integer>
+      <cd:Description>Negative voltage of LTC1043</cd:Description>
+      <cd:Unit>1E-3 V</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="U_pol">
+    <cd:Integer>
+      <cd:Description>Polarization voltage</cd:Description>
+      <cd:Unit>1E-3 V</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill_1">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="a_centr">
+    <cd:Array>
+      <cd:Description>Centrifugal acceleration, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-11 m/s2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E11">
+          <cd:Unit>m/s2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="a_GG">
+    <cd:Array>
+      <cd:Description>Gravity gradient acceleration, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-11 m/s2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E11">
+          <cd:Unit>m/s2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="a_Sun">
+    <cd:Array>
+      <cd:Description>Acceleration due to Solar radiation pressure, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-11 m/s2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E11">
+          <cd:Unit>m/s2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="e_Sun">
+    <cd:Array>
+      <cd:Description>Direction to the Sun, unit vector, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E9"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="m_SC">
+    <cd:Integer>
+      <cd:Description>Actual mass of S/C</cd:Description>
+      <cd:Unit>1E-3 kg</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>kg</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="r_CoG">
+    <cd:Array>
+      <cd:Description>Center of Gravity, S/C frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_head">
+    <cd:Array>
+      <cd:Description>Cross section area normal, front</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m2</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_down">
+    <cd:Array>
+      <cd:Description>Cross section area normal, down</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m2</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_left">
+    <cd:Array>
+      <cd:Description>Cross section area normal, left (-Y)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m2</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_right">
+    <cd:Array>
+      <cd:Description>Cross section area normal, right (+Y)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m2</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="K_Earth">
+    <cd:Array>
+      <cd:Description>Downward optical reflectivity normal</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m2</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m2</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P_Gas">
+    <cd:Array>
+      <cd:Description>Pressure of gas tanks</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 Pa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2">
+          <cd:Unit>Pa</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="T_Gas">
+    <cd:Array>
+      <cd:Description>Temperature of gas tanks</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 degC</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2">
+          <cd:Unit>degC</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Thru_Acc_On">
+    <cd:Integer>
+      <cd:Description>Accumulated thruster on time</cd:Description>
+      <cd:Unit>1E-4 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_ACC">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the ACC</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_Platform">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the S/C platform information</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Maneuver_Id">
+    <cd:Integer>
+      <cd:Description>Current maneuver identification code</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill_2">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

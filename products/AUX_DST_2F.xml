@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_DST_2F" format="ascii" last-modified="2012-05-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension>numelements(asciiline)</cd:Dimension>
+    <cd:Record>
+      <cd:Field name="name">
+        <cd:Text>
+          <cd:ByteSize>3</cd:ByteSize>
+          <cd:NativeType>string</cd:NativeType>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="year_last">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="month">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="separator_1">
+        <cd:Text>
+          <cd:ByteSize>1</cd:ByteSize>
+          <cd:NativeType>char</cd:NativeType>
+          <cd:FixedValue>*</cd:FixedValue>
+        </cd:Text>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="date">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="quicklook">
+        <cd:Text>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>string</cd:NativeType>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="separator_2">
+        <cd:Text>
+          <cd:ByteSize>1</cd:ByteSize>
+          <cd:NativeType>char</cd:NativeType>
+          <cd:FixedValue>X</cd:FixedValue>
+        </cd:Text>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="version">
+        <cd:Text>
+          <cd:ByteSize>1</cd:ByteSize>
+          <cd:NativeType>char</cd:NativeType>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="year_first">
+        <cd:Integer>
+          <cd:ByteSize>2</cd:ByteSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="base_value">
+        <cd:Integer>
+          <cd:ByteSize>4</cd:ByteSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="value">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Integer>
+            <cd:ByteSize>4</cd:ByteSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="mean">
+        <cd:Integer>
+          <cd:ByteSize>4</cd:ByteSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="newline">
+        <cd:AsciiLineSeparator/>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Array>
+</cd:ProductDefinition>

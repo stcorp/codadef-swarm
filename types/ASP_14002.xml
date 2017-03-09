@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_14002" last-modified="2017-01-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for SWARM TTC System HK 2</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00029">
+            <cd:Integer>
+              <cd:Description>TCL_2_ANG_14A_ObBoomIf</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00057">
+            <cd:Integer>
+              <cd:Description>TCL_4_ANG_14B_ObBoomIf</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00087">
+            <cd:Integer>
+              <cd:Description>TCL_6_ANG_14C_ObBoomIf</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00032">
+            <cd:Integer>
+              <cd:Description>TCL_2_ANG_17A_ObSubsys</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00060">
+            <cd:Integer>
+              <cd:Description>TCL_4_ANG_17B_ObSubsys</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00090">
+            <cd:Integer>
+              <cd:Description>TCL_6_ANG_17C_ObSubsys</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00115">
+            <cd:Integer>
+              <cd:Description>TCM_8_ANY_NeaOb</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_53">
+            <cd:Raw>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID4" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

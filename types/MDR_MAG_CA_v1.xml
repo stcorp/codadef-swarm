@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_MAG_CA_v1" last-modified="2011-04-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID5301"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status (of VFM), source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Latitude">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Latitude</cd:Description>
+      <cd:Unit>1E-7 degrees_north</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Longitude">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Longitude</cd:Description>
+      <cd:Unit>1E-7 degrees_east</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Radius">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Radius</cd:Description>
+      <cd:Unit>1E-2 m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F">
+    <cd:Integer>
+      <cd:Description>Magnetic field intensity</cd:Description>
+      <cd:Unit>1E-4 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dF_AOCS">
+    <cd:Integer>
+      <cd:Description>Magnetic stray field correction intensity of AOCS magneto-torquer coils</cd:Description>
+      <cd:Unit>1E-4 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dF_other">
+    <cd:Integer>
+      <cd:Description>Magnetic stray field correction intensity of all other sources</cd:Description>
+      <cd:Unit>1E-4 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_error">
+    <cd:Integer>
+      <cd:Description>Error estimate on magnetic field intensity</cd:Description>
+      <cd:Unit>1E-4 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_VFM">
+    <cd:Integer>
+      <cd:Description>Magnetic field intensity from the VFM instrument, converted and corrected</cd:Description>
+      <cd:Unit>1E-4 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="B">
+    <cd:Array>
+      <cd:Description>Magnetic field vector, VFM frame, time Time+dt</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dB_AOCS">
+    <cd:Array>
+      <cd:Description>Magnetic stray field correction vector of AOCS magneto-torquer coils, VFM frame, time Time+dt</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dB_other">
+    <cd:Array>
+      <cd:Description>Magnetic stray field correction vector of all other sources, VFM frame, time Time+dt_VFM</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="EU_VFM">
+    <cd:Array>
+      <cd:Description>Raw VFM measurement, time Time+dt_VFM</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit/>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="T_CDC">
+    <cd:Integer>
+      <cd:Description>Temperature of VFM CDC, time Time+dt_VFM</cd:Description>
+      <cd:Unit>1E-2 degC</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2">
+        <cd:Unit>degC</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="T_CSC">
+    <cd:Integer>
+      <cd:Description>Temperature of VFM CSC, time Time+dt_VFM</cd:Description>
+      <cd:Unit>1E-2 degC</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2">
+        <cd:Unit>degC</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="T_EU">
+    <cd:Integer>
+      <cd:Description>Temperature of VFM EU, time Time+dt_VFM</cd:Description>
+      <cd:Unit>1E-2 degC</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2">
+        <cd:Unit>degC</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dt_VFM">
+    <cd:Integer>
+      <cd:Description>Time offset of VFM measurement</cd:Description>
+      <cd:Unit>1E-4 s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

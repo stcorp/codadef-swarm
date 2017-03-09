@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Range" format="xml" namexml="Range" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="Min">
+    <cd:Type namexml="Min">
+      <cd:Float format="ascii">
+        <cd:Description>Minimum value allowed</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max">
+    <cd:Type namexml="Max">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum value allowed</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

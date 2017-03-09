@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cd:Record format="xml" last-modified="2014-08-25" name="SPH_AUX" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for AUX DSTIND</cd:Description>
+  <cd:Field name="SPH_Descriptor">
+    <cd:Text namexml="SPH_Descriptor"/>
+  </cd:Field>
+  <cd:Field name="Validity_Start">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>UTC start time of validity</cd:Description>
+      <cd:Text namexml="Validity_Start"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Validity_Stop">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>UTC stop time of validity</cd:Description>
+      <cd:Text namexml="Validity_Stop"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Source">
+    <cd:Record namexml="Source">
+      <cd:Field name="System">
+        <cd:Text namexml="System"/>
+      </cd:Field>
+      <cd:Field name="Creator">
+        <cd:Text namexml="Creator"/>
+      </cd:Field>
+      <cd:Field name="Creator_Version">
+        <cd:Text namexml="Creator_Version"/>
+      </cd:Field>
+      <cd:Field name="Creation_Date">
+        <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;)">
+          <cd:Text namexml="Creation_Date"/>
+          <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+          <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+          <cd:Mapping string="" value="nan"/>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="Original_Name">
+        <cd:Text namexml="Original_Name"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

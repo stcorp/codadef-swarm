@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Thermistor" format="xml" namexml="Thermistor" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="R_25C">
+    <cd:Type namexml="R_25C">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Beta">
+    <cd:Type namexml="Beta">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="A">
+    <cd:Type namexml="A">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="B">
+    <cd:Type namexml="B">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="C">
+    <cd:Type namexml="C">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="R_filter">
+    <cd:Type namexml="R_filter">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="R_ref">
+    <cd:Type namexml="R_ref">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

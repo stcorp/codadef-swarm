@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_GPSCLK" format="ascii" last-modified="2011-08-31" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="data">
+      <cd:Text format="ascii">
+        <cd:Description>Uninterpreted Text data</cd:Description>
+        <cd:ByteSize><![CDATA[filesize()]]></cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>  
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

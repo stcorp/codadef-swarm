@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<cd:Record name="VFM_EUL_CA" format="xml" namexml="VFM_EUL_CA" last-modified="2009-06-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>MAGXEUL_1B Data Set Record, VFM_EUL_CA</cd:Description>
+  <cd:Attribute name="Data_Set">
+    <cd:FixedValue>1</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="STR_q_VFM_Est">
+    <cd:Record namexml="STR_q_VFM_Est">
+      <cd:Field name="Q1">
+        <cd:Type namexml="Q1">
+          <cd:Float format="ascii">
+            <cd:Description>1st quaternion component</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Q2">
+        <cd:Type namexml="Q2">
+          <cd:Float format="ascii">
+            <cd:Description>2nd quaternion component</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>13</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Q3">
+        <cd:Type namexml="Q3">
+          <cd:Float format="ascii">
+            <cd:Description>3rd quaternion component</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>13</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Q4">
+        <cd:Type namexml="Q4">
+          <cd:Float format="ascii">
+            <cd:Description>4th quaternion component</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>13</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Rms_VFM">
+    <cd:Record namexml="Rms_VFM">
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Weighted rms misfit in VFM X-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>6</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Weighted rms misfit in VFM Y-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>6</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Weighted rms misfit in VFM Z-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>6</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Bias_VFM">
+    <cd:Record namexml="Bias_VFM">
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Data residual bias, VFM X-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>9</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Data residual bias, VFM Y-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>9</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Data residual bias, VFM Z-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>9</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Rms_NEC">
+    <cd:Record namexml="Rms_NEC">
+      <cd:Field name="N">
+        <cd:Type namexml="N">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Weighted rms misfit in NEC N-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>6</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="E">
+        <cd:Type namexml="E">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Weighted rms misfit in NEC E-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>6</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="C">
+        <cd:Type namexml="C">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Weighted rms misfit in NEC C-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>6</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Bias_NEC">
+    <cd:Record namexml="Bias_NEC">
+      <cd:Field name="N">
+        <cd:Type namexml="N">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Data residual bias, NEC N-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>9</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="E">
+        <cd:Type namexml="E">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Data residual bias, NEC E-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>9</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="C">
+        <cd:Type namexml="C">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>nT</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Data residual bias, NEC C-axis</cd:Description>
+            <cd:Unit>nT</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:ByteSize>9</cd:ByteSize>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Rms_F">
+    <cd:Type namexml="Rms_F">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>nT</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Weighted rms misfit of field intensity</cd:Description>
+        <cd:Unit>nT</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:ByteSize>6</cd:ByteSize>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Bias_F">
+    <cd:Type namexml="Bias_F">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>nT</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Data residual bias of field intensity</cd:Description>
+        <cd:Unit>nT</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:ByteSize>9</cd:ByteSize>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Samples_VFM">
+    <cd:Type namexml="Samples_VFM">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of VFM vector samples used in estimate</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:ByteSize>10</cd:ByteSize>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Samples_F">
+    <cd:Type namexml="Samples_F">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of field intensity samples used in estimate</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:ByteSize>10</cd:ByteSize>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Kp_Max">
+    <cd:Type namexml="Kp_Max">
+      <cd:Text format="ascii">
+        <cd:Description>Maximum allowed Kp index used for data selection. If not used set to "99"</cd:Description>
+        <cd:NativeType>string</cd:NativeType>
+        <cd:ByteSize>2</cd:ByteSize>
+      </cd:Text>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Dst_Max">
+    <cd:Type namexml="Dst_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum allowed Dst index used for data selection. If not used set to "0000"</cd:Description>
+        <cd:Unit>nT</cd:Unit>
+        <cd:NativeType>uint16</cd:NativeType>
+        <cd:ByteSize>4</cd:ByteSize>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="dDst_Max">
+    <cd:Type namexml="dDst_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum allowed Dst index gradient used for data selection. If not used set to "0000"</cd:Description>
+        <cd:Unit>nT/h</cd:Unit>
+        <cd:NativeType>uint16</cd:NativeType>
+        <cd:ByteSize>4</cd:ByteSize>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

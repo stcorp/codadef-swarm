@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_55113" last-modified="2009-07-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for GPSR SciNoiseHistogramStandby                            55306</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00002">
+            <cd:Integer>
+              <cd:Description>GPSRE FrontEndTemp</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00003">
+            <cd:Integer>
+              <cd:Description>GPSRE NotUsed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00004">
+            <cd:Integer>
+              <cd:Description>GPSRE SerialNumber</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00005">
+            <cd:Integer>
+              <cd:Description>GPSRE NomRedFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00006">
+            <cd:Integer>
+              <cd:Description>GPSRE AllDataValidFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00007">
+            <cd:Integer>
+              <cd:Description>GPSRE ReceiverMode</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00008">
+            <cd:Integer>
+              <cd:Description>GPSRE NofRecordsInBlock</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Group_8">
+            <cd:Array>
+              <cd:Dimension><![CDATA[int(../GST00008)]]></cd:Dimension>
+                <cd:Record>
+          <cd:Field name="GST00014">
+            <cd:Integer>
+              <cd:Description>GPSRE DwnConvertrChainID</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00123">
+            <cd:Integer>
+              <cd:Description>GPSRE NotUsed</cd:Description>
+              <cd:BitSize>12</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00124">
+            <cd:Integer>
+              <cd:Description>GPSRE NoisPwrGainIFAmpl</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00125">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosI7</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00126">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosI5</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00127">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosI3</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00128">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosI1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00129">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntNegI1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00130">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntNegI3</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00131">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntNegI5</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00132">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntNegI7</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00133">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ7</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00134">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ5</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00135">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ3</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00136">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00137">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntNegQ1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00138">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ3</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00139">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ5</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00140">
+            <cd:Integer>
+              <cd:Description>GPSRE SigLevDtcCntPosQ7</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+                </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>24</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID75" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

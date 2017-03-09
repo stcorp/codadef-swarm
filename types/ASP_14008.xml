@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_14008" last-modified="2009-07-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for SWARM AuxSystemHkTm8TankTemp</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="AHT00000">
+            <cd:Integer>
+              <cd:Description>HPT 1 AN1 Signal</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="AHT00002">
+            <cd:Integer>
+              <cd:Description>HPT 2 AN1 Signal</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OHT00024">
+            <cd:Integer>
+              <cd:Description>OBC REF 3p3V FGM A</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OHT00025">
+            <cd:Integer>
+              <cd:Description>OBC REF GND FGM A</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OHT00026">
+            <cd:Integer>
+              <cd:Description>OBC REF 3p3V FGM B</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OHT00027">
+            <cd:Integer>
+              <cd:Description>OBC REF GND FGM B</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OHT00028">
+            <cd:Integer>
+              <cd:Description>OBC REF 3p3V FGM C</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OHT00029">
+            <cd:Integer>
+              <cd:Description>OBC REF GND FGM C</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00014">
+            <cd:Integer>
+              <cd:Description>TCL 1 ANY 02A TankA</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00015">
+            <cd:Integer>
+              <cd:Description>TCL 1 ANY 03A TankB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00036">
+            <cd:Integer>
+              <cd:Description>TCL 2 ANY 21A CgpsPrA1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00037">
+            <cd:Integer>
+              <cd:Description>TCL 2 ANY 22A CgpsPrB1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00042">
+            <cd:Integer>
+              <cd:Description>TCL 3 ANY 02B TankA</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00043">
+            <cd:Integer>
+              <cd:Description>TCL 3 ANY 03B TankB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00064">
+            <cd:Integer>
+              <cd:Description>TCL 4 ANY 21B CgpsPrA1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00065">
+            <cd:Integer>
+              <cd:Description>TCL 4 ANY 22B CgpsPrB1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00070">
+            <cd:Integer>
+              <cd:Description>TCL 5 ANY 02C TankA</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00071">
+            <cd:Integer>
+              <cd:Description>TCL 5 ANY 03C TankB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00082">
+            <cd:Integer>
+              <cd:Description>TCM 5 ANY CgpsLptA</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00083">
+            <cd:Integer>
+              <cd:Description>TCM 5 ANY TankA1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00084">
+            <cd:Integer>
+              <cd:Description>TCM 5 ANY TankB1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00094">
+            <cd:Integer>
+              <cd:Description>TCL 6 ANY 21C CgpsPrA1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00095">
+            <cd:Integer>
+              <cd:Description>TCL 6 ANY 22C CgpsPrB1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00096">
+            <cd:Integer>
+              <cd:Description>TCM 6 ANY CgpsPrA2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00097">
+            <cd:Integer>
+              <cd:Description>TCM 6 ANY CgpsHpt1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00112">
+            <cd:Integer>
+              <cd:Description>TCM 7 ANY CgpsLptB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00113">
+            <cd:Integer>
+              <cd:Description>TCM 7 ANY TankA2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00114">
+            <cd:Integer>
+              <cd:Description>TCM 7 ANY TankB2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00126">
+            <cd:Integer>
+              <cd:Description>TCM 8 ANY CgpsPrB2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="THT00127">
+            <cd:Integer>
+              <cd:Description>TCM 8 ANY CgpsHpt2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52372">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52373">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52374">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52375">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52376">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52377">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52378">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52379">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>24</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID4" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

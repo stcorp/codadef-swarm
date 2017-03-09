@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Vector" format="xml" namexml="Vector" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Attribute name="unit">
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Field name="X">
+    <cd:Type namexml="X">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Y">
+    <cd:Type namexml="Y">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Z">
+    <cd:Type namexml="Z">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_CLut2d" format="xml" namexml="CLut2d" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="List_of_CL2_Points">
+    <cd:Record namexml="List_of_CL2_Points">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="CL2_Point">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="CL2_Point">
+            <cd:Field name="Y">
+              <cd:Type namexml="Y">
+                <cd:Float format="ascii">
+                   <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="CLut1d">
+              <cd:NamedType id="CCDB_CLut1d"/>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

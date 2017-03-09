@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_MAG_HR_v1" last-modified="2012-04-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID5101"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status (of VFM), source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Latitude">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Latitude</cd:Description>
+      <cd:Unit>1E-7 degrees_north</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Longitude">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Longitude</cd:Description>
+      <cd:Unit>1E-7 degrees_east</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Radius">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Radius</cd:Description>
+      <cd:Unit>1E-2 m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="B_VFM">
+    <cd:Array>
+      <cd:Description>Magnetic field vector, VFM frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+        <ct:NamedTest id="CheckVFM6"/>
+      </cd:Integer>
+    </cd:Array>    
+  </cd:Field>
+  <cd:Field name="B_NEC">
+    <cd:Array>
+      <cd:Description>Magnetic field vector, NEC frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dB_AOCS">
+    <cd:Array>
+      <cd:Description>Magnetic stray field correction vector of AOCS magneto-torquer coils, VFM frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dB_other">
+    <cd:Array>
+      <cd:Description>Magnetic stray field correction vector of all other sources, VFM frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="B_error">
+    <cd:Array>
+      <cd:Description>Error estimates on magnetic field, VFM frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="q_NEC_CRF">
+    <cd:Array>
+      <cd:Description>Quatemion, transformation: NEC &lt;- CRF</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E9"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Att_error">
+    <cd:Integer>
+      <cd:Description>Error estimates on attitude information</cd:Description>
+      <cd:Unit>1E-4 mdegrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>mdegrees</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_B">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the magnetic field measurement</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_q">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the attitude information</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_Platform">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the S/C platform information</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

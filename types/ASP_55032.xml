@@ -1,0 +1,799 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_55032" last-modified="2012-05-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for GPSR HKDiagSWARMAux</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00002">
+            <cd:Integer>
+              <cd:Description>GPSRE FrontEndTemp</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_24">
+            <cd:Raw>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00004">
+            <cd:Integer>
+              <cd:Description>GPSRE SerialNumber</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00005">
+            <cd:Integer>
+              <cd:Description>GPSRE NomRedFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00006">
+            <cd:Integer>
+              <cd:Description>GPSRE AllDataValidFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00007">
+            <cd:Integer>
+              <cd:Description>GPSRE ReceiverMode</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00008">
+            <cd:Integer>
+              <cd:Description>GPSRE NofRecordsInBlock</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFreqChannelNr</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID2</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag2</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr2</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat2</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID3</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag3</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr3</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat3</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID4</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag4</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr4</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat4</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID5</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag5</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr5</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat5</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID6</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag6</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr6</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat6</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID7</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag7</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr7</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat7</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07009">
+            <cd:Integer>
+              <cd:Description>GPSRE ConstellationID8</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07011">
+            <cd:Integer>
+              <cd:Description>GPSRE SpaceVehicleID8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07074">
+            <cd:Integer>
+              <cd:Description>GPSRE AntispoofFlag8</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07807">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChannelNr8</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07205">
+            <cd:Integer>
+              <cd:Description>GPSRE MultiFChnTrkStat8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07914">
+            <cd:Integer>
+              <cd:Description>GPSRE NavDataSyncStat8</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07206">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck3rdSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07207">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07208">
+            <cd:Integer>
+              <cd:Description>GPSRE CodeLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07209">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck3dSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07210">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck2ndSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07211">
+            <cd:Integer>
+              <cd:Description>GPSRE CarrLck1stSnglFChn</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>24</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID70" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

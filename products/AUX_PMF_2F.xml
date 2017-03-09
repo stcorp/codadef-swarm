@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_PMF_2F" format="ascii" last-modified="2017-02-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="epoch_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_1">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="epoch_year">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="newline_2">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="data_range_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_3">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="data_range">
+      <cd:Array>
+        <cd:Dimension>2</cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="newline_4">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="imf_by_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_5">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="imf_by">
+      <cd:Array>
+        <cd:Dimension>2</cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="newline_6">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="em_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_7">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="em">
+      <cd:Record>
+        <cd:Field name="em_1">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="newline_8">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="em_2">
+          <cd:Array>
+            <cd:Dimension>3</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+    <cd:Field name="newline_9">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="f107_correlated_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_10">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="f107_correlated">
+      <cd:Record>
+        <cd:Field name="f107_correlated_1">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="newline_11">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="f107_correlated_2">
+          <cd:Array>
+            <cd:Dimension>3</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_12">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="f107_correlated_3">
+          <cd:Array>
+            <cd:Dimension>5</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_13">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+    <cd:Field name="est_ist_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_14">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="est_ist">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="newline_15">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="sm_external_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_16">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="sm">
+      <cd:Record>
+        <cd:Field name="sm_external_1">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="newline_17">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="sm_external_2">
+          <cd:Array>
+            <cd:Dimension>3</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_18">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="sm_external_3">
+          <cd:Array>
+            <cd:Dimension>5</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_19">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+    <cd:Field name="gsm_external_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_20">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="gsm">
+      <cd:Record>
+        <cd:Field name="gsm_external_1">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="newline_21">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="gsm_external_2">
+          <cd:Array>
+            <cd:Dimension>3</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_22">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="gsm_external_3">
+          <cd:Array>
+            <cd:Dimension>5</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_23">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+    <cd:Field name="header_1">
+      <cd:Array>
+        <cd:Dimension>2</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline_24">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="degree_static">
+      <cd:Integer>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="degree_1st_deriv">
+      <cd:Integer>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="degree_2nd_deriv_before_epoch">
+      <cd:Integer>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="degree_2nd_deriv_after_epoch">
+      <cd:Integer>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="newline_25">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="header_2">
+      <cd:Array>
+        <cd:Dimension>2</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline_26">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="internal_field">
+      <cd:Array>
+        <cd:Dimension>8645</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="n">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="m">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="h_lm">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="g_lm">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="gd">
+            <cd:Available><![CDATA[index(.) <= 151]]></cd:Available>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="hd">
+            <cd:Available><![CDATA[index(.) <= 151]]></cd:Available>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="gddminus">
+            <cd:Available><![CDATA[index(.) <= 151]]></cd:Available>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="hddminus">
+            <cd:Available><![CDATA[index(.) <= 151]]></cd:Available>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="gddplus">
+            <cd:Available><![CDATA[index(.) <= 151]]></cd:Available>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="hddplus">
+            <cd:Available><![CDATA[index(.) <= 151]]></cd:Available>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="newline_27">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="extra_line">
+      <cd:Available><![CDATA[at(./internal_field, byteoffset(.) + bytesize(.) < filesize())]]></cd:Available>
+      <cd:Hidden/>       
+      <cd:Raw>
+         <cd:Description>Uninterpreted extra line</cd:Description>
+         <cd:BitSize><![CDATA[8 * (filesize()-byteoffset(.))]]></cd:BitSize>
+      </cd:Raw> 
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

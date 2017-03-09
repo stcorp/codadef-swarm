@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_CalibrationCoefficientsHKCorrection" format="xml" namexml="CalibrationCoefficientsHKCorrection" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="Slope">
+    <cd:Type namexml="Slope">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Offset">
+    <cd:Type namexml="Offset">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="HKCorr">
+    <cd:Type namexml="HKCorr">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="HKRef">
+    <cd:Type namexml="HKRef">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

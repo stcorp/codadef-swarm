@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_DCB_2F" format="ascii" last-modified="2012-07-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Array>
+        <cd:Dimension>$lineno_first_dcb_record</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="dcb">
+      <cd:Array>
+        <cd:Dimension>$num_dcb_records</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="prn">
+            <cd:Text>
+              <cd:NativeType>string</cd:NativeType>
+              <cd:ByteSize>6</cd:ByteSize>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="bias">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+              <cd:ByteSize>10</cd:ByteSize>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="rms">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+              <cd:ByteSize>10</cd:ByteSize>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="eol_header">
+            <cd:Text>
+              <cd:ByteSize>55</cd:ByteSize>
+              <cd:FixedValue>                                  PRN / BIAS / RMS    \n</cd:FixedValue>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="rest_of_file">
+      <cd:Array>
+        <cd:Dimension><![CDATA[unboundindex(., byteoffset(.) >= filesize() && index(.) >= $lineno_last_dcb_record)]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="lineno_first_dcb_record">
+    <cd:Init><![CDATA[$lineno_first_dcb_record = index(asciiline, substr(60, 20, str(., 80)) == "PRN / BIAS / RMS    ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="lineno_last_dcb_record">
+    <cd:Init><![CDATA[$lineno_last_dcb_record = index(asciiline, index(.) > $lineno_first_dcb_record && substr(60, 20, str(., 80)) != "PRN / BIAS / RMS    ") - 1]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dcb_records">
+    <cd:Init><![CDATA[$num_dcb_records = $lineno_last_dcb_record - $lineno_first_dcb_record]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

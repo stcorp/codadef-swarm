@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MIO_SHAi2D" format="ascii" last-modified="2012-07-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="DBL_IonosphericField"/>
+  <cd:ProductVariable name="num_coefficients">
+    <cd:Init><![CDATA[$num_coefficients = int(/mmax) * (int(/mmax) + 2) + (int(/nmax) - int(/mmax)) * (2 * int(/mmax) + 1)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_time_coefficients">
+    <cd:Init><![CDATA[$num_time_coefficients = (int(/pmax) - int(/pmin) + 1) * (int(/smax) - int(/smin) + 1)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

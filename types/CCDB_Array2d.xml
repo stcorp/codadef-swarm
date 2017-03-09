@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Array2d" format="xml" namexml="Array2d" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Attribute name="unit">
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Field name="List_of_Array1ds">
+    <cd:Record namexml="List_of_Array1ds">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Array1d">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Array1d">
+            <cd:Attribute name="unit">
+              <cd:Optional/>
+            </cd:Attribute>
+            <cd:Field name="List_of_A_Elements">
+              <cd:Record namexml="List_of_A_Elements">
+                <cd:Attribute name="count"/>
+                <cd:Field name="A_Element">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="A_Element">
+                      <cd:Float format="ascii">
+                         <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

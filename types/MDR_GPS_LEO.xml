@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_GPS_LEO" last-modified="2014-10-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID0701"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="t_UTC">
+    <cd:Time format="binary" timeformat="float(./day) * 86400 + float(./sec) + float(./microsec) * 1e-6">
+      <cd:Record>
+        <cd:Description>Timestamp at UTC</cd:Description>
+        <cd:Field name="day">
+          <cd:Integer>
+            <cd:Unit>days since 2000-01-01</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeDay"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="sec">
+          <cd:Integer>
+            <cd:Unit>s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeSecond"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="microsec">
+          <cd:Integer>
+            <cd:Unit>1E-6 s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeMicroSecond"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="t_GPS">
+    <cd:Record>
+      <cd:Description>Timestamp at GPST</cd:Description>
+      <cd:Field name="day">
+        <cd:Integer>
+          <cd:Unit>days</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <ct:NamedTest id="RangeDay"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="milisec">
+        <cd:Integer>
+          <cd:Unit>ms</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="nanosec">
+        <cd:Integer>
+          <cd:Unit>1E-3 ns</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+          <cd:Conversion numerator="1" denominator="1E3">
+            <cd:Unit>ns</cd:Unit>
+          </cd:Conversion>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="t_IMT">
+    <cd:Record>
+      <cd:Description>Timestamp at GPST-aligned IMT</cd:Description>
+      <cd:Field name="day">
+        <cd:Integer>
+          <cd:Unit>days</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <ct:NamedTest id="RangeDay"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="milisec">
+        <cd:Integer>
+          <cd:Unit>ms</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="nanosec">
+        <cd:Integer>
+          <cd:Unit>1E-3 ns</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+          <cd:Conversion numerator="1" denominator="1E3">
+            <cd:Unit>ns</cd:Unit>
+          </cd:Conversion>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Temp">
+    <cd:Integer>
+      <cd:Description>Front-end receiver temperature</cd:Description>
+      <cd:Unit>1E-3 C</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>C</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P_SWARM">
+    <cd:Array>
+      <cd:Description>Swarm Position</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_SWARM">
+    <cd:Array>
+      <cd:Description>Swarm Velocity</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="roll">
+    <cd:Integer>
+      <cd:Description>roll angle</cd:Description>
+      <cd:Unit>1E-9 rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E9">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pitch">
+    <cd:Integer>
+      <cd:Description>pitch angle</cd:Description>
+      <cd:Unit>1E-9 rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E9">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="yaw">
+    <cd:Integer>
+      <cd:Description>yaw angle</cd:Description>
+      <cd:Unit>1E-9 rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E9">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GDOP">
+    <cd:Integer>
+      <cd:Description>GDOP for GPS satellites used in navigation solution</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PVT_QI">
+    <cd:Integer>
+      <cd:Description>PVT data quality index</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MNS_method">
+    <cd:Integer>
+      <cd:Description>Navigation solution method</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

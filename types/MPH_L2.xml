@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<cd:Record name="MPH_L2" format="xml" namexml="MPH" last-modified="2014-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Level 2 Main Product Header</cd:Description>
+  <cd:Field name="Product">
+    <cd:Text namexml="Product">
+      <cd:Description>Product file name (without extension)</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Product_Format">
+    <cd:Text namexml="Product_Format">
+      <cd:Description>Format of the Product file: CDF, PDF or ASCII</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Stage_Code">
+    <cd:Text namexml="Proc_Stage_Code">
+      <cd:Description>character 9 - 18 in the file name. This can be: OPER = Routine operations, TEST = Test, RPRO = Reprocessing</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Ref_Doc">
+    <cd:Text namexml="Ref_Doc">
+      <cd:Description>Reference document describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Center">
+    <cd:Text namexml="Proc_Center">
+      <cd:Description>Processing Centre ID code: BGS = British Geological Survey, DEOS = DEOS, DTU = DTU Space, ETH = Eidgenössische Technsiche Hochschule, GFZ = GeoForschungsZentrum Potsdam, IPGP = Institut de Physique du Globe de Paris, PDGS = Payload Data Ground Segment</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Time">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>Processing Time, UTC (Product Generation Time)</cd:Description>
+      <cd:Text namexml="Proc_Time"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Software_Version">
+    <cd:Text namexml="Software_Version">
+      <cd:Description>Processor Name and software version number. Format: ProcesserName/VV.rr</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Product_Err">
+    <cd:Type namexml="Product_Err">
+      <cd:Integer format="ascii">
+        <cd:Description>Product Error Flag. Set to 0 if product is fully ok, non-zero if any problems or errors are present</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Tot_Size">
+    <cd:Type namexml="Tot_Size">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>bytes</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Total size of product</cd:Description>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="CRC">
+    <cd:Type namexml="CRC">
+      <cd:Integer format="ascii">
+        <cd:Description>Cyclic Redundancy Code computed as overall value of all records of the Measurement Data Set. Will be set to "-0000000001" if not computed.</cd:Description>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+    <cd:Optional/>
+  </cd:Field>
+</cd:Record>

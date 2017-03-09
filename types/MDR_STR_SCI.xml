@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_STR_SCI" last-modified="2013-03-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID0301"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="t">
+    <cd:Time format="binary" timeformat="float(./day) * 86400 + float(./sec) + float(./microsec) * 1e-6">
+      <cd:Record>
+        <cd:Description>Time of observation, t_0_STR</cd:Description>
+        <cd:Field name="day">
+          <cd:Integer>
+            <cd:Unit>days since 2000-01-01</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeDay"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="sec">
+          <cd:Integer>
+            <cd:Unit>s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeSecond"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="microsec">
+          <cd:Integer>
+            <cd:Unit>1E-6 s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeMicroSecond"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Att1">
+    <cd:Record>
+      <cd:Field name="q">
+        <cd:Array>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Orientation of camera head 1, ICRF</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:Conversion numerator="1" denominator="1E9"/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="Info">
+        <cd:Record>
+          <cd:Field name="Seq">
+            <cd:Integer>
+              <cd:Description>Sequence: 0 = initial attitude determination + fine-tuning, 1 = only fine-tuning</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Cor">
+            <cd:Integer>
+              <cd:Description>If 1: Corrections applied</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="HR">
+            <cd:Integer>
+              <cd:Description>If 1: High attitude rate detected</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="BBO">
+            <cd:Integer>
+              <cd:Description>If 1: Big bright object(s) detected</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="t_ref">
+            <cd:Integer>
+              <cd:Description>Time reference: 0 = Timestamp based on synchronized time, 1 = Timestamp is given in seconds since instrument boot up</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Valid">
+            <cd:Integer>
+              <cd:Description>If 1: Att1.q is valid</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Res">
+            <cd:Integer>
+              <cd:Description>Accuracy estimate of Att1.q</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <cd:Conversion numerator="1" denominator="1E2"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Stars">
+            <cd:Integer>
+              <cd:Description>Number of centroid objects detected as stars</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Locks">
+            <cd:Integer>
+              <cd:Description>Number of triads recognized during the Lost in Space function</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Fill_1">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Att2">
+    <cd:Record>
+      <cd:Field name="q">
+        <cd:Array>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Orientation of camera head 1, ICRF</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:Conversion numerator="1" denominator="1E9"/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="Info">
+        <cd:Record>
+          <cd:Field name="Seq">
+            <cd:Integer>
+              <cd:Description>Sequence: 0 = initial attitude determination + fine-tuning, 1 = only fine-tuning</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Cor">
+            <cd:Integer>
+              <cd:Description>If 1: Corrections applied</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="HR">
+            <cd:Integer>
+              <cd:Description>If 1: High attitude rate detected</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="BBO">
+            <cd:Integer>
+              <cd:Description>If 1: Big bright object(s) detected</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="t_ref">
+            <cd:Integer>
+              <cd:Description>Time reference: 0 = Timestamp based on synchronized time, 1 = Timestamp is given in seconds since instrument boot up</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Valid">
+            <cd:Integer>
+              <cd:Description>If 1: Att2.q is valid</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Res">
+            <cd:Integer>
+              <cd:Description>Accuracy estimate of Att2.q</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <cd:Conversion numerator="1" denominator="1E2"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Stars">
+            <cd:Integer>
+              <cd:Description>Number of centroid objects detected as stars</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Locks">
+            <cd:Integer>
+              <cd:Description>Number of triads recognized during the Lost in Space function</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Fill_2">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Att3">
+    <cd:Record>
+      <cd:Field name="q">
+        <cd:Array>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Orientation of camera head 1, ICRF</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:Conversion numerator="1" denominator="1E9"/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="Info">
+        <cd:Record>
+          <cd:Field name="Seq">
+            <cd:Integer>
+              <cd:Description>Sequence: 0 = initial attitude determination + fine-tuning, 1 = only fine-tuning</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Cor">
+            <cd:Integer>
+              <cd:Description>If 1: Corrections applied</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="HR">
+            <cd:Integer>
+              <cd:Description>If 1: High attitude rate detected</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="BBO">
+            <cd:Integer>
+              <cd:Description>If 1: Big bright object(s) detected</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="t_ref">
+            <cd:Integer>
+              <cd:Description>Time reference: 0 = Timestamp based on synchronized time, 1 = Timestamp is given in seconds since instrument boot up</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Valid">
+            <cd:Integer>
+              <cd:Description>If 1: Att3.q is valid</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Res">
+            <cd:Integer>
+              <cd:Description>Accuracy estimate of Att3.q</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <cd:Conversion numerator="1" denominator="1E2"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Stars">
+            <cd:Integer>
+              <cd:Description>Number of centroid objects detected as stars</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Locks">
+            <cd:Integer>
+              <cd:Description>Number of triads recognized during the Lost in Space function</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Fill_3">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SP3CVAL_2_" format="binary" last-modified="2012-04-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Raw>
+    <cd:Description>Uninterpreted PDF</cd:Description>
+    <cd:BitSize><![CDATA[8 * filesize()]]></cd:BitSize>
+  </cd:Raw>
+</cd:ProductDefinition>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MI1_VALi2__HDR" format="xml" last-modified="2012-06-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_Header">
+      <cd:Record namexml="Earth_Explorer_Header">
+        <cd:Description>Earth Explorer Header File</cd:Description>
+        <cd:Attribute name="xsi:noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="schemaVersion">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Field name="Fixed_Header">
+          <cd:NamedType id="Fixed_Header"/>
+        </cd:Field>
+        <cd:Field name="Variable_Header">
+          <cd:Record namexml="Variable_Header">
+            <cd:Description>Variable Header Section</cd:Description>
+            <cd:Field name="MPH">
+              <cd:NamedType id="MPH_L2"/>
+            </cd:Field>
+            <cd:Field name="SPH">
+              <cd:NamedType id="SPH_L2_CAT1"/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <ct:NamedTest id="FixedValueMI1_VALi2_" path="Fixed_Header/File_Type"/>
+        <ct:NamedTest id="FileNameCheckHDR" path="Fixed_Header/File_Name"/>
+        <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+        <ct:NamedTest id="FileNameMatchValidityStop" path="Fixed_Header/File_Name"/>
+        <ct:NamedTest id="FileNameMatchFileVersion" path="Fixed_Header/File_Name"/>
+        <ct:NamedTest id="FixedValuePDF" path="Variable_Header/MPH/Product_Format"/>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<cd:Record format="xml" last-modified="2014-08-25" name="SPH_L2_AUX" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Specific Product Header for SWARM CAT-I AUX products and for AUX_IGR_2F, AUX_COR_2F, and AUX_LIT_2F</cd:Description>
+  <cd:Field name="SPH_Descriptor">
+    <cd:Text namexml="SPH_Descriptor">
+      <cd:Description>Product Name</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Validity_Time_Interval">
+    <cd:Record namexml="Validity_Time_Interval">
+      <cd:Field name="Validity_Start">
+        <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+          <cd:Description>Start time in UTC of sensing datag</cd:Description>
+          <cd:Text namexml="Validity_Start"/>
+          <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+          <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+          <cd:Mapping string="" value="nan"/>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="Validity_Stop">
+        <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+          <cd:Description>Stop time in UTC of sensing data</cd:Description>
+          <cd:Text namexml="Validity_Stop"/>
+          <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+          <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+          <cd:Mapping string="" value="nan"/>
+        </cd:Time>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Product_Confidence_Data">
+    <cd:Record namexml="Product_Confidence_Data">
+      <cd:Field name="Quality_Indicator">
+        <cd:Type namexml="Quality_Indicator">
+          <cd:Integer format="ascii">
+            <cd:Description>General product quality indicator, 000 if best quality is expected. A different number than 000, if problems occurred during processing.</cd:Description>
+            <cd:NativeType>uint16</cd:NativeType>
+            <cd:ByteSize>3</cd:ByteSize>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Source">
+    <cd:Record namexml="Source">
+      <cd:Field name="Original_Filename">
+        <cd:Text namexml="Original_Filename">
+          <cd:Description>Name of the original file before reformatting</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator_Date">
+        <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;)">
+          <cd:Description>Date of creation of the original file</cd:Description>
+          <cd:Text namexml="Creator_Date"/>
+          <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+          <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+          <cd:Mapping string="" value="nan"/>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="Creator">
+        <cd:Text namexml="Creator">
+          <cd:Description>Name of the external facility creating the original file</cd:Description>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="DBL_IonosphericField" last-modified="2013-08-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="pre_comments">
+    <cd:Array>
+      <cd:Dimension>unboundindex(., byteoffset(.) >= filesize() || str(., 1) != "#")</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="line">
+          <cd:AsciiLine/>
+        </cd:Field>
+        <cd:Field name="newline">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nmax">
+    <cd:Integer>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mmax">
+    <cd:Integer>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pmin">
+    <cd:Integer>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pmax">
+    <cd:Integer>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="smin">
+    <cd:Integer>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="smax">
+    <cd:Integer>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="theta_NGP">
+    <cd:Float>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="phi_NGP">
+    <cd:Float>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="h">
+    <cd:Float>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="N">
+    <cd:Float>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="newline_1">
+    <cd:AsciiLineSeparator/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="primary_field">
+    <cd:Array>
+      <cd:Dimension>$num_coefficients</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="n">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="m">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="q_nm">
+          <cd:Array>
+            <cd:Dimension>2 * $num_time_coefficients</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_2">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="secondary_field">
+    <cd:Array>
+      <cd:Dimension>$num_coefficients</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="n">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="m">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="q_nm">
+          <cd:Array>
+            <cd:Dimension>2 * $num_time_coefficients</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="newline_3">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_PSM_2F" format="ascii" last-modified="2012-07-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header_1">
+      <cd:Text>
+        <cd:ByteSize>47</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+        <cd:FixedValue>expansion degrees: SM spatial, daily variation </cd:FixedValue>
+      </cd:Text> 
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_1">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="ndegrees_spatial">
+      <cd:Integer>
+        <cd:NativeType>uint16</cd:NativeType>
+        <cd:ByteSize>12</cd:ByteSize>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="ndegrees_day">
+      <cd:Integer>
+        <cd:NativeType>uint16</cd:NativeType>
+        <cd:ByteSize>12</cd:ByteSize>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="newline_2">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_3">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="header_2">
+      <cd:Text>
+        <cd:FixedValue>   n,  m_SM, m_GEO,  dailyindx,    coeff</cd:FixedValue>
+        <cd:ByteSize>40</cd:ByteSize>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_4">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="coefficients">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$ncoeff]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="n">
+            <cd:Integer>
+              <cd:NativeType>uint16</cd:NativeType>
+              <cd:ByteSize>4</cd:ByteSize>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="m_SM">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+              <cd:ByteSize>6</cd:ByteSize>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="m_GEO">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+              <cd:ByteSize>7</cd:ByteSize>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="dailyindx">
+            <cd:Integer>
+              <cd:NativeType>int32</cd:NativeType>
+              <cd:ByteSize>11</cd:ByteSize>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="coeff">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+              <cd:ByteSize>10</cd:ByteSize>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="newline_5">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="ndegrees_spatial">
+    <cd:Init><![CDATA[$ndegrees_spatial = int(/ndegrees_spatial)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ndegrees_day">
+    <cd:Init><![CDATA[$ndegrees_day = int(/ndegrees_day)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ncoeff_spatial">
+    <!-- This value is sum((2*i+1)^2, i=1..n) = 4*sum(i^2, i=1..n) + 4*sum(i, i=1..n) + n -->
+    <cd:Init><![CDATA[$ncoeff_spatial = int(4 * $ndegrees_spatial * ($ndegrees_spatial + 1) * (2 * $ndegrees_spatial + 1) / 6) + 2 * $ndegrees_spatial * ($ndegrees_spatial + 1) + $ndegrees_spatial]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ncoeff_day">
+    <cd:Init><![CDATA[$ncoeff_day = $ndegrees_day * 2 + 1]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ncoeff">
+    <cd:Init><![CDATA[$ncoeff = $ncoeff_spatial * $ncoeff_day]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

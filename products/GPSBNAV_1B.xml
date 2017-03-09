@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GPSBNAV_1B" format="sp3" last-modified="2016-01-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

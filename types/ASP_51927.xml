@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_51927" last-modified="2009-07-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for EFI Con gurationPacket</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14002">
+            <cd:Integer>
+              <cd:Description>EFI TiiAgcIncrMcpV</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14003">
+            <cd:Integer>
+              <cd:Description>EFI TiiAgcIncrShuttDuty</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14010">
+            <cd:Integer>
+              <cd:Description>EFI TiiAutoGainCntl</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14011">
+            <cd:Integer>
+              <cd:Description>EFI TiiNumColForMomCalc</cd:Description>
+              <cd:BitSize>6</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14012">
+            <cd:Integer>
+              <cd:Description>EFI TiiAgcUpperThreshld</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14013">
+            <cd:Integer>
+              <cd:Description>EFI TiiAgcLowerThreshld</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14009">
+            <cd:Integer>
+              <cd:Description>EFI TiiMinimumColumn</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14020">
+            <cd:Integer>
+              <cd:Description>EFI TiiMaximumColumn</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14022">
+            <cd:Integer>
+              <cd:Description>EFI PixelThreshold</cd:Description>
+              <cd:BitSize>12</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_104">
+            <cd:Raw>
+              <cd:BitSize>13</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="EST14004">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen1PhosphorVSet</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14005">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen1McpVSet</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14006">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen1BiasGridVSet</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14007">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen1ShuttLowPlatV</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14008">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen1ShuttDutyCycl</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14014">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen1GainMapId</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_176">
+            <cd:Raw>
+              <cd:BitSize>20</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="EST14015">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen2PhosphorVSett</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14016">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen2McpVSett</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14017">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen2BiasGridVSett</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14018">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen2ShuttLowPlatV</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14019">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen2ShuttDutyCycl</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14025">
+            <cd:Integer>
+              <cd:Description>EFI TiiSen2GainMapId</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_248">
+            <cd:Raw>
+              <cd:BitSize>20</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="EST10003">
+            <cd:Integer>
+              <cd:Description>EFI CommonParam1</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST10004">
+            <cd:Integer>
+              <cd:Description>EFI CommonParam2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST10005">
+            <cd:Integer>
+              <cd:Description>EFI CommonParam3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST11004">
+            <cd:Integer>
+              <cd:Description>EFI FaceplateDuration</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST11005">
+            <cd:Integer>
+              <cd:Description>EFI FaceplateFixBias</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST11006">
+            <cd:Integer>
+              <cd:Description>EFI DwnsampleAnalogFilt</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST11007">
+            <cd:Integer>
+              <cd:Description>EFI DwnsampleCpu</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14033">
+            <cd:Integer>
+              <cd:Description>EFI FpgaCntrlRegCiCNoc</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14034">
+            <cd:Integer>
+              <cd:Description>EFI TrackCurrPrb1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14035">
+            <cd:Integer>
+              <cd:Description>EFI TrackCurrPrb2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14036">
+            <cd:Integer>
+              <cd:Description>EFI NcoAmplRegister</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14037">
+            <cd:Integer>
+              <cd:Description>EFI NoOfZeroBiasTrack</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14038">
+            <cd:Integer>
+              <cd:Description>EFI DwnsamplingCpu</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14039">
+            <cd:Integer>
+              <cd:Description>EFI OptionsZeroTrack</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14040">
+            <cd:Integer>
+              <cd:Description>EFI CntrlBitsOfMode</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14041">
+            <cd:Integer>
+              <cd:Description>EFI FpgaCntrlRegCiCNoc</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14042">
+            <cd:Integer>
+              <cd:Description>EFI FixBiasLinEPrb1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14043">
+            <cd:Integer>
+              <cd:Description>EFI FixBiasIonPrb1</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14044">
+            <cd:Integer>
+              <cd:Description>EFI FixBiasLinEPrb2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14045">
+            <cd:Integer>
+              <cd:Description>EFI FixBiasIonPrb2</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14046">
+            <cd:Integer>
+              <cd:Description>EFI NcoAmpRegLinE</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14047">
+            <cd:Integer>
+              <cd:Description>EFI NcoAmplRegIon</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14048">
+            <cd:Integer>
+              <cd:Description>EFI NcoAmplRegRetE</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14049">
+            <cd:Integer>
+              <cd:Description>EFI DurationLinE</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14050">
+            <cd:Integer>
+              <cd:Description>EFI DurationIon</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14051">
+            <cd:Integer>
+              <cd:Description>EFI DurationRetE</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14052">
+            <cd:Integer>
+              <cd:Description>EFI OptionsHarmonic</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST14053">
+            <cd:Integer>
+              <cd:Description>EFI CntrlBitsOfMode</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="EST10007">
+            <cd:Integer>
+              <cd:Description>EFI LPInstrumentId</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_592">
+            <cd:Raw>
+              <cd:BitSize>4</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="EST10002">
+            <cd:Integer>
+              <cd:Description>EFI MeasTStamp</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID56" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

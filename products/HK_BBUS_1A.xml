@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="HK_BBUS_1A" format="binary" last-modified="2012-08-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="MDR_STAT_HK">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr1]]></cd:Dimension>
+        <cd:NamedType id="MDR_STAT_HK"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="MDR_CURR_HK">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr2]]></cd:Dimension>
+        <cd:NamedType id="MDR_CURR_HK"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsr1">
+    <cd:Init><![CDATA[$num_dsr1 = unboundindex(/MDR_STAT_HK, byteoffset(.) + 2 >= filesize() || int(./MDR_ID) != 901)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr2">
+    <cd:Init><![CDATA[$num_dsr2 = unboundindex(/MDR_CURR_HK, byteoffset(.) + 2 >= filesize() || int(./MDR_ID) != 902)]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

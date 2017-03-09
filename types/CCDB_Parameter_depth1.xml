@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Parameter_depth1" format="xml" namexml="Parameter" last-modified="2011-05-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>CCDB Parameter</cd:Description>
+  <cd:Field name="Name">
+    <cd:Text namexml="Name">
+      <cd:Description>Name identifying the parameter</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Definition">
+    <cd:Text namexml="Definition">
+      <cd:Description>Short (one line) description of parameter</cd:Description>
+    </cd:Text>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="DefinitionRef">
+    <cd:Text namexml="DefinitionRef">
+      <cd:Description>Reference to more detailed definition of parameter</cd:Description>
+    </cd:Text>
+    <cd:Optional/>
+  </cd:Field>
+
+  <cd:Field name="Text">
+    <cd:Text namexml="Text">
+      <cd:Attribute name="choice_of">
+        <cd:FixedValue>Data_Type</cd:FixedValue>
+      </cd:Attribute>
+    </cd:Text>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="TextId">
+    <cd:Text namexml="TextId">
+      <cd:Attribute name="choice_of">
+        <cd:FixedValue>Data_Type</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+    </cd:Text>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Scalar">
+    <cd:Type namexml="Scalar">
+      <cd:Attribute name="choice_of">
+        <cd:FixedValue>Data_Type</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Double">
+    <cd:Type namexml="Double">
+      <cd:Attribute name="choice_of">
+        <cd:FixedValue>Data_Type</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Integer">
+    <cd:Type namexml="Integer">
+      <cd:Attribute name="choice_of">
+        <cd:FixedValue>Data_Type</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+         <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Vector">
+    <cd:NamedType id="CCDB_Vector"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Quaternion">
+    <cd:NamedType id="CCDB_Quaternion"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Filter">
+    <cd:NamedType id="CCDB_Filter"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Matrix">
+    <cd:NamedType id="CCDB_Matrix"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Matrix3x6">
+    <cd:NamedType id="CCDB_Matrix3x6"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Array1d">
+    <cd:NamedType id="CCDB_Array1d"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Array2d">
+    <cd:NamedType id="CCDB_Array2d"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Lut1d">
+    <cd:NamedType id="CCDB_Lut1d"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Lut2d">
+    <cd:NamedType id="CCDB_Lut2d"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Polynom">
+    <cd:NamedType id="CCDB_Polynom"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="FIR_FP">
+    <cd:NamedType id="CCDB_FIR_FP"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="StateInfo">
+    <cd:NamedType id="CCDB_StateInfo"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="CurrentInfo">
+    <cd:NamedType id="CCDB_CurrentInfo"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="InducedInfo">
+    <cd:NamedType id="CCDB_InducedInfo"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="CalibrationCoefficientsHKCorrection">
+    <cd:NamedType id="CCDB_CalibrationCoefficientsHKCorrection"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Range">
+    <cd:NamedType id="CCDB_Range"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="TRange">
+    <cd:NamedType id="CCDB_TRange"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="ThermCal">
+    <cd:NamedType id="CCDB_ThermCal"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="VFM_TCF">
+    <cd:NamedType id="CCDB_VFM_TCF"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="VFM_TCF_Th">
+    <cd:NamedType id="CCDB_VFM_TCF_Th"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Thermistor">
+    <cd:NamedType id="CCDB_Thermistor"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="CArray">
+    <cd:NamedType id="CCDB_CArray"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="CLut1d">
+    <cd:NamedType id="CCDB_CLut1d"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="CLut2d">
+    <cd:NamedType id="CCDB_CLut2d"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Composite">
+    <cd:Record namexml="Composite">
+      <cd:Attribute name="choice_of">
+        <cd:FixedValue>Data_Type</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Field name="List_of_Parameters">
+        <cd:Record namexml="List_of_Parameters">
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Parameter">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:NamedType id="CCDB_Parameter_depth2"/>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="CDataSection">
+    <cd:NamedType id="CCDB_CDataSection"/>
+    <cd:Optional/>
+  </cd:Field>
+
+  <cd:Field name="Note">
+    <cd:Text namexml="Note">
+      <cd:Description>Free text note</cd:Description>
+    </cd:Text>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="List_of_Configuration_IDs">
+    <cd:Record namexml="List_of_Configuration_IDs">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Configuration_ID">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Configuration_ID">
+            <cd:Field name="Config_Name">
+              <cd:Text namexml="Config_Name">
+                <cd:Description>Identifying the unit/system</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Config_State">
+              <cd:Text namexml="Config_State">
+                <cd:Description>Identifying the state</cd:Description>
+              </cd:Text>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Validity_Period">
+    <cd:Record namexml="Validity_Period">
+      <cd:Field name="Validity_Start">
+        <cd:Type namexml="Validity_Start">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Description>This is the UTC Validity Start Time, coherent with the Validity Start Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "beginning of mission" (without an absolute time specified)</cd:Description>
+            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Validity_Stop">
+        <cd:Type namexml="Validity_Stop">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Description>This is the UTC Validity Stop Time, coherent with the Validity Stop Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "end of mission" (without an absolute time specified)</cd:Description>
+            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <ct:NamedTest id="ValidityPeriodOrder"/>
+    </cd:Record>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="List_of_Conditions">
+    <cd:Record namexml="List_of_Conditions">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Condition">
+        <cd:Array>
+          <cd:Description>Environmental conditions for that the data are measured</cd:Description>
+          <cd:Dimension/>
+          <cd:Record namexml="Condition">
+            <cd:Field name="Source">
+              <cd:Text namexml="Source">
+                <cd:Description>reference to test setup</cd:Description>
+              </cd:Text>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="Creation_Date">
+              <cd:Type namexml="Creation_Date">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Source_Ref">
+              <cd:Text namexml="Source_Ref">
+                <cd:Description>Reference to document describing source</cd:Description>
+              </cd:Text>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+    <cd:Optional/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_CLut1d" format="xml" namexml="CLut1d" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Field name="List_of_CL_Points">
+    <cd:Record namexml="List_of_CL_Points">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="CL_Point">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="CL_Point">
+            <cd:Field name="X">
+              <cd:Type namexml="X">
+                <cd:Float format="ascii">
+                   <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Scalar">
+              <cd:Type namexml="Scalar">
+                <cd:Attribute name="choice_of">
+                  <cd:FixedValue>CA_Data_Type</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                   <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="Vector">
+              <cd:NamedType id="CCDB_Vector"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="Quaternion">
+              <cd:NamedType id="CCDB_Quaternion"/>
+              <cd:Optional/>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

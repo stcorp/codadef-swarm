@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_EFI_PL" last-modified="2014-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID5601"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status (of TII), source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Latitude">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Latitude</cd:Description>
+      <cd:Unit>1E-7 degrees_north</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Longitude">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Longitude</cd:Description>
+      <cd:Unit>1E-7 degrees_east</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E7">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Radius">
+    <cd:Integer>
+      <cd:Description>Position in ITRF, Radius</cd:Description>
+      <cd:Unit>1E-2 m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="v_SC">
+    <cd:Array>
+      <cd:Description>Spacecraft velocity, NEC frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="v_ion">
+    <cd:Array>
+      <cd:Description>Ion velocity, NEC frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2" invalid="-2147483648">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+        <ct:NamedTest id="RangeEFI12a"/>
+      </cd:Integer>
+    </cd:Array>    
+  </cd:Field>
+  <cd:Field name="v_ion_error">
+    <cd:Array>
+      <cd:Description>Error estimate of v_ion, NEC frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-2 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E2" invalid="-2147483648">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="E">
+    <cd:Array>
+      <cd:Description>Electric field vector, NEC frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6 mV/m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6" invalid="-2147483648">
+          <cd:Unit>mV/m</cd:Unit>
+        </cd:Conversion>
+        <ct:NamedTest id="RangeEFI13a"/>
+      </cd:Integer>
+    </cd:Array>  
+  </cd:Field>
+  <cd:Field name="E_error">
+    <cd:Array>
+      <cd:Description>Error estimate of E, NEC frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-6 mV/m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6" invalid="-2147483648">
+          <cd:Unit>mV/m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dt_LP">
+    <cd:Integer>
+      <cd:Description>Time offset of LP data, t_LP = t + dt_LP</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E6">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n">
+    <cd:Integer>
+      <cd:Description>Plasma density (electron)</cd:Description>
+      <cd:Unit>1E-1 cm-3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="10">
+        <cd:Unit>cm-3</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_error">
+    <cd:Integer>
+      <cd:Description>Error estimate of plasma density (ne)</cd:Description>
+      <cd:Unit>1E-1 cm-3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="10">
+        <cd:Unit>cm-3</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="T_ion">
+    <cd:Integer>
+      <cd:Description>Plasma ion temperature</cd:Description>
+      <cd:Unit>1E-2 K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2" invalid="4294967295">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+     <ct:NamedTest id="RangeEFI14a"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="T_ion_error">
+    <cd:Integer>
+      <cd:Description>Error estimate of plasma ion temperature (T_ion)</cd:Description>
+      <cd:Unit>1E-2 K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2" invalid="4294967295">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="T_elec">
+    <cd:Integer>
+      <cd:Description>Plasma electron temperature</cd:Description>
+      <cd:Unit>1E-2 K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2" invalid="4294967295">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="T_elec_error">
+    <cd:Integer>
+      <cd:Description>Error estimate of plasma electron temperature (T_elec)</cd:Description>
+      <cd:Unit>1E-2 K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E2" invalid="4294967295">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="U_SC">
+    <cd:Integer>
+      <cd:Description>Spacecraft potential</cd:Description>
+      <cd:Unit>1E-3 V</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+     <ct:NamedTest id="RangeEFI15a"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="U_SC_error">
+    <cd:Integer>
+      <cd:Description>Error estimate of spacecraft potential (U_pol)</cd:Description>
+      <cd:Unit>1E-3 V</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>V</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="v_ion_H">
+    <cd:Array>
+      <cd:Description>ion velocity, horizontal (H) sensor</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3" invalid="-2147483648">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="v_ion_H_error">
+    <cd:Array>
+      <cd:Description>Error estimate of v_ion_H</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3" invalid="-2147483648">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="v_ion_V">
+    <cd:Array>
+      <cd:Description>ion velocity, vertical (V) sensor</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3" invalid="-2147483648">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="v_ion_V_error">
+    <cd:Array>
+      <cd:Description>Error estimate of v_ion_V</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-3 m/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E3" invalid="-2147483648">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rms_fit_H">
+    <cd:Integer>
+      <cd:Description>RMS fit error from TII x-profile 2-Gaussian fits, H sensor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rms_fit_V">
+    <cd:Integer>
+      <cd:Description>RMS fit error from TII x-profile 2-Gaussian fits, V sensor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_x_H">
+    <cd:Integer>
+      <cd:Description>Variance in 16 Hz x moment during a halfsecond interval, H sensor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E5"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_y_H">
+    <cd:Integer>
+      <cd:Description>Variance in 16 Hz y moment during a halfsecond interval, H sensor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E5"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_x_V">
+    <cd:Integer>
+      <cd:Description>Variance in 16 Hz x moment during a halfsecond interval, V sensor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E5"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_y_V">
+    <cd:Integer>
+      <cd:Description>Variance in 16 Hz y moment during a halfsecond interval, V sensor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E5"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dv_mtq_H">
+    <cd:Integer>
+      <cd:Description>Velocity deflection due to magnetotorquer, H sensor</cd:Description>
+      <cd:Unit>1E-3 m/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>m/s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dv_mtq_V">
+    <cd:Integer>
+      <cd:Description>Velocity deflection due to magnetotorquer, V sensor</cd:Description>
+      <cd:Unit>1E-3 m/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>m/s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SAA">
+    <cd:Integer>
+      <cd:Description>South Atlantic Anomaly proximity indicator (range 0-5)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_LP">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the source/method of LP measurements (ne, T_elec, U_SC)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_LP_n">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the plasma density measurement</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_LP_T_elec">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the electron temperature measurement</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_LP_U_SC">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the spacecraft potential measurement</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_TII">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the TII measurement</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Flags_Platform">
+    <cd:Integer>
+      <cd:Description>Flags characterizing the S/C platform information (AOCS magnetorquers and thrusters, VFM and STR status)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Maneuver_Id">
+    <cd:Integer>
+      <cd:Description>Current maneuver identification code</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

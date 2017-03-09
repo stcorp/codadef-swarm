@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_CDataSection" format="xml" namexml="CDataSection" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="FormatDefinition">
+    <cd:Text namexml="FormatDefinition">
+      <cd:Description>Reference to document describing format</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="CDataValues">
+    <cd:Text namexml="CDataValues">
+      <cd:Attribute name="type"/>
+    </cd:Text>
+  </cd:Field>
+</cd:Record>

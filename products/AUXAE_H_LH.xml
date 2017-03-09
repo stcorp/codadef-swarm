@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUXAE_H_LH" format="ascii" last-modified="2013-02-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Text>
+    <cd:Description>Uninterpreted Data</cd:Description>
+    <cd:NativeType>string</cd:NativeType>
+    <cd:ByteSize><![CDATA[filesize()]]></cd:ByteSize>
+  </cd:Text>
+</cd:ProductDefinition>

@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_LP_HM_v1" last-modified="2013-03-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID0502"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="t">
+    <cd:Time format="binary" timeformat="float(./day) * 86400 + float(./sec) + float(./microsec) * 1e-6">
+      <cd:Record>
+        <cd:Description>Time of observation</cd:Description>
+        <cd:Field name="day">
+          <cd:Integer>
+            <cd:Unit>days since 2000-01-01</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeDay"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="sec">
+          <cd:Integer>
+            <cd:Unit>s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeSecond"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="microsec">
+          <cd:Integer>
+            <cd:Unit>1E-6 s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeMicroSecond"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="I1_ion">
+    <cd:Float>
+      <cd:Description>Ion region current probe1</cd:Description>
+      <cd:Unit>A</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="I1_lin">
+    <cd:Float>
+      <cd:Description>Linear electron region current probe1</cd:Description>
+      <cd:Unit>A</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="I1_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region current probe1</cd:Description>
+      <cd:Unit>A</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="D1_ion">
+    <cd:Float>
+      <cd:Description>Ion region current derivative probe1</cd:Description>
+      <cd:Unit>A/V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="C1_ion">
+    <cd:Float>
+      <cd:Description>Ion region capacitance probe1</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="D1_lin">
+    <cd:Float>
+      <cd:Description>Linear electron region current derivative probe1</cd:Description>
+      <cd:Unit>A/V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="C1_lin">
+    <cd:Float>
+      <cd:Description>Linear electron region capacitance probe1</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="D1_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region current derivative probe1</cd:Description>
+      <cd:Unit>A/V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="C1_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region capacitance probe1</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="I2_ion">
+    <cd:Float>
+      <cd:Description>Ion region current probe2</cd:Description>
+      <cd:Unit>A</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="I2_lin">
+    <cd:Float>
+      <cd:Description>Linear electron region current probe2</cd:Description>
+      <cd:Unit>A</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="I2_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region current probe2</cd:Description>
+      <cd:Unit>A</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="D2_ion">
+    <cd:Float>
+      <cd:Description>Ion region current derivative probe2</cd:Description>
+      <cd:Unit>A/V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="C2_ion">
+    <cd:Float>
+      <cd:Description>Ion region capacitance probe2</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="D2_lin">
+    <cd:Float>
+      <cd:Description>Linear electron region current derivative probe2</cd:Description>
+      <cd:Unit>A/V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="C2_lin">
+    <cd:Float>
+      <cd:Description>Linear electron region capacitance probe2</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="D2_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region current derivative probe2</cd:Description>
+      <cd:Unit>A/V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="C2_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region capacitance probe2</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="V1_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region voltage probe1</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="V2_ret">
+    <cd:Float>
+      <cd:Description>Retarded electron region voltage probe2</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="V_ion1">
+    <cd:Float>
+      <cd:Description>Ion region voltage probe1</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="V_ion2">
+    <cd:Float>
+      <cd:Description>Ion region voltage probe2</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="V_lin1">
+    <cd:Float>
+      <cd:Description>Linear electron region voltage probe1</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="V_lin2">
+    <cd:Float>
+      <cd:Description>Linear electron region voltage probe2</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="Overflow_p2_ret_e">
+    <cd:Integer>
+      <cd:Description>Overflows in retarded e-region, probe2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Overflow_p1_ret_e">
+    <cd:Integer>
+      <cd:Description>Overflows in retarded e-region, probe1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Overflow_p2_lin_e">
+    <cd:Integer>
+      <cd:Description>Overflows in linear e-region, probe2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Overflow_p1_lin_e">
+    <cd:Integer>
+      <cd:Description>Overflows in linear e-region, probe1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Iface">
+    <cd:Array>
+      <cd:Description>LP Measurem. From Faceplate</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>A</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Vface">
+    <cd:Float>
+      <cd:Description>Fix bias voltage. From Faceplate</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="P1_Gain">
+    <cd:Float>
+      <cd:Description>Probe 1 Gain (resistor value)</cd:Description>
+      <cd:Unit>ohm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="P2_Gain">
+    <cd:Float>
+      <cd:Description>Probe 2 Gain (resistor value)</cd:Description>
+      <cd:Unit>ohm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="Fp_Gain">
+    <cd:Float>
+      <cd:Description>Faceplate Gain (resistor value)</cd:Description>
+      <cd:Unit>ohm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="deltaTime">
+    <cd:Float>
+      <cd:Description>LP instrument measurement timestamp delta</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

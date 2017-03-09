@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASM_VFM_IC" last-modified="2012-02-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of first observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of first observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of first observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Day_end">
+    <cd:Integer>
+      <cd:Description>Day of last observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec_end">
+    <cd:Integer>
+      <cd:Description>Second of day of last observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec_end">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of last observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DPU_Id">
+    <cd:Integer>
+      <cd:Description>Id of active VFM DPU, 1 = primary, 2 = secondary</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Bias">
+    <cd:Array>
+      <cd:Description>Vector of estimated offsets</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-5 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E5">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Scale">
+    <cd:Array>
+      <cd:Description>Vector of estimated sensitivities</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E9"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Non_orth">
+    <cd:Array>
+      <cd:Description>Vector of estimated non-orthogonalities</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1E-4 mdegrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>mdegrees</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Samples">
+    <cd:Integer>
+      <cd:Description>Number of samples used in estimation</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Rms">
+    <cd:Integer>
+      <cd:Description>Weighted rms value of residuals after estimation</cd:Description>
+      <cd:Unit>1E-4 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Cov">
+    <cd:Array>
+      <cd:Description>Covariances of estimated parameters - lower left part of covariance matrix ([1-9,9] triangular matrix is stored as flat [45] array)</cd:Description>
+      <cd:Dimension>45</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E9"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="W_scale">
+    <cd:Array>
+      <cd:Description>Log (base 10) values of actual scaling of weigths of a-priori information</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E6"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

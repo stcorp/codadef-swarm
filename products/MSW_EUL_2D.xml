@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MSW_EUL_2D" format="ascii" last-modified="2012-04-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="MSW_EUL"/>
+  <cd:ProductVariable name="num_records">
+    <cd:Init><![CDATA[$num_records = numelements(asciiline) - 3]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

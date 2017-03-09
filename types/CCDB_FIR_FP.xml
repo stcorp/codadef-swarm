@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_FIR_FP" format="xml" namexml="FIR_FP" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Attribute name="unit">
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Field name="List_of_Bs">
+    <cd:Record namexml="List_of_Bs">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="B">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Type namexml="B">
+            <cd:Float format="ascii">
+              <cd:Description>Filter coefficient</cd:Description>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Lim">
+    <cd:Type namexml="Lim">
+      <cd:Float format="ascii">
+        <cd:Description>Limit</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Range">
+    <cd:Record namexml="Range">
+      <cd:Description>Ranges for the coefficients</cd:Description>
+      <cd:Field name="Min">
+        <cd:Type namexml="Min">
+          <cd:Float format="ascii">
+            <cd:Description>Minimum value allowed</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max">
+        <cd:Type namexml="Max">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum value allowed</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="T_nom">
+    <cd:Type namexml="T_nom">
+      <cd:Float format="ascii">
+        <cd:Description>Nominal sampling period</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Gap_Size">
+    <cd:Type namexml="Max_Gap_Size">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum gap allowed</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

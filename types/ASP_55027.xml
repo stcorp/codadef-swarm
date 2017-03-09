@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_55027" last-modified="2012-05-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for GPSR HKDiagNavigationSolution</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00002">
+            <cd:Integer>
+              <cd:Description>GPSRE FrontEndTemp</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_24">
+            <cd:Raw>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00004">
+            <cd:Integer>
+              <cd:Description>GPSRE SerialNumber</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00005">
+            <cd:Integer>
+              <cd:Description>GPSRE NomRedFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01006">
+            <cd:Integer>
+              <cd:Description>GPSRE NavSol DataValid</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00007">
+            <cd:Integer>
+              <cd:Description>GPSRE ReceiverMode</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00008">
+            <cd:Integer>
+              <cd:Description>GPSRE NofRecordsInBlock</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00019">
+            <cd:Integer>
+              <cd:Description>GPSRE GPSTimeSec</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST10019">
+            <cd:Integer>
+              <cd:Description>GPSRE GPSTimeSubSec</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_105">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00017">
+            <cd:Integer>
+              <cd:Description>GPSRE NavSolutionMethod</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00021">
+            <cd:Integer>
+              <cd:Description>GPSRE QualityIndex</cd:Description>
+              <cd:BitSize>12</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00022">
+            <cd:Integer>
+              <cd:Description>GPSRE GeoDilOfPrecsion</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00023">
+            <cd:Integer>
+              <cd:Description>GPSRE MaxUserRngeAccurcy</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00024">
+            <cd:Integer>
+              <cd:Description>GPSRE MaxCurveFitIntervl</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_148">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00026">
+            <cd:Integer>
+              <cd:Description>GPSRE NrOfSVsInNavSol</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00027">
+            <cd:Integer>
+              <cd:Description>GPSRE X Coordinate MSB</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00028">
+            <cd:Integer>
+              <cd:Description>GPSRE X Coordinate LSB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00029">
+            <cd:Integer>
+              <cd:Description>GPSRE Y Coordinate MSB</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00030">
+            <cd:Integer>
+              <cd:Description>GPSRE Y Coordinate LSB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00031">
+            <cd:Integer>
+              <cd:Description>GPSRE Z Coordinate MSB</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00032">
+            <cd:Integer>
+              <cd:Description>GPSRE Z Coordinate LSB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00033">
+            <cd:Integer>
+              <cd:Description>GPSRE X Velocity</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00034">
+            <cd:Integer>
+              <cd:Description>GPSRE Y Velocity</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00035">
+            <cd:Integer>
+              <cd:Description>GPSRE Z Velocity</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00038">
+            <cd:Integer>
+              <cd:Description>GPSRE PosDilOfPrecison</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00039">
+            <cd:Integer>
+              <cd:Description>GPSRE TimeDilOfPrecision</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00040">
+            <cd:Integer>
+              <cd:Description>GPSRE PosErrorInXDir</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00041">
+            <cd:Integer>
+              <cd:Description>GPSRE PosErrorInYDir</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00042">
+            <cd:Integer>
+              <cd:Description>GPSRE PosErrorInZDir</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00043">
+            <cd:Integer>
+              <cd:Description>GPSRE GnssSysTimeError</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00044">
+            <cd:Integer>
+              <cd:Description>GPSRE VelocityErrorXDir</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00045">
+            <cd:Integer>
+              <cd:Description>GPSRE VelocityErrorYDir</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00046">
+            <cd:Integer>
+              <cd:Description>GPSRE VelocityErrorZDir</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00047">
+            <cd:Integer>
+              <cd:Description>GPSRE RxClockFreqError</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>24</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID70" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

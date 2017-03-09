@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_APX_2F" format="binary" last-modified="2014-01-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_epochs]]></cd:Dimension>
+    <cd:Record>
+      <cd:Field name="epoch_year">
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <cd:Description>Epoch year</cd:Description>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="colatitude">
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <cd:Description>Colatitude of magnetic North pole</cd:Description>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="elon">
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <cd:Description></cd:Description>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="vp">
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <cd:Description></cd:Description>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="nlat">
+        <cd:Integer>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:Description>Number of latitude grid points</cd:Description>
+          <cd:LittleEndian/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="nlon">
+        <cd:Integer>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:Description>Number of longitude grid points</cd:Description>
+          <cd:LittleEndian/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="nalt">
+        <cd:Integer>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:Description>Number of altitude grid points</cd:Description>
+          <cd:LittleEndian/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="padding_1">
+        <cd:Raw>
+          <cd:BitSize><![CDATA[8 * ($record_bytesize - (8 + 8 + 8 + 8 + 4 + 4 + 4))]]></cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="latitudes">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$nlatitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Latitude grid point</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="longitudes">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$nlongitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Longitude grid point</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="altitudes">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$naltitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Altitude grid point</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="padding_2">
+        <cd:Raw>
+          <cd:BitSize><![CDATA[8 * ($record_bytesize - 8 * ($nlatitudes + $nlongitudes + $naltitudes))]]></cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="x">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$naltitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlongitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlatitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Apex X value</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="padding_3">
+        <cd:Raw>
+          <cd:BitSize><![CDATA[8 * ($record_bytesize - $num_entries_per_record * 8)]]></cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="y">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$naltitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlongitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlatitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Apex Y value</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="padding_4">
+        <cd:Raw>
+          <cd:BitSize><![CDATA[8 * ($record_bytesize - $num_entries_per_record * 8)]]></cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="z">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$naltitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlongitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlatitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Apex Z value</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="padding_5">
+        <cd:Raw>
+          <cd:BitSize><![CDATA[8 * ($record_bytesize - $num_entries_per_record * 8)]]></cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="v">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$naltitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlongitudes]]></cd:Dimension>
+          <cd:Dimension><![CDATA[$nlatitudes]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Description>Apex V value</cd:Description>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="padding_6">
+        <cd:Raw>
+          <cd:BitSize><![CDATA[8 * ($record_bytesize - $num_entries_per_record * 8)]]></cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Array>
+  <cd:ProductVariable name="num_entries_per_record">
+    <cd:Init><![CDATA[$num_entries_per_record = int([0]/nlat) * int([0]/nlon) * int([0]/nalt)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="record_bytesize">
+    <cd:Init><![CDATA[$record_bytesize = 8 * 2 * $num_entries_per_record]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="nlatitudes">
+    <cd:Init><![CDATA[$nlatitudes = int([0]/nlat)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="nlongitudes">
+    <cd:Init><![CDATA[$nlongitudes = int([0]/nlon)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="naltitudes">
+    <cd:Init><![CDATA[$naltitudes = int([0]/nalt)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_epochs">
+    <cd:Init><![CDATA[$num_epochs = filesize() / $record_bytesize / 6]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SHC" last-modified="2013-01-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="pre_comments">
+    <cd:Array>
+      <cd:Dimension>unboundindex(., byteoffset(.) >= filesize() || str(., 1) != "#")</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="line">
+          <cd:AsciiLine/>
+        </cd:Field>
+        <cd:Field name="newline">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="block">
+    <cd:Record>
+      <cd:Field name="N_min">
+        <cd:Integer>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="N_max">
+        <cd:Integer>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="N_times">
+        <cd:Integer>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spline_order">
+        <cd:Integer>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="N_step">
+        <cd:Integer>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Start_validity_time">
+        <cd:Available><![CDATA[substr(bytesize(./N_step), 1, bytes(./N_step, bytesize(.) + 1)) == " "]]></cd:Available>
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="Stop_validity_time">
+        <cd:Available><![CDATA[exists(./Start_validity_time) && substr(bytesize(./Start_validity_time), 1, bytes(./Start_validity_time, bytesize(.) + 1)) == " "]]></cd:Available>
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="newline_1">
+        <cd:AsciiLineSeparator/>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="t">
+        <cd:Array>
+          <cd:Dimension>int(../N_times)</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="newline_2">
+        <cd:AsciiLineSeparator/>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="coefficients">
+        <cd:Array>
+          <cd:Dimension>int(../N_max) * (int(../N_max) + 2) - ((int(../N_min) - 1) * (int(../N_min) + 1))</cd:Dimension>
+          <cd:Record>
+            <cd:Field name="degree">
+              <cd:Integer>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="order">
+              <cd:Integer>
+                <cd:NativeType>int32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="gh">
+              <cd:Array>
+                <cd:Dimension>int(../../../N_times)</cd:Dimension>
+                <cd:Float>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="whitespace">
+              <cd:AsciiWhiteSpace/>
+              <cd:Hidden/>
+            </cd:Field>
+            <cd:Field name="newline">
+              <cd:AsciiLineSeparator/>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="post_comments">
+    <cd:Array>
+      <cd:Dimension>unboundindex(., byteoffset(.) >= filesize() || str(., 1) != "#")</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="line">
+          <cd:AsciiLine/>
+        </cd:Field>
+        <cd:Field name="newline">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

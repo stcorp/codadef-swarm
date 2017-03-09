@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<cd:Record name="Data_Block_OSV" format="xml" namexml="Data_Block" last-modified="2014-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Cryosat Orbit State Vector Data Block</cd:Description>
+  <cd:Attribute name="type">
+    <cd:FixedValue>xml</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="List_of_OSVs">
+    <cd:Record namexml="List_of_OSVs">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="OSV">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="OSV">
+            <cd:Field name="TAI">
+              <cd:Time timeformat="time(str(.),&quot;'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+                <cd:Description>TAI date and time of OSV, in ASCII standard time format, including time reference and micro-seconds</cd:Description>
+                <cd:Text namexml="TAI"/>
+                <cd:Mapping string="TAI=0000-00-00T00:00:00.000000" value="-inf"/>
+                <cd:Mapping string="TAI=9999-99-99T99:99:99.999999" value="+inf"/>
+                <cd:Mapping string="" value="nan"/>
+              </cd:Time>
+            </cd:Field>
+            <cd:Field name="UTC">
+              <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+                <cd:Description>UTC date and time of OSV, in ASCII standard time format, including time reference and microseconds</cd:Description>
+                <cd:Text namexml="UTC"/>
+                <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+                <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+                <cd:Mapping string="" value="nan"/>
+              </cd:Time>
+            </cd:Field>
+            <cd:Field name="UT1">
+              <cd:Time timeformat="time(str(.),&quot;'UT1='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+                <cd:Description>UT1 date and time of OSV, in ASCII standard time format, including time reference and microseconds</cd:Description>
+                <cd:Text namexml="UT1"/>
+                <cd:Mapping string="UT1=0000-00-00T00:00:00.000000" value="-inf"/>
+                <cd:Mapping string="UT1=9999-99-99T99:99:99.999999" value="+inf"/>
+                <cd:Mapping string="" value="nan"/>
+              </cd:Time>
+            </cd:Field>
+            <cd:Field name="Absolute_Orbit">
+              <cd:Type namexml="Absolute_Orbit">
+                <cd:Integer format="ascii">
+                  <cd:Description>absolute orbit counter This counter is incremented by one unit from a record to the next. It must be differenciated with the real absolute orbit number on which the state vector really belongs i.e : if the Z value of the OSV is &gt;= 0 then "real" absolute orbit number equal the absolute orboit counter if the Z value of the OSV is &lt; 0 then "real" absolute orbit number equal the absolute orbit counter minus 1</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="X">
+              <cd:Type namexml="X">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>X position in earth-fixed coordinate system</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Y">
+              <cd:Type namexml="Y">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Y position in earth-fixed coordinate system</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Z">
+              <cd:Type namexml="Z">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Z position in earth-fixed coordinate system</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="VX">
+              <cd:Type namexml="VX">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>m/s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>X velocity in earth-fixed coordinate system</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="VY">
+              <cd:Type namexml="VY">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>m/s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Y velocity in earth-fixed coordinate system</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="VZ">
+              <cd:Type namexml="VZ">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>m/s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Z velocity in earth-fixed coordinate system</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Quality">
+              <cd:Text namexml="Quality">
+                <cd:Description>Values is/are TBD. This parameter is added to keep format compatibiolity withe DORIS Precise Orbit File Format. Default ("not used") value is "0000000000000"</cd:Description>
+              </cd:Text>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

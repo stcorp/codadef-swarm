@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<cd:Record name="AUX_CCDB_EFI_LP_CP_Variable_Header" namexml="Variable_Header" format="xml" last-modified="2013-02-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="Configuration">
+    <cd:Record namexml="Configuration">
+      <cd:Field name="Identifier">
+        <cd:Text namexml="Identifier"/>
+      </cd:Field>
+      <cd:Field name="Serial_ID">
+        <cd:Text namexml="Serial_ID"/>
+      </cd:Field>
+      <cd:Field name="Note">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Text namexml="Note"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Conditions">
+    <cd:Text namexml="Conditions"/>
+  </cd:Field>
+  <cd:Field name="Change_Record">
+    <cd:Record namexml="Change_Record">
+      <cd:Field name="List_of_Changes">
+        <cd:Record namexml="List_of_Changes">
+          <cd:Attribute name="count"/>
+          <cd:Field name="Change">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Text namexml="Change"/>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

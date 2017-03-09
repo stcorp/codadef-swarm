@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_VFM_TCF" format="xml" namexml="VFM_TCF" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Field name="DPU_id">
+    <cd:Type namexml="DPU_id">
+      <cd:Float format="ascii">
+        <cd:Description>DPU identifiers, 1 = Primary, 3 = Secondary</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="bias">
+    <cd:Record namexml="bias">
+      <cd:Description>Bias Vectors</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="n_orth">
+    <cd:Record namexml="n_orth">
+      <cd:Description>Non-orthogonality angle vectors</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rms">
+    <cd:Type namexml="rms">
+      <cd:Float format="ascii">
+        <cd:Description>Estimated RMS values</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="scale">
+    <cd:Record namexml="scale">
+      <cd:Description>Sensitivity vectors</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X">
+        <cd:Type namexml="X">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Y">
+        <cd:Type namexml="Y">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Z">
+        <cd:Type namexml="Z">
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="trange">
+    <cd:Record namexml="trange">
+      <cd:Description>Allowed range</cd:Description>
+      <cd:Field name="Min">
+        <cd:Type namexml="Min">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max">
+        <cd:Type namexml="Max">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

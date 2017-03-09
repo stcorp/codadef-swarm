@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="ACCC_PR_1B_v3" format="binary" last-modified="2015-01-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="MDR_ACC_PR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+        <cd:NamedType id="MDR_ACC_PR_v1"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = filesize() / 188]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

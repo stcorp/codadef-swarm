@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="VFM_MAN_RP" last-modified="2014-06-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID5901"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Day">
+    <cd:Integer>
+      <cd:Description>Day of observation, days since 2000-01-01, UTC</cd:Description>
+      <cd:Unit>days since 2000-01-01</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Sec">
+    <cd:Integer>
+      <cd:Description>Second of day of observation, UTC</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Microsec">
+    <cd:Integer>
+      <cd:Description>Microsecond of second of observation</cd:Description>
+      <cd:Unit>1E-6 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RangeMicroSecond"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="delta_t">
+    <cd:Integer>
+      <cd:Description>Time difference between first observation in the two ASM_VFM_IC records</cd:Description>
+      <cd:Unit>1E-3 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E3">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="delta_bias">
+    <cd:Array>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Differences in estimated offsets</cd:Description>
+        <cd:Unit>1E-5 nT</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E5">
+          <cd:Unit>nT</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="delta_scale">
+    <cd:Array>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Differences in estimated scale values</cd:Description>
+        <cd:Unit>1E-9</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E9"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="delta_non_orth">
+    <cd:Array>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Differences in estimated non-orthogonality angles</cd:Description>
+        <cd:Unit>1E-4 mdegrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1" denominator="1E4">
+          <cd:Unit>mdegrees</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Threshold1_bias">
+    <cd:Integer>
+      <cd:Description>Threshold 1 value, bias</cd:Description>
+      <cd:Unit>1E-5 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E5">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Threshold1_scale">
+    <cd:Integer>
+      <cd:Description>Threshold 1 value, scale</cd:Description>
+      <cd:Unit>1E-9</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E9"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Threshold1_non_orth">
+    <cd:Integer>
+      <cd:Description>Threshold 1 value, non-orthogonality</cd:Description>
+      <cd:Unit>1E-4 mdegrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>mdegrees</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Threshold2_bias">
+    <cd:Integer>
+      <cd:Description>Threshold 2 value, bias</cd:Description>
+      <cd:Unit>1E-5 nT</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E5">
+        <cd:Unit>nT</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Threshold2_scale">
+    <cd:Integer>
+      <cd:Description>Threshold 2 value, scale</cd:Description>
+      <cd:Unit>1E-9</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E9"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Threshold2_non_orth">
+    <cd:Integer>
+      <cd:Description>Threshold 2 value, non-orthogonality</cd:Description>
+      <cd:Unit>1E-4 mdegrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <cd:Conversion numerator="1" denominator="1E4">
+        <cd:Unit>mdegrees</cd:Unit>
+      </cd:Conversion>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Messages">
+    <cd:Integer>
+      <cd:Description>Number of messages</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Message_ID">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(../Messages)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Message_ID; 1: All changes within threshold1. CCDB remains unchanged; 10: All changes within threshold2, at least one change above threshold1. CCDB parameters to be updated with linear change in time; 100: At least one change above threshold2. Further investigation needed. CCDB remains unchanged until further notice.</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

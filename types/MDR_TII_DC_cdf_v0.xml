@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2016-04-28" name="MDR_TII_DC_cdf_v0">
+  <cd:Field name="H_Sensor_CCDB_TII_x0">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_CCDB_TII_y0">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_CCDB_TII_energy_transfer_coefficient">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_CCDB_Structure_TIIX_q_Q1">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_CCDB_Structure_TIIX_q_Q2">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_CCDB_Structure_TIIX_q_Q3">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_CCDB_Structure_TIIX_q_Q4">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_Input_Info_N_Product">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_Input_Info_Product_Start_Time">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Time timeformat="float(.) * 0.001 - 63113904000">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="H_Sensor_Input_Info_Product_Stop_Time">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Time timeformat="float(.) * 0.001 - 63113904000">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_TII_x0">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_TII_y0">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_TII_energy_transfer_coefficient">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_Structure_TIIX_q_Q1">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_Structure_TIIX_q_Q2">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_Structure_TIIX_q_Q3">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_CCDB_Structure_TIIX_q_Q4">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_Input_Info_N_Product">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_Input_Info_Product_Start_Time">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Time timeformat="float(.) * 0.001 - 63113904000">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="V_Sensor_Input_Info_Product_Stop_Time">
+    <cd:Array>
+      <cd:Dimension>1</cd:Dimension>
+      <cd:Time timeformat="float(.) * 0.001 - 63113904000">
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<cd:Record name="AUX_CCDB" namexml="Earth_Explorer_File" format="xml" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Earth Explorer File</cd:Description>
+  <cd:Field name="Earth_Explorer_Header">
+    <cd:Record namexml="Earth_Explorer_Header">
+      <cd:Description>Earth Explorer Header File</cd:Description>
+      <cd:Field name="Fixed_Header">
+        <cd:NamedType id="Fixed_Header"/>
+      </cd:Field>
+      <cd:Field name="Variable_Header">
+        <cd:Record namexml="Variable_Header">
+          <cd:Description>Variable Header Section</cd:Description>
+          <cd:Field name="Configuration_Section">
+            <cd:Record namexml="Configuration_Section">
+              <cd:Field name="List_of_Configurations">
+                <cd:Record namexml="List_of_Configurations">
+                  <cd:Attribute name="count">
+                  </cd:Attribute>
+                  <cd:Field name="Configuration">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Record namexml="Configuration">
+                        <cd:Field name="Identifier">
+                          <cd:Text namexml="Identifier">
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="Unit">
+                          <cd:Text namexml="Unit">
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="Serial_ID">
+                          <cd:Text namexml="Serial_ID">
+                          </cd:Text>
+                        </cd:Field>
+                      </cd:Record>
+                      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Change_Record">
+            <cd:Record namexml="Change_Record">
+              <cd:Field name="List_of_Changes">
+                <cd:Record namexml="List_of_Changes">
+                  <cd:Attribute name="count">
+                  </cd:Attribute>
+                  <cd:Field name="Change">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Text namexml="Change">
+                      </cd:Text>
+                      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Data_Source">
+            <cd:Record namexml="Data_Source">
+              <cd:Field name="List_of_Contributions">
+                <cd:Record namexml="List_of_Contributions">
+                  <cd:Attribute name="count">
+                  </cd:Attribute>
+                  <cd:Field name="Contribution">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Text namexml="Contribution">
+                      </cd:Text>
+                      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+      <ct:NamedTest id="FileNameMatchFileVersion" path="Fixed_Header/File_Name"/>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Data_Block">
+    <cd:Record namexml="Data_Block">
+      <cd:Attribute name="type">
+        <cd:Optional/>
+        <cd:FixedValue>xml</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Field name="List_of_Parameter_Groups">
+        <cd:Record namexml="List_of_Parameter_Groups">
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Parameter_Group">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="Parameter_Group">
+                <cd:Field name="Group_Name">
+                  <cd:Text namexml="Group_Name">
+                    <cd:Description>Name identifying the parameter group</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Group_Definition">
+                  <cd:Text namexml="Group_Definition">
+                    <cd:Description>Short (one line) description of parameter group</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="List_of_Parameters">
+                  <cd:Record namexml="List_of_Parameters">
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Parameter">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:NamedType id="CCDB_Parameter"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

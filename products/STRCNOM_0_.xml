@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="STRCNOM_0_" format="binary" last-modified="2010-07-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Union format="binary">
+      <cd:FieldExpression><![CDATA[if(int(:/source_packet/data/SID) == 3, 0, if(int(:/source_packet/data/SID) == 4, 1, if(int(:/source_packet/data/SID) == 5, 2, -1)))]]></cd:FieldExpression>
+      <cd:Field name="CU1">
+        <cd:NamedType id="ASP_61073"/>
+      </cd:Field>
+      <cd:Field name="CU2">
+        <cd:NamedType id="ASP_61074"/>
+      </cd:Field>
+      <cd:Field name="CU3">
+        <cd:NamedType id="ASP_61075"/>
+      </cd:Field>
+    </cd:Union>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedTest id="CheckSTR13CU10" path="[]/CU1/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR3" path="[]/CU1/source_packet/data/S1T00060"/>
+  <ct:NamedTest id="CheckSTR2" path="[]/CU1/source_packet/data/S1T00062"/>
+  <ct:NamedTest id="CheckSTR15CU10" path="[]/CU1/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR9CU10" path="[]/CU1/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR13CU20" path="[]/CU2/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR3" path="[]/CU2/source_packet/data/S1T02060"/>
+  <ct:NamedTest id="CheckSTR2" path="[]/CU2/source_packet/data/S1T02062"/>
+  <ct:NamedTest id="CheckSTR15CU20" path="[]/CU2/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR9CU20" path="[]/CU2/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR13CU30" path="[]/CU3/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR3" path="[]/CU3/source_packet/data/S1T03060"/>
+  <ct:NamedTest id="CheckSTR2" path="[]/CU3/source_packet/data/S1T03062"/>
+  <ct:NamedTest id="CheckSTR15CU30" path="[]/CU3/source_packet/data"/>
+  <ct:NamedTest id="CheckSTR9CU30" path="[]/CU3/source_packet/data"/>
+</cd:ProductDefinition>

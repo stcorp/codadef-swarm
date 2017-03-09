@@ -1,0 +1,2503 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_14007" last-modified="2012-05-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for SWARM AuxSystemHkTm7PcduA B</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00016">
+            <cd:Integer>
+              <cd:Description>PCDU A StreALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00017">
+            <cd:Integer>
+              <cd:Description>PCDU A VfmeALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00018">
+            <cd:Integer>
+              <cd:Description>PCDU A EfiALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00019">
+            <cd:Integer>
+              <cd:Description>PCDU A AccALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00020">
+            <cd:Integer>
+              <cd:Description>PCDU A ThrALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00021">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA1LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00022">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA2LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00023">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA3LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00024">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA4LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00025">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA5LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00026">
+            <cd:Integer>
+              <cd:Description>PCDU A CtuASlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00027">
+            <cd:Integer>
+              <cd:Description>PCDU A SbRxASlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00028">
+            <cd:Integer>
+              <cd:Description>PCDU A FgmASlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00029">
+            <cd:Integer>
+              <cd:Description>PCDU A FgmBSlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00030">
+            <cd:Integer>
+              <cd:Description>PCDU A RuALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00031">
+            <cd:Integer>
+              <cd:Description>PCDU A SbTxALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00032">
+            <cd:Integer>
+              <cd:Description>PCDU A AsmeALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00033">
+            <cd:Integer>
+              <cd:Description>PCDU A GpsreALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00034">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare3ALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00035">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare1ALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00036">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare2ALclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00037">
+            <cd:Integer>
+              <cd:Description>PCDU B StreBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00038">
+            <cd:Integer>
+              <cd:Description>PCDU B VfmeBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00039">
+            <cd:Integer>
+              <cd:Description>PCDU B EfiBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00040">
+            <cd:Integer>
+              <cd:Description>PCDU B AccBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00041">
+            <cd:Integer>
+              <cd:Description>PCDU B ThrBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00042">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB1LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00043">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB2LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00044">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB3LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00045">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB4LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00046">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB5LclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00047">
+            <cd:Integer>
+              <cd:Description>PCDU B CtuBSlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00048">
+            <cd:Integer>
+              <cd:Description>PCDU B SbRxBSlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00049">
+            <cd:Integer>
+              <cd:Description>PCDU B FgmCSlclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00050">
+            <cd:Integer>
+              <cd:Description>PCDU B RuBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00051">
+            <cd:Integer>
+              <cd:Description>PCDU B SbTxBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00052">
+            <cd:Integer>
+              <cd:Description>PCDU B AsmeBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00053">
+            <cd:Integer>
+              <cd:Description>PCDU B GpsreBLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00054">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare3BLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00055">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare1BLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00056">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare2BLclCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00057">
+            <cd:Integer>
+              <cd:Description>PCDU BatCurrA</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00058">
+            <cd:Integer>
+              <cd:Description>PCDU BatCurrB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00059">
+            <cd:Integer>
+              <cd:Description>PCDU BatCurrC</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00060">
+            <cd:Integer>
+              <cd:Description>PCDU BatVoltA</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00061">
+            <cd:Integer>
+              <cd:Description>PCDU BatVoltB</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00062">
+            <cd:Integer>
+              <cd:Description>PCDU MainbusAVolt</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00063">
+            <cd:Integer>
+              <cd:Description>PCDU MainbusBVolt</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00064">
+            <cd:Integer>
+              <cd:Description>PCDU MeaControlVolt</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00065">
+            <cd:Integer>
+              <cd:Description>PCDU A SaPyVolt</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00066">
+            <cd:Integer>
+              <cd:Description>PCDU A SaPyReg1Curr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00067">
+            <cd:Integer>
+              <cd:Description>PCDU A SaPyReg2Curr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00068">
+            <cd:Integer>
+              <cd:Description>PCDU A SaPyReg3Curr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00069">
+            <cd:Integer>
+              <cd:Description>PCDU A SaPyRegTCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00070">
+            <cd:Integer>
+              <cd:Description>PCDU A Temp</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00071">
+            <cd:Integer>
+              <cd:Description>PCDU B SaMyVolt</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00072">
+            <cd:Integer>
+              <cd:Description>PCDU B SaMyReg1Curr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00073">
+            <cd:Integer>
+              <cd:Description>PCDU B SaMyReg2Curr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00074">
+            <cd:Integer>
+              <cd:Description>PCDU B SaMyReg3Curr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00075">
+            <cd:Integer>
+              <cd:Description>PCDU B SaMyRegTCurr</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00076">
+            <cd:Integer>
+              <cd:Description>PCDU B Temp</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00077">
+            <cd:Integer>
+              <cd:Description>PCDU A NeaAPreArmStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00078">
+            <cd:Integer>
+              <cd:Description>PCDU A AsmNeaAArmStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00079">
+            <cd:Integer>
+              <cd:Description>PCDU A Ob12NeaAArmStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00080">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00081">
+            <cd:Integer>
+              <cd:Description>PCDU A AsmNeaAFireTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00082">
+            <cd:Integer>
+              <cd:Description>PCDU A Ob1NeaAFireTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00083">
+            <cd:Integer>
+              <cd:Description>PCDU A Ob2NeaAFireTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00084">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00085">
+            <cd:Integer>
+              <cd:Description>PCDU A StreALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00086">
+            <cd:Integer>
+              <cd:Description>PCDU A VfmeALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00087">
+            <cd:Integer>
+              <cd:Description>PCDU A EfiALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00088">
+            <cd:Integer>
+              <cd:Description>PCDU A AccALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00089">
+            <cd:Integer>
+              <cd:Description>PCDU A StreAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00090">
+            <cd:Integer>
+              <cd:Description>PCDU A VfmeAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00091">
+            <cd:Integer>
+              <cd:Description>PCDU A EfiAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00092">
+            <cd:Integer>
+              <cd:Description>PCDU A AccAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00093">
+            <cd:Integer>
+              <cd:Description>PCDU A ThrALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00094">
+            <cd:Integer>
+              <cd:Description>PCDU A ThrAOvwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00095">
+            <cd:Integer>
+              <cd:Description>PCDU A HplvALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00096">
+            <cd:Integer>
+              <cd:Description>PCDU A HplvAOpenTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00097">
+            <cd:Integer>
+              <cd:Description>PCDU A HplvACloseTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00098">
+            <cd:Integer>
+              <cd:Description>PCDU A HplvBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00099">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00100">
+            <cd:Integer>
+              <cd:Description>PCDU A HplvBCloseTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00101">
+            <cd:Integer>
+              <cd:Description>PCDU A ThrAInhibitStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00102">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA1pXmYmZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00103">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA2pXpYpZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00104">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA3mXpYmZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00105">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA4mXmYpZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00106">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00107">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00108">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00109">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA5pXmYpYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00110">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA6mXpYmYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00111">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA7pXpYmYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00112">
+            <cd:Integer>
+              <cd:Description>PCDU A ActA8mXmYpYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00113">
+            <cd:Integer>
+              <cd:Description>PCDU A OctA1pXpYmXStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00114">
+            <cd:Integer>
+              <cd:Description>PCDU A OctA2pXmYmXStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00115">
+            <cd:Integer>
+              <cd:Description>PCDU A OctA3pYmYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00116">
+            <cd:Integer>
+              <cd:Description>PCDU A OctA4pYmYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00117">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00118">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00119">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00120">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00121">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00122">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00123">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00124">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00125">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA1LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00126">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA2LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00127">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA3LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00128">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA4LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00129">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrGrpA5LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00130">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA51SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00131">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA52SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00132">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA53SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00133">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA11SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00134">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA12SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00135">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA13SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00136">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA14SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00137">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA21SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00138">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA22SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00139">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA23SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00140">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA24SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00141">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA31SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00142">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA32SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00143">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA33SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00144">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA34SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00145">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA41SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00146">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA42SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00147">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA43SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00148">
+            <cd:Integer>
+              <cd:Description>PCDU A HtrA44SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00149">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00150">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00151">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00152">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00153">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00154">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00155">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00156">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00157">
+            <cd:Integer>
+              <cd:Description>PCDU A RuALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00158">
+            <cd:Integer>
+              <cd:Description>PCDU A SbTxALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00159">
+            <cd:Integer>
+              <cd:Description>PCDU A AsmeALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00160">
+            <cd:Integer>
+              <cd:Description>PCDU A GpsreALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00161">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare3ALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00162">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare1ALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00163">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare2ALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00164">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00165">
+            <cd:Integer>
+              <cd:Description>PCDU A RuAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00166">
+            <cd:Integer>
+              <cd:Description>PCDU A SbTxAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00167">
+            <cd:Integer>
+              <cd:Description>PCDU A AsmeAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00168">
+            <cd:Integer>
+              <cd:Description>PCDU A GpsreAPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00169">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare3APreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00170">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare1APreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00171">
+            <cd:Integer>
+              <cd:Description>PCDU A Spare2APreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00172">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00173">
+            <cd:Integer>
+              <cd:Description>PCDU A CtuASlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00174">
+            <cd:Integer>
+              <cd:Description>PCDU A SbRxASlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00175">
+            <cd:Integer>
+              <cd:Description>PCDU A FgmASlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00176">
+            <cd:Integer>
+              <cd:Description>PCDU A FgmBSlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00177">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00178">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00179">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00180">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00181">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00182">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00183">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00184">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00185">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00186">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00187">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00188">
+            <cd:Integer>
+              <cd:Description>PCDU A NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00189">
+            <cd:Integer>
+              <cd:Description>PCDU B NeaBPreArmStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00190">
+            <cd:Integer>
+              <cd:Description>PCDU B AsmNeaBArmStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00191">
+            <cd:Integer>
+              <cd:Description>PCDU B Ob12NeaBArmStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00192">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00193">
+            <cd:Integer>
+              <cd:Description>PCDU B AsmNeaBFireTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00194">
+            <cd:Integer>
+              <cd:Description>PCDU B Ob1NeaBFireTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00195">
+            <cd:Integer>
+              <cd:Description>PCDU B Ob2NeaBFireTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00196">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00197">
+            <cd:Integer>
+              <cd:Description>PCDU B StreBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00198">
+            <cd:Integer>
+              <cd:Description>PCDU B VfmeBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00199">
+            <cd:Integer>
+              <cd:Description>PCDU B EfiBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00200">
+            <cd:Integer>
+              <cd:Description>PCDU B AccBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00201">
+            <cd:Integer>
+              <cd:Description>PCDU B StreBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00202">
+            <cd:Integer>
+              <cd:Description>PCDU B VfmeBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00203">
+            <cd:Integer>
+              <cd:Description>PCDU B EfiBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00204">
+            <cd:Integer>
+              <cd:Description>PCDU B AccBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00205">
+            <cd:Integer>
+              <cd:Description>PCDU B ThrBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00206">
+            <cd:Integer>
+              <cd:Description>PCDU B ThrBOvwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00207">
+            <cd:Integer>
+              <cd:Description>PCDU B HplvBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00208">
+            <cd:Integer>
+              <cd:Description>PCDU B HplvBOpenTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00209">
+            <cd:Integer>
+              <cd:Description>PCDU B HplvBCloseTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00210">
+            <cd:Integer>
+              <cd:Description>PCDU B HplvALclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00211">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00212">
+            <cd:Integer>
+              <cd:Description>PCDU B HplvACloseTrig</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00213">
+            <cd:Integer>
+              <cd:Description>PCDU B ThrBInhibitStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00214">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB1pXmYmZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00215">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB2pXpYpZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00216">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB3mXpYmZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00217">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB4mXmYpZStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00218">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00219">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00220">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00221">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB5pXmYpYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00222">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB6mXpYmYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00223">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB7pXpYmYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00224">
+            <cd:Integer>
+              <cd:Description>PCDU B ActB8mXmYpYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00225">
+            <cd:Integer>
+              <cd:Description>PCDU B OctB1pXmYmXStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00226">
+            <cd:Integer>
+              <cd:Description>PCDU B OctB2pXpYmXStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00227">
+            <cd:Integer>
+              <cd:Description>PCDU B OctB3mYpYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00228">
+            <cd:Integer>
+              <cd:Description>PCDU B OctB4mYpYStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00229">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00230">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00231">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00232">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00233">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00234">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00235">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00236">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00237">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB1LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00238">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB2LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00239">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB3LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00240">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB4LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00241">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrGrpB5LclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00242">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB51SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00243">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB52SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00244">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB53SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00245">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB11SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00246">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB12SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00247">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB13SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00248">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB14SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00249">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB21SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00250">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB22SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00251">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB23SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00252">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB24SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00253">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB31SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00254">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB32SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00255">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB33SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00256">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB34SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00257">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB41SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00258">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB42SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00259">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB43SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00260">
+            <cd:Integer>
+              <cd:Description>PCDU B HtrB44SwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00261">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00262">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00263">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00264">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00265">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00266">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00267">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00268">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00269">
+            <cd:Integer>
+              <cd:Description>PCDU B RuBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00270">
+            <cd:Integer>
+              <cd:Description>PCDU B SbTxBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00271">
+            <cd:Integer>
+              <cd:Description>PCDU B AsmeBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00272">
+            <cd:Integer>
+              <cd:Description>PCDU B GpsreBLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00273">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare3BLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00274">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare1BLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00275">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare2BLclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00276">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00277">
+            <cd:Integer>
+              <cd:Description>PCDU B RuBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00278">
+            <cd:Integer>
+              <cd:Description>PCDU B SbTxBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00279">
+            <cd:Integer>
+              <cd:Description>PCDU B AsmeBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00280">
+            <cd:Integer>
+              <cd:Description>PCDU B GpsreBPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00281">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare3BPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00282">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare1BPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00283">
+            <cd:Integer>
+              <cd:Description>PCDU B Spare2BPreSwStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00284">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00285">
+            <cd:Integer>
+              <cd:Description>PCDU B CtuBSlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00286">
+            <cd:Integer>
+              <cd:Description>PCDU B SbRxBSlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00287">
+            <cd:Integer>
+              <cd:Description>PCDU B FgmCSlclStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00288">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00289">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00290">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00291">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00292">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00293">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00294">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00295">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00296">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00297">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00298">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00299">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00300">
+            <cd:Integer>
+              <cd:Description>PCDU B NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT10301">
+            <cd:Integer>
+              <cd:Description>PCDU EocReg1Stat</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT10304">
+            <cd:Integer>
+              <cd:Description>PCDU EocReg2Stat</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00307">
+            <cd:Integer>
+              <cd:Description>PCDU Dnel1EnaStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00308">
+            <cd:Integer>
+              <cd:Description>PCDU Dnel2EnaStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT10309">
+            <cd:Integer>
+              <cd:Description>PCDU EocReg3Stat</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00312">
+            <cd:Integer>
+              <cd:Description>PCDU BatRelABHoldStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00313">
+            <cd:Integer>
+              <cd:Description>PCDU LptAStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00314">
+            <cd:Integer>
+              <cd:Description>PCDU Hpt1Stat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00315">
+            <cd:Integer>
+              <cd:Description>PCDU LptBStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00316">
+            <cd:Integer>
+              <cd:Description>PCDU Hpt2Stat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00317">
+            <cd:Integer>
+              <cd:Description>PCDU NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00318">
+            <cd:Integer>
+              <cd:Description>PCDU NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00319">
+            <cd:Integer>
+              <cd:Description>PCDU AsmHtrAStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00320">
+            <cd:Integer>
+              <cd:Description>PCDU AsmHtrBStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00321">
+            <cd:Integer>
+              <cd:Description>PCDU ObHtrAStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00322">
+            <cd:Integer>
+              <cd:Description>PCDU ObHtrBStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00323">
+            <cd:Integer>
+              <cd:Description>PCDU NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00324">
+            <cd:Integer>
+              <cd:Description>PCDU NU</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="AST50904">
+            <cd:Integer>
+              <cd:Description>AOCS mode</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="OST57342">
+            <cd:Integer>
+              <cd:Description>Calibration Manoeuvre ID</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_1256">
+            <cd:Raw>
+              <cd:BitSize>5</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="AST51668">
+            <cd:Float>
+              <cd:Description>thrOntSum</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="Spare_1322">
+            <cd:Raw>
+              <cd:BitSize>2</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="AST54516">
+            <cd:Integer>
+              <cd:Description>fpmSstStatus</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_1325">
+            <cd:Raw>
+              <cd:BitSize>2</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="AST54519">
+            <cd:Integer>
+              <cd:Description>ocmSstStatus</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_1331">
+            <cd:Raw>
+              <cd:BitSize>5</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="AST51117">
+            <cd:Integer>
+              <cd:Description>fpmSstFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_1339">
+            <cd:Raw>
+              <cd:BitSize>7</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="AST51441">
+            <cd:Integer>
+              <cd:Description>ocmSstFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_1344">
+            <cd:Raw>
+              <cd:BitSize>4</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="TTT52380">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52381">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52382">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52383">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52384">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52385">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52386">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52387">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52804">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52805">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52806">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52807">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52808">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52809">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52810">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52811">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52812">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52813">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52814">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52815">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52816">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52817">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52818">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52819">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52892">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52893">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52894">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52895">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52820">
+            <cd:Integer>
+              <cd:Description>Status</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52821">
+            <cd:Integer>
+              <cd:Description>Update Counter</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52822">
+            <cd:Integer>
+              <cd:Description>Day</cd:Description>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="TTT52823">
+            <cd:Integer>
+              <cd:Description>Milliseconds</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+
+    </cd:Record>
+   </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID4" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

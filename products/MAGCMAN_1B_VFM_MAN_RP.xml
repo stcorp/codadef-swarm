@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="MAGCMAN_1B_VFM_MAN_RP" format="cdf" last-modified="2016-04-20">
+  <cd:NamedType id="VFM_MAN_RP_cdf_v0"/>
+</cd:ProductDefinition>

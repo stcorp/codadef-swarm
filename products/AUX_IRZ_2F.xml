@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_IRZ_2F" format="ascii" last-modified="2012-07-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Record>
+        <cd:Field name="date_of_last_update">
+          <cd:Record>
+            <cd:Field name="day">
+              <cd:Integer>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="comma_1">
+              <cd:Text>
+                <cd:ByteSize>1</cd:ByteSize>
+                <cd:NativeType>char</cd:NativeType>
+                <cd:FixedValue>,</cd:FixedValue>
+              </cd:Text>
+              <cd:Hidden/>
+            </cd:Field>
+            <cd:Field name="month">
+              <cd:Integer>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="comma_2">
+              <cd:Text>
+                <cd:ByteSize>1</cd:ByteSize>
+                <cd:NativeType>char</cd:NativeType>
+                <cd:FixedValue>,</cd:FixedValue>
+              </cd:Text>
+              <cd:Hidden/>
+            </cd:Field>
+            <cd:Field name="year">
+              <cd:Integer>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="comma_3">
+          <cd:Text>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>char</cd:NativeType>
+            <cd:FixedValue>,</cd:FixedValue>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="newline_1">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="newline_2">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="start_month">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="comma_4">
+          <cd:Text>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>char</cd:NativeType>
+            <cd:FixedValue>,</cd:FixedValue>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="start_year">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="comma_5">
+          <cd:Text>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>char</cd:NativeType>
+            <cd:FixedValue>,</cd:FixedValue>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="end_month">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="comma_6">
+          <cd:Text>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>char</cd:NativeType>
+            <cd:FixedValue>,</cd:FixedValue>
+          </cd:Text>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="end_year">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+    <cd:Field name="comma_7">
+      <cd:Text>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+        <cd:FixedValue>,</cd:FixedValue>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_3">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_4">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="ig_index_previous_month">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="comma_8">
+      <cd:Text>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+        <cd:FixedValue>,</cd:FixedValue>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_5">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="ig_index_array">
+      <cd:Array>
+        <cd:Dimension>$num_indices</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="ig_index">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="separator">
+            <cd:Array>
+              <cd:Dimension><![CDATA[unboundindex(., byteoffset(.) >= filesize() || (str(., 1) != "," && str(., 1) != "\n" && str(., 1) != "\r" && str(., 1) != " "))]]></cd:Dimension>
+              <cd:Text>
+                <cd:ByteSize>1</cd:ByteSize>
+                <cd:NativeType>char</cd:NativeType>
+              </cd:Text>
+            </cd:Array>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="ig_index_next_month">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="newline_6">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_7">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="rz_index_previous_month">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="comma_9">
+      <cd:Text>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+        <cd:FixedValue>,</cd:FixedValue>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_8">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="rz_index_array">
+      <cd:Array>
+        <cd:Dimension>$num_indices</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="rz_index">
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="separator">
+            <cd:Array>
+              <cd:Dimension><![CDATA[unboundindex(., byteoffset(.) >= filesize() || (str(., 1) != "," && str(., 1) != "\n" && str(., 1) != "\r" && str(., 1) != " "))]]></cd:Dimension>
+              <cd:Text>
+                <cd:ByteSize>1</cd:ByteSize>
+                <cd:NativeType>char</cd:NativeType>
+              </cd:Text>
+            </cd:Array>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="rz_index_next_month">
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="newline_9">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_indices">
+    <cd:Init><![CDATA[$num_indices = 12 * (int(/header/end_year) - int(/header/start_year)) + int(/header/end_month) - int(/header/start_month) + 1]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="REPB_ICMCV" format="xml" last-modified="2011-09-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:NamedType id="REP_ICMCV"/>
+    </cd:Field>
+    <ct:NamedTest id="FixedValueREPB_ICMCV" path="Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type"/>
+  </cd:Record>
+</cd:ProductDefinition>

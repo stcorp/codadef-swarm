@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<cd:Record name="List_of_DSDs" format="xml" namexml="List_of_DSDs" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>List of Data Set Descriptors</cd:Description>
+  <cd:Attribute name="count"/>
+  <cd:Field name="DSD">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="DSD">
+        <cd:Description>Data Set Descriptor</cd:Description>
+        <cd:Field name="Data_Set_Name">
+          <cd:Text namexml="Data_Set_Name">
+            <cd:Description>Name describing the Data Set</cd:Description>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Data_Set_Type">
+          <cd:Text namexml="Data_Set_Type">
+            <cd:Description>Type of the Data Set. It can be one of: M = Measurement, R = Reference</cd:Description>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="File_Name">
+          <cd:Text namexml="File_Name">
+            <cd:Description>Name of the Reference File. It is used if Data_Set_Type is set to R, otherwise it is empty</cd:Description>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Data_Set_Offset">
+          <cd:Type namexml="Data_Set_Offset">
+            <cd:Attribute name="unit">
+              <cd:Optional/>
+              <cd:FixedValue>bytes</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Integer format="ascii">
+              <cd:Description>Offset in bytes between start byte of product files and start byte of first record of DS</cd:Description>
+              <cd:NativeType>int64</cd:NativeType>
+              <cd:ByteSize>21</cd:ByteSize>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Data_Set_Size">
+          <cd:Type namexml="Data_Set_Size">
+            <cd:Attribute name="unit">
+              <cd:Optional/>
+              <cd:FixedValue>bytes</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Integer format="ascii">
+              <cd:Description>Size in bytes of the Attached Data Set Used if Data_Set_Type is set to M. If not used set to 0</cd:Description>
+              <cd:NativeType>int64</cd:NativeType>
+              <cd:ByteSize>21</cd:ByteSize>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Num_of_Records">
+          <cd:Type namexml="Num_of_Records">
+            <cd:Integer format="ascii">
+              <cd:Description>Number of Data Set Records in the Attached Data Set</cd:Description>
+              <cd:NativeType>int64</cd:NativeType>
+              <cd:ByteSize>11</cd:ByteSize>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Record_Size">
+          <cd:Type namexml="Record_Size">
+            <cd:Attribute name="unit">
+              <cd:Optional/>
+              <cd:FixedValue>bytes</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Integer format="ascii">
+              <cd:Description>Size of the Data Set Record in the Attached Data Set. If variable set to -0000000001. If not used set to +0000000000</cd:Description>
+              <cd:NativeType>int64</cd:NativeType>
+              <cd:ByteSize>11</cd:ByteSize>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Byte_Order">
+          <cd:Text namexml="Byte_Order">
+            <cd:Description>Byte ordering information. It describes the endianness of the data set. 3210 -> Big-endian. 0123 -> Little-endian. For Reference DSDs, this field is empty or 0000.</cd:Description>
+          </cd:Text>
+        </cd:Field>
+        <ct:NamedTest id="DataSetSizeValue"/>
+      </cd:Record>
+      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

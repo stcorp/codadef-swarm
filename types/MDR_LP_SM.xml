@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDR_LP_SM" last-modified="2013-03-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="MDR_ID">
+    <cd:Integer>
+      <cd:Description>Data Set Record identifier</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="FixedValueMDRID0501"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SyncStatus">
+    <cd:Integer>
+      <cd:Description>Time synchronization status, source and quality</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="t">
+    <cd:Time format="binary" timeformat="float(./day) * 86400 + float(./sec) + float(./microsec) * 1e-6">
+      <cd:Record>
+        <cd:Description>Time of observation</cd:Description>
+        <cd:Field name="day">
+          <cd:Integer>
+            <cd:Unit>days since 2000-01-01</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeDay"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="sec">
+          <cd:Integer>
+            <cd:Unit>s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeSecond"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="microsec">
+          <cd:Integer>
+            <cd:Unit>1E-6 s</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="RangeMicroSecond"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Isw1">
+    <cd:Array>
+      <cd:Description>Sweep mode currents, probe1</cd:Description>
+      <cd:Dimension>252</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>A</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Isw2">
+    <cd:Array>
+      <cd:Description>Sweep mode currents, probe2</cd:Description>
+      <cd:Dimension>252</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>A</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Vbias1">
+    <cd:Array>
+      <cd:Description>Sweep mode bias voltage, probe1</cd:Description>
+      <cd:Dimension>252</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>A</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Vbias2">
+    <cd:Array>
+      <cd:Description>Sweep mode bias voltage, probe2</cd:Description>
+      <cd:Dimension>252</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>A</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dt">
+    <cd:Integer>
+      <cd:Description>Step duration</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dU">
+    <cd:Integer>
+      <cd:Description>Step height</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill_2">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Uo">
+    <cd:Float>
+      <cd:Description>Starting bias</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ninv">
+    <cd:Integer>
+      <cd:Description>Step at which sign of step height is inverted</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n">
+    <cd:Integer>
+      <cd:Description>Number of sweep samples between steps</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Fill_1">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Fill_3">
+    <cd:Raw>
+      <cd:Description>Filler</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Iface">
+    <cd:Array>
+      <cd:Description>LP measurements From Faceplate</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>A</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Vface">
+    <cd:Float>
+      <cd:Description>Faceplate fixed bias</cd:Description>
+      <cd:Unit>V</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="P1_Gain">
+    <cd:Float>
+      <cd:Description>Probe 1 Gain (resistor value)</cd:Description>
+      <cd:Unit>ohm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="P2_Gain">
+    <cd:Float>
+      <cd:Description>Probe 2 Gain (resistor value)</cd:Description>
+      <cd:Unit>ohm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="Fp_Gain">
+    <cd:Float>
+      <cd:Description>Faceplate Gain (resistor value)</cd:Description>
+      <cd:Unit>ohm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="deltaTime">
+    <cd:Float>
+      <cd:Description>LP instrument measurement timestamp delta</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

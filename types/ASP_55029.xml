@@ -1,0 +1,976 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ASP_55029" last-modified="2013-11-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Annotated Source Packet for SWARM GPSR HKDiagTrackingState</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet length = (length of source packet excluding 6 bytes) - 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current SP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (1 = CRC error, 0 = no CRC error)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>	
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Record>
+          <cd:Field name="data_field_header">
+            <cd:NamedType id="ASP_Data_Field_Header"/>
+          </cd:Field>
+          <cd:Field name="SID">
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00002">
+            <cd:Integer>
+              <cd:Description>FrontEndTemp</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_24">
+            <cd:Raw>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00004">
+            <cd:Integer>
+              <cd:Description>SerialNumber</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00005">
+            <cd:Integer>
+              <cd:Description>NomRedFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00006">
+            <cd:Integer>
+              <cd:Description>AllDataValidFlag</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00007">
+            <cd:Integer>
+              <cd:Description>ReceiverMode</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00008">
+            <cd:Integer>
+              <cd:Description>NofRecordsInBlock</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00009">
+            <cd:Integer>
+              <cd:Description>ConstellationID</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_52">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00013">
+            <cd:Integer>
+              <cd:Description>AntennaID</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00086">
+            <cd:Integer>
+              <cd:Description>MultiFreqChTrkStat</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00016">
+            <cd:Integer>
+              <cd:Description>MultiFreqChannelNr</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_75">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00087">
+            <cd:Integer>
+              <cd:Description>SignType1stSfcMfc</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_91">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00089">
+            <cd:Integer>
+              <cd:Description>SignType2ndSfcMfc</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00090">
+            <cd:Integer>
+              <cd:Description>ChanNr 2nd SFC MFC</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_107">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST00091">
+            <cd:Integer>
+              <cd:Description>SignType3rdSfcMfc</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST00092">
+            <cd:Integer>
+              <cd:Description>ChanNr 3rd SFC MFC</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_136">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST01009">
+            <cd:Integer>
+              <cd:Description>ConstellationID2</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_148">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST01013">
+            <cd:Integer>
+              <cd:Description>AntennaID2</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_171">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST01087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc2</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_187">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST01089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc2</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_203">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST01091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc2</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST01092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc2</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_232">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST02009">
+            <cd:Integer>
+              <cd:Description>ConstellationID3</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_244">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST02013">
+            <cd:Integer>
+              <cd:Description>AntennaID3</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_267">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST02087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc3</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_283">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST02089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc3</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_299">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST02091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc3</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST02092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc3</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_328">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST03009">
+            <cd:Integer>
+              <cd:Description>ConstellationID4</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_340">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST03013">
+            <cd:Integer>
+              <cd:Description>AntennaID4</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_363">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST03087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc4</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_379">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST03089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc4</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_395">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST03091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc4</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST03092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc4</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_424">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST04009">
+            <cd:Integer>
+              <cd:Description>ConstellationID5</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_436">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST04013">
+            <cd:Integer>
+              <cd:Description>AntennaID5</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_459">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST04087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc5</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_475">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST04089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc5</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_491">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST04091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc5</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST04092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc5</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_520">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST05009">
+            <cd:Integer>
+              <cd:Description>ConstellationID6</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_532">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST05013">
+            <cd:Integer>
+              <cd:Description>AntennaID6</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_555">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST05087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc6</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_571">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST05089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc6</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_587">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST05091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc6</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST05092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc6</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_616">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST06009">
+            <cd:Integer>
+              <cd:Description>ConstellationID7</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_628">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST06013">
+            <cd:Integer>
+              <cd:Description>AntennaID7</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_651">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST06087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc7</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_667">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST06089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc7</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_683">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST06091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc7</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST06092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc7</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_712">
+            <cd:Raw>
+              <cd:BitSize>16</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST07009">
+            <cd:Integer>
+              <cd:Description>ConstellationID8</cd:Description>
+              <cd:BitSize>3</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07011">
+            <cd:Integer>
+              <cd:Description>SpaceVehicleID8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_724">
+            <cd:Raw>
+              <cd:BitSize>1</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST07013">
+            <cd:Integer>
+              <cd:Description>AntennaID8</cd:Description>
+              <cd:BitSize>4</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07086">
+            <cd:Integer>
+              <cd:Description>MultiFrqChTrkStat8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07016">
+            <cd:Integer>
+              <cd:Description>MultiFrqChannelNr8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_747">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST07087">
+            <cd:Integer>
+              <cd:Description>SignTyp1stSfcMfc8</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07088">
+            <cd:Integer>
+              <cd:Description>ChanNr1stSfcMfc8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_763">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST07089">
+            <cd:Integer>
+              <cd:Description>SignTyp2ndSfcMfc8</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07090">
+            <cd:Integer>
+              <cd:Description>ChanNr2ndSfcMfc8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_779">
+            <cd:Raw>
+              <cd:BitSize>3</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="GST07091">
+            <cd:Integer>
+              <cd:Description>SignTyp3rdSfcMfc8</cd:Description>
+              <cd:BitSize>5</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="GST07092">
+            <cd:Integer>
+              <cd:Description>ChanNr3rdSfcMfc8</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Spare_Align">
+            <cd:Raw>
+              <cd:BitSize>40</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+     <ct:NamedTest id="FixedValuePID70" path="packet_header/app_pid"/>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

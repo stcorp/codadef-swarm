@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_OBS_2_" format="ascii" last-modified="2012-07-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_header_lines]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline_1">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="data">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_data_lines]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="intermediate_header">
+            <cd:Available><![CDATA[byteoffset(.) < filesize() && bytes(., 1) == "#"]]></cd:Available>
+            <cd:Record>
+              <cd:Field name="intermediate_header_contents">
+                <cd:AsciiLine/>            
+              </cd:Field>
+              <cd:Field name="newline_2">
+                <cd:AsciiLineSeparator/>
+                <cd:Hidden/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="iaga_code">
+            <cd:Text>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="latitude">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="longitude">
+            <cd:Float>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="radius">
+            <cd:Float>
+              <cd:ByteSize>9</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="year">
+            <cd:Integer>
+              <cd:ByteSize>5</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="month">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="day">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="ut">
+            <cd:Float>
+              <cd:ByteSize>5</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="b_north">
+            <cd:Float>
+              <cd:ByteSize>9</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="b_east">
+            <cd:Float>
+              <cd:ByteSize>9</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="b_centered">
+            <cd:Float>
+              <cd:ByteSize>9</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="newline_3">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_header_lines">
+    <cd:Init><![CDATA[$num_header_lines = index(asciiline, str(., 1) != "#")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_data_lines">
+    <cd:Init><![CDATA[$num_data_lines = count(asciiline, str(., 1) != "#")]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

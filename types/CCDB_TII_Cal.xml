@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_TII_Cal" format="xml" namexml="CCDB_TII" last-modified="2014-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+
+ <cd:Field name="CCDB_TII">
+  <cd:Record namexml="CCDB_TII">
+   <cd:Description>TIIx Calibration Parameters</cd:Description>
+   <cd:Field name="x0">
+      <cd:Type namexml="x0">
+        <cd:Float format="ascii">
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Type>
+    </cd:Field>
+    <cd:Field name="y0">
+      <cd:Type namexml="y0">
+        <cd:Float format="ascii">
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Type>
+    </cd:Field>
+    <cd:Field name="energy_transfer_coefficient">
+      <cd:Type namexml="energy_transfer_coefficient">
+        <cd:Float format="ascii">
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Type>
+    </cd:Field>
+  </cd:Record>
+ </cd:Field>
+ <cd:Field name="CCDB_Structure">
+  <cd:Record namexml="CCDB_Structure">
+   <cd:Field name="TIIX_q">
+    <cd:Record namexml="TIIX_q">
+      <cd:Description>TIIx Calibration Quaternion</cd:Description>
+        <cd:Field name="Q1">
+          <cd:Type namexml="Q1">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Q2">
+          <cd:Type namexml="Q2">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Q3">
+          <cd:Type namexml="Q3">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Q4">
+          <cd:Type namexml="Q4">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+    </cd:Record>
+   </cd:Field>
+  </cd:Record>
+ </cd:Field>
+ <cd:Field name="Input_Info">
+  <cd:Record namexml="Input_Info">
+    <cd:Field name="N_Product">
+      <cd:Type namexml="N_Product">
+        <cd:Integer format="ascii">
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Type>
+    </cd:Field>
+    <cd:Field name="Product_Start_Time">
+      <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+        <cd:Text namexml="Product_Start_Time"/>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Field>
+    <cd:Field name="Product_Stop_Time">
+      <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+        <cd:Text namexml="Product_Stop_Time"/>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Field>
+  </cd:Record>
+ </cd:Field>
+</cd:Record>
+

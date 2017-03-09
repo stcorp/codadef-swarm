@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="VFMBAUX_1B_v1" format="binary" last-modified="2009-10-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="MDR_VFMAUX">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+        <cd:NamedType id="MDR_VFMAUX_v1"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = filesize() / 124]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

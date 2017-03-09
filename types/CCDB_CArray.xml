@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_CArray" format="xml" namexml="CArray" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="List_of_CA_Elements">
+    <cd:Record namexml="List_of_CA_Elements">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="CA_Element">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="CA_Element">
+            <cd:Field name="Scalar">
+              <cd:Type namexml="Scalar">
+                <cd:Attribute name="choice_of">
+                  <cd:FixedValue>CA_Data_Type</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                   <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="Vector">
+              <cd:NamedType id="CCDB_Vector"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="Quaternion">
+              <cd:NamedType id="CCDB_Quaternion"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="Lut1d">
+              <cd:NamedType id="CCDB_Lut1d"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="StateInfo">
+              <cd:NamedType id="CCDB_StateInfo"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="CurrentInfo">
+              <cd:NamedType id="CCDB_CurrentInfo"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="InducedInfo">
+              <cd:NamedType id="CCDB_InducedInfo"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="ThermCal">
+              <cd:NamedType id="CCDB_ThermCal"/>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="VFM_TCF">
+              <cd:NamedType id="CCDB_VFM_TCF"/>
+              <cd:Optional/>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

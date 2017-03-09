@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="MSW_EUL" last-modified="2012-06-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="header">
+    <cd:Array>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="line">
+          <cd:AsciiLine/>
+        </cd:Field>
+        <cd:Field name="newline">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="record">
+    <cd:Array>
+      <cd:Dimension>$num_records</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="MD2000">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_A_alpha">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_A_beta">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_A_gamma">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_B_alpha">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_B_beta">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_B_gamma">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_C_alpha">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_C_beta">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="SW_C_gamma">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="newline">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

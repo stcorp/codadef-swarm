@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="LP_A_CA_1B_v1" format="binary" last-modified="2016-04-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="LP__OFF_CA">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+        <cd:NamedType id="LP__OFF_CA_v1"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = filesize() / 824]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

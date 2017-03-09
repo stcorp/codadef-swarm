@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_TRange" format="xml" namexml="TRange" last-modified="2011-05-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="Min">
+    <cd:Type namexml="Min">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+        <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max">
+    <cd:Type namexml="Max">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+        <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

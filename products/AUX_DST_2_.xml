@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_DST_2_" format="ascii" last-modified="2012-06-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Array>
+        <cd:Dimension>4</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="data">
+      <cd:Array>
+        <cd:Dimension>numelements(asciiline) - 4</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="mjd2000">
+            <cd:Float>
+              <cd:ByteSize>12</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="dst">
+            <cd:Float>
+              <cd:ByteSize>10</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="est">
+            <cd:Float>
+              <cd:ByteSize>10</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="ist">
+            <cd:Float>
+              <cd:ByteSize>10</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="spare">
+            <cd:Text>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+            </cd:Text>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="dp">
+            <cd:Text>
+              <cd:ByteSize>1</cd:ByteSize>
+              <cd:NativeType>char</cd:NativeType>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

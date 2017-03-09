@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_Quaternion" format="xml" namexml="Quaternion" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Field name="Q1">
+    <cd:Type namexml="Q1">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Q2">
+    <cd:Type namexml="Q2">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Q3">
+    <cd:Type namexml="Q3">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Q4">
+    <cd:Type namexml="Q4">
+      <cd:Float format="ascii">
+         <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MAGC_HR_1B_v1" format="binary" last-modified="2011-03-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="MDR_MAG_HR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+        <cd:NamedType id="MDR_MAG_HR_v1"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="ASM_VFM_IC">
+      <cd:NamedType id="ASM_VFM_IC"/>
+    </cd:Field>
+    <ct:NamedTest id="FixedValueMDRID5102" path="ASM_VFM_IC/MDR_ID"/>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = (filesize() - 292) / 112]]></cd:Init>
+  </cd:ProductVariable>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

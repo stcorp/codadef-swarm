@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="TIIC_CA_1B" format="binary" last-modified="2011-04-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="TII_FIT_CA">
+      <cd:Array>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:NamedType id="TII_FIT_CA"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+</cd:ProductDefinition>

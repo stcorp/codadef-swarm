@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="DBL_MantleConductivity" last-modified="2012-07-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="pre_comments">
+    <cd:Array>
+      <cd:Dimension>unboundindex(., byteoffset(.) >= filesize() || str(., 1) != "#")</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="line">
+          <cd:AsciiLine/>
+        </cd:Field>
+        <cd:Field name="newline">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="N_layer">
+    <cd:Integer>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="N_theta">
+    <cd:Integer>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="N_phi">
+    <cd:Integer>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_1">
+    <cd:AsciiLineSeparator/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="theta_b">
+    <cd:Float>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="phi_b">
+    <cd:Float>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="newline_2">
+    <cd:AsciiLineSeparator/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="layer">
+    <cd:Array>
+      <cd:Dimension>$num_layers</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="k">
+          <cd:Integer>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="r_k">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="sigma0_k">
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="flag3D">
+          <cd:Integer>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+          <ct:NamedTest id="3DFlagValid"/>
+        </cd:Field>
+        <cd:Field name="newline_3">
+          <cd:AsciiLineSeparator/>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="model3D">
+          <cd:Available><![CDATA[int(:/flag3D) == 3]]></cd:Available>
+          <cd:Array>
+            <cd:Dimension>$num_colatitude_nodes</cd:Dimension>
+            <cd:Record>
+              <cd:Field name="sigma_k">
+                <cd:Array>
+                  <cd:Dimension>$num_longitude_nodes</cd:Dimension>
+                  <cd:Float>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Array>
+              </cd:Field>
+              <cd:Field name="newline_4">
+                <cd:AsciiLineSeparator/>
+                <cd:Hidden/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

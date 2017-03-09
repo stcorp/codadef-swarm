@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_KP__2_" format="ascii" last-modified="2017-02-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record>
+    <cd:Field name="header">
+      <cd:Array>
+        <cd:Dimension>$num_header_lines</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="line">
+            <cd:AsciiLine/>            
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="column_header">
+      <cd:AsciiLine/>            
+    </cd:Field>
+    <cd:Field name="newline_1">
+      <cd:AsciiLineSeparator/>
+      <cd:Hidden/>
+    </cd:Field>    
+    <cd:Field name="data">
+      <cd:Array>
+        <cd:Dimension>numelements(asciiline) - $num_header_lines - 1</cd:Dimension>
+        <cd:Record>
+          <cd:Field name="mjd2000">
+            <cd:Float>
+              <cd:ByteSize>11</cd:ByteSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="kp">
+            <cd:Integer>
+              <cd:ByteSize>3</cd:ByteSize>
+              <cd:NativeType>int16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="ap">
+            <cd:Integer>
+              <cd:ByteSize>4</cd:ByteSize>
+              <cd:NativeType>int16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="newline">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_header_lines">
+    <cd:Init><![CDATA[$num_header_lines = unboundindex(/header, byteoffset(.) >= filesize() || str(., 1) != "#")]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

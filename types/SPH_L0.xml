@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<cd:Record format="xml" last-modified="2014-08-26" name="SPH_L0" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Specific Product Header for SWARM Level 0 products</cd:Description>
+  <cd:Field name="SPH_Descriptor">
+    <cd:Text namexml="SPH_Descriptor"/>
+  </cd:Field>
+  <cd:Field name="Sensing_Start">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>UTC start time of sensing</cd:Description>
+      <cd:Text namexml="Sensing_Start"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Sensing_Stop">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>UTC stop time of sensing</cd:Description>
+      <cd:Text namexml="Sensing_Stop"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Rel_Time_ASC_Node_Start">
+    <cd:Type namexml="Rel_Time_ASC_Node_Start">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Relative time since crossing ascending node time relative to start time of data sensing</cd:Description>
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rel_Time_ASC_Node_Stop">
+    <cd:Type namexml="Rel_Time_ASC_Node_Stop">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Time of the ascending node relative to stop time of data sensing. Relative time since crossing ascending node time relative to stop time of data sensings</cd:Description>
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ABS_Orbit_Start">
+    <cd:Type namexml="ABS_Orbit_Start">
+      <cd:Integer format="ascii">
+        <cd:Description>Absolute Orbit Number at sensing start time</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ABS_Orbit_Stop">
+    <cd:Type namexml="ABS_Orbit_Stop">
+      <cd:Integer format="ascii">
+        <cd:Description>Absolute Orbit Number at sensing stop time</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Abs_Time_ASC_Node_Start">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>UTC time at crossing ascending node start</cd:Description>
+      <cd:Text namexml="Abs_Time_ASC_Node_Start"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Abs_Time_ASC_Node_Stop">
+    <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+      <cd:Description>UTC time at crossing ascending node stop</cd:Description>
+      <cd:Text namexml="Abs_Time_ASC_Node_Stop"/>
+      <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+      <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+      <cd:Mapping string="" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="Ascending_Flag">
+    <cd:Type namexml="Ascending_Flag">
+      <cd:Text format="ascii">
+        <cd:Description>Orbit orientation at the sensing start time. A = ascending, D = descending</cd:Description>
+        <cd:NativeType>char</cd:NativeType>
+        <cd:ByteSize>1</cd:ByteSize>
+      </cd:Text>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Product_Location">
+    <cd:Record namexml="Product_Location">
+      <cd:Field name="Downlink_Start_UTC">
+        <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+          <cd:Description>Time of start of downlink of dump for the data</cd:Description>
+          <cd:Text namexml="Downlink_Start_UTC"/>
+          <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+          <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+          <cd:Mapping string="" value="nan"/>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="Downlink_Stop_UTC">
+        <cd:Time timeformat="time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;)">
+          <cd:Description>Time of stop of downlink of dump for the data</cd:Description>
+          <cd:Text namexml="Downlink_Stop_UTC"/>
+          <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+          <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+          <cd:Mapping string="" value="nan"/>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="Downlink_Orbit">
+        <cd:Type namexml="Downlink_Orbit">
+          <cd:Integer format="ascii">
+            <cd:Description>Orbit when data was downlinked (at start of downlink)</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Product_Confidence_Data">
+    <cd:Record namexml="Product_Confidence_Data">
+      <cd:Field name="Num_ISPs">
+        <cd:Type namexml="Num_ISPs">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of ISPs in the product</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+            <cd:ByteSize>7</cd:ByteSize>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_Missing_ISPs">
+        <cd:Type namexml="Num_Missing_ISPs">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of missing ISPs in the product</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+            <cd:ByteSize>7</cd:ByteSize>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_Discarded_ISPs">
+        <cd:Type namexml="Num_Discarded_ISPs">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of ISPs discarded</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+            <cd:ByteSize>7</cd:ByteSize>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_DSDs">
+    <cd:NamedType id="List_of_DSDs"/>
+    <ct:NamedTest id="ByteOrderValidL0" path="DSD[]/Byte_Order" />
+    <ct:NamedTest id="FixedValueByteOrder3210ForMDSD" path="DSD[]/Byte_Order" />
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_VFM_TCF_Th" format="xml" namexml="VFM_TCF_Th" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of">
+    <cd:FixedValue>Data_Type</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="bias">
+    <cd:Type namexml="bias">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum threshold allowed for bias vector component</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="n_orth">
+    <cd:Type namexml="n_orth">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum threshold allowed for non-orthogonality angle vectors</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="scale">
+    <cd:Type namexml="scale">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum threshold allowed for sensitivity vectors</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

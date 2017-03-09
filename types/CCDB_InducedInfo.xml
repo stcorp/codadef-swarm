@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<cd:Record name="CCDB_InducedInfo" format="xml" namexml="InducedInfo" last-modified="2011-01-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="choice_of"/>
+  <cd:Field name="ID">
+    <cd:Text namexml="ID">
+      <cd:Description>Identifier of HK data field</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="name">
+    <cd:Text namexml="name">
+      <cd:Description>Descriptive name</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="type">
+    <cd:Type namexml="type">
+      <cd:Integer format="ascii">
+        <cd:Description>Type</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="val1">
+    <cd:Type namexml="val1">
+      <cd:Float format="ascii">
+        <cd:Description>Value or Value(1)</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="val2">
+    <cd:Type namexml="val2">
+      <cd:Float format="ascii">
+        <cd:Description>Value(2)</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="dInd_ASM">
+    <cd:Record namexml="dInd_ASM">
+      <cd:Description>Change in magnetically induced stray field vector at ASM sensor position</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X11">
+        <cd:Type namexml="X11">
+          <cd:Description>Column 1, row 1</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X21">
+        <cd:Type namexml="X21">
+          <cd:Description>Column 1, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X31">
+        <cd:Type namexml="X31">
+          <cd:Description>Column 1, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X12">
+        <cd:Type namexml="X12">
+          <cd:Description>Column 2, row 1</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X22">
+        <cd:Type namexml="X22">
+          <cd:Description>Column 2, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X32">
+        <cd:Type namexml="X32">
+          <cd:Description>Column 2, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X13">
+        <cd:Type namexml="X13">
+          <cd:Description>Column 3, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X23">
+        <cd:Type namexml="X23">
+          <cd:Description>Column 3, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X33">
+        <cd:Type namexml="X33">
+          <cd:Description>Column 3, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dInd_VFM">
+    <cd:Record namexml="dInd_VFM">
+      <cd:Description>Change in magnetically induced stray field vector at VFM sensor position</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X11">
+        <cd:Type namexml="X11">
+          <cd:Description>Column 1, row 1</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X21">
+        <cd:Type namexml="X21">
+          <cd:Description>Column 1, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X31">
+        <cd:Type namexml="X31">
+          <cd:Description>Column 1, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X12">
+        <cd:Type namexml="X12">
+          <cd:Description>Column 2, row 1</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X22">
+        <cd:Type namexml="X22">
+          <cd:Description>Column 2, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X32">
+        <cd:Type namexml="X32">
+          <cd:Description>Column 2, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X13">
+        <cd:Type namexml="X13">
+          <cd:Description>Column 3, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X23">
+        <cd:Type namexml="X23">
+          <cd:Description>Column 3, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X33">
+        <cd:Type namexml="X33">
+          <cd:Description>Column 3, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dAM_ASM">
+    <cd:Record namexml="dAM_ASM">
+      <cd:Description>Change in magnetically induced stray field vector of AOCS magnetorquers at ASM</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X11">
+        <cd:Type namexml="X11">
+          <cd:Description>Column 1, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X21">
+        <cd:Type namexml="X21">
+          <cd:Description>Column 1, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X31">
+        <cd:Type namexml="X31">
+          <cd:Description>Column 1, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X12">
+        <cd:Type namexml="X12">
+          <cd:Description>Column 2, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X22">
+        <cd:Type namexml="X22">
+          <cd:Description>Column 2, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X32">
+        <cd:Type namexml="X32">
+          <cd:Description>Column 2, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X13">
+        <cd:Type namexml="X13">
+          <cd:Description>Column 3, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X23">
+        <cd:Type namexml="X23">
+          <cd:Description>Column 3, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X33">
+        <cd:Type namexml="X33">
+          <cd:Description>Column 3, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X14">
+        <cd:Type namexml="X14">
+          <cd:Description>Column 4, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X24">
+        <cd:Type namexml="X24">
+          <cd:Description>Column 4, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X34">
+        <cd:Type namexml="X34">
+          <cd:Description>Column 4, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X15">
+        <cd:Type namexml="X15">
+          <cd:Description>Column 5, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X25">
+        <cd:Type namexml="X25">
+          <cd:Description>Column 5, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X35">
+        <cd:Type namexml="X35">
+          <cd:Description>Column 5, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X16">
+        <cd:Type namexml="X16">
+          <cd:Description>Column 6, row 1</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X26">
+        <cd:Type namexml="X26">
+          <cd:Description>Column 6, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X36">
+        <cd:Type namexml="X36">
+          <cd:Description>Column 6, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="dAM_VFM">
+    <cd:Record namexml="dAM_VFM">
+      <cd:Description>Change in magnetically induced stray field vector of AOCS magnetorquers at VFM</cd:Description>
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Field name="X11">
+        <cd:Type namexml="X11">
+          <cd:Description>Column 1, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X21">
+        <cd:Type namexml="X21">
+          <cd:Description>Column 1, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X31">
+        <cd:Type namexml="X31">
+          <cd:Description>Column 1, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X12">
+        <cd:Type namexml="X12">
+          <cd:Description>Column 2, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X22">
+        <cd:Type namexml="X22">
+          <cd:Description>Column 2, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X32">
+        <cd:Type namexml="X32">
+          <cd:Description>Column 2, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X13">
+        <cd:Type namexml="X13">
+          <cd:Description>Column 3, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X23">
+        <cd:Type namexml="X23">
+          <cd:Description>Column 3, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X33">
+        <cd:Type namexml="X33">
+          <cd:Description>Column 3, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X14">
+        <cd:Type namexml="X14">
+          <cd:Description>Column 4, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X24">
+        <cd:Type namexml="X24">
+          <cd:Description>Column 4, row 2</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X34">
+        <cd:Type namexml="X34">
+          <cd:Description>Column 4, row 3</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X15">
+        <cd:Type namexml="X15">
+          <cd:Description>Column 5, row 1</cd:Description>
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X25">
+        <cd:Type namexml="X25">
+          <cd:Description>Column 5, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X35">
+        <cd:Type namexml="X35">
+          <cd:Description>Column 5, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X16">
+        <cd:Type namexml="X16">
+          <cd:Description>Column 6, row 1</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X26">
+        <cd:Type namexml="X26">
+          <cd:Description>Column 6, row 2</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="X36">
+        <cd:Type namexml="X36">
+          <cd:Description>Column 6, row 3</cd:Description>
+          <cd:Float format="ascii">
+             <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
