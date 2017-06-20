@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="SHC" last-modified="2013-01-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="ascii" name="SHC" last-modified="2017-06-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="pre_comments">
     <cd:Array>
       <cd:Dimension>unboundindex(., byteoffset(.) >= filesize() || str(., 1) != "#")</cd:Dimension>
@@ -65,6 +65,10 @@
           </cd:Float>
         </cd:Array>
       </cd:Field>
+      <cd:Field name="whitespace_1">
+         <cd:AsciiWhiteSpace/>
+         <cd:Hidden/>
+      </cd:Field>
       <cd:Field name="newline_2">
         <cd:AsciiLineSeparator/>
         <cd:Hidden/>
@@ -91,7 +95,7 @@
                 </cd:Float>
               </cd:Array>
             </cd:Field>
-            <cd:Field name="whitespace">
+            <cd:Field name="whitespace_2">
               <cd:AsciiWhiteSpace/>
               <cd:Hidden/>
             </cd:Field>
