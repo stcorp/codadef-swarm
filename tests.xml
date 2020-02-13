@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests last-modified="2017-02-22" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<ct:Tests last-modified="2017-12-12" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <ct:Test name="BooleanBinTest" criticality="Error" description="The value should be True: '1' or False: '0'"><![CDATA[int(.) == 1 || int(.)==0]]></ct:Test>
   <ct:Test name="BooleanXmlTest" criticality="Error" description="The value should be 'true' or 'false'"><![CDATA[str(.) == "true" || str(.)=="false" || str(.) == "True" || str(.)=="False"]]></ct:Test>
   <ct:Test name="DataSetSizeSum" criticality="Error" description="The sum of the Data_Set_Size values with Data_Set_Type != 'R' in the DSDs should equal the MPH Tot_Size"><![CDATA[int(./MPH/Tot_Size) == add(./SPH/List_of_DSDs/DSD, if(str(./Data_Set_Type) != "R", int(./Data_Set_Size), 0))]]></ct:Test>
@@ -107,18 +107,24 @@
   <ct:Test name="FixedValueEEFCTMS_2F" criticality="Error" description="The value should be 'EEFCTMS_2F'"><![CDATA[str(.) == "EEFCTMS_2F"]]></ct:Test>
   <ct:Test name="FixedValueEFI_QL__2_" criticality="Error" description="The value should be 'EFI_QL__2_'"><![CDATA[str(.) == "EFI_QL__2_"]]></ct:Test>
   <ct:Test name="FixedValueEFIA_LP_1A" criticality="Error" description="The value should be 'EFIA_LP_1A'"><![CDATA[str(.) == "EFIA_LP_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIA_LP_1B" criticality="Error" description="The value should be 'EFIA_LP_1B'"><![CDATA[str(.) == "EFIA_LP_1B"]]></ct:Test>
+  <ct:Test name="FixedValueEFIALPI_1B" criticality="Error" description="The value should be 'EFIALPI_1B'"><![CDATA[str(.) == "EFIALPI_1B"]]></ct:Test>    
   <ct:Test name="FixedValueEFIA_PL_1B" criticality="Error" description="The value should be 'EFIA_PL_1B'"><![CDATA[str(.) == "EFIA_PL_1B"]]></ct:Test>
   <ct:Test name="FixedValueEFIALPC_0_" criticality="Error" description="The value should be 'EFIALPC_0_'"><![CDATA[str(.) == "EFIALPC_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFIANOM_0_" criticality="Error" description="The value should be 'EFIANOM_0_'"><![CDATA[str(.) == "EFIANOM_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFIATIC_0_" criticality="Error" description="The value should be 'EFIATIC_0_'"><![CDATA[str(.) == "EFIATIC_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFIATII_1A" criticality="Error" description="The value should be 'EFIATII_1A'"><![CDATA[str(.) == "EFIATII_1A"]]></ct:Test>
   <ct:Test name="FixedValueEFIB_LP_1A" criticality="Error" description="The value should be 'EFIB_LP_1A'"><![CDATA[str(.) == "EFIB_LP_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIB_LP_1B" criticality="Error" description="The value should be 'EFIB_LP_1B'"><![CDATA[str(.) == "EFIB_LP_1B"]]></ct:Test>
+  <ct:Test name="FixedValueEFIBLPI_1B" criticality="Error" description="The value should be 'EFIBLPI_1B'"><![CDATA[str(.) == "EFIBLPI_1B"]]></ct:Test>  
   <ct:Test name="FixedValueEFIB_PL_1B" criticality="Error" description="The value should be 'EFIB_PL_1B'"><![CDATA[str(.) == "EFIB_PL_1B"]]></ct:Test>
   <ct:Test name="FixedValueEFIBLPC_0_" criticality="Error" description="The value should be 'EFIBLPC_0_'"><![CDATA[str(.) == "EFIBLPC_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFIBNOM_0_" criticality="Error" description="The value should be 'EFIBNOM_0_'"><![CDATA[str(.) == "EFIBNOM_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFIBTIC_0_" criticality="Error" description="The value should be 'EFIBTIC_0_'"><![CDATA[str(.) == "EFIBTIC_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFIBTII_1A" criticality="Error" description="The value should be 'EFIBTII_1A'"><![CDATA[str(.) == "EFIBTII_1A"]]></ct:Test>
   <ct:Test name="FixedValueEFIC_LP_1A" criticality="Error" description="The value should be 'EFIC_LP_1A'"><![CDATA[str(.) == "EFIC_LP_1A"]]></ct:Test>
+  <ct:Test name="FixedValueEFIC_LP_1B" criticality="Error" description="The value should be 'EFIC_LP_1B'"><![CDATA[str(.) == "EFIC_LP_1B"]]></ct:Test>
+  <ct:Test name="FixedValueEFICLPI_1B" criticality="Error" description="The value should be 'EFICLPI_1B'"><![CDATA[str(.) == "EFICLPI_1B"]]></ct:Test>    
   <ct:Test name="FixedValueEFIC_PL_1B" criticality="Error" description="The value should be 'EFIC_PL_1B'"><![CDATA[str(.) == "EFIC_PL_1B"]]></ct:Test>
   <ct:Test name="FixedValueEFICLPC_0_" criticality="Error" description="The value should be 'EFICLPC_0_'"><![CDATA[str(.) == "EFICLPC_0_"]]></ct:Test>
   <ct:Test name="FixedValueEFICNOM_0_" criticality="Error" description="The value should be 'EFICNOM_0_'"><![CDATA[str(.) == "EFICNOM_0_"]]></ct:Test>
@@ -308,6 +314,9 @@
   <ct:Test name="FixedValueREPA_DVTCV" criticality="Error" description="The value should be 'REPA_DVTCV'"><![CDATA[str(.) == "REPA_DVTCV"]]></ct:Test>
   <ct:Test name="FixedValueREPB_DVTCV" criticality="Error" description="The value should be 'REPB_DVTCV'"><![CDATA[str(.) == "REPB_DVTCV"]]></ct:Test>
   <ct:Test name="FixedValueREPC_DVTCV" criticality="Error" description="The value should be 'REPC_DVTCV'"><![CDATA[str(.) == "REPC_DVTCV"]]></ct:Test>
+  <ct:Test name="FixedValueSC_ADYN_1B" criticality="Error" description="The value should be 'SC_ADYN_1B'"><![CDATA[str(.) == "SC_ADYN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSC_BDYN_1B" criticality="Error" description="The value should be 'SC_BDYN_1B'"><![CDATA[str(.) == "SC_BDYN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSC_CDYN_1B" criticality="Error" description="The value should be 'SC_CDYN_1B'"><![CDATA[str(.) == "SC_CDYN_1B"]]></ct:Test>  
   <ct:Test name="FixedValueSP3ACOM_2_" criticality="Error" description="The value should be 'SP3ACOM_2_'"><![CDATA[str(.) == "SP3ACOM_2_"]]></ct:Test>
   <ct:Test name="FixedValueSP3AKIN_2_" criticality="Error" description="The value should be 'SP3AKIN_2_'"><![CDATA[str(.) == "SP3AKIN_2_"]]></ct:Test>
   <ct:Test name="FixedValueSP3AVAL_2_" criticality="Error" description="The value should be 'SP3AVAL_2_'"><![CDATA[str(.) == "SP3AVAL_2_"]]></ct:Test>

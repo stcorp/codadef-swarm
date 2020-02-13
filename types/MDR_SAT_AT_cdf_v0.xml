@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2017-06-15" name="MDR_SAT_AT_cdf_v0">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2018-01-10" name="MDR_SAT_AT_cdf_v0">
   <cd:Attribute name="TITLE">
     <cd:Text/>
   </cd:Attribute>
@@ -89,6 +89,7 @@
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_1">
     <cd:Text/>
+    <cd:Optional/>    
   </cd:Attribute>  
   <cd:Attribute name="Maneuver_Id_2">
     <cd:Text/>

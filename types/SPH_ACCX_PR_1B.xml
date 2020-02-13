@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<cd:Record format="xml" last-modified="2014-08-25" name="SPH_ACCX_PR_1B" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
-  <cd:Description>Specific Product Header for ACCX_PR_1B products</cd:Description>
+<cd:Record format="xml" last-modified="2017-12-12" name="SPH_ACCX_PR_1B" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Specific Product Header for ACCX_PR_1B/SC_XDYN_1B products</cd:Description>
   <cd:Field name="SPH_Descriptor">
     <cd:Text namexml="SPH_Descriptor"> </cd:Text>
   </cd:Field>

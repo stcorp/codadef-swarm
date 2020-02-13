@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2018-01-10" name="TII_FIT_CA_cdf_v0">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2020-02-04" name="MDR_SC_DYN_cdf_v1">
   <cd:Attribute name="TITLE">
     <cd:Text/>
   </cd:Attribute>
@@ -93,60 +93,60 @@
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_2">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_3">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_4">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_5">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_6">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_7">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_8">
     <cd:Text/>
-    <cd:Optional/>    
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_9">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>  
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_10">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>  
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_11">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>    
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_12">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>    
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_13">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>    
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_14">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>    
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_15">
     <cd:Text/>
-    <cd:Optional/>    
-  </cd:Attribute>  
+    <cd:Optional/>
+  </cd:Attribute>
   <cd:Attribute name="Quality_Indicator">
     <cd:Text/>
   </cd:Attribute>
@@ -159,13 +159,10 @@
   <cd:Attribute name="STR_ISP_Missing">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="EFI_ISP_Missing">
+  <cd:Attribute name="ACC_ISP_Missing">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="LP_ISP_Missing">
-    <cd:Text/>
-  </cd:Attribute>
-  <cd:Attribute name="TII_ISP_Missing">
+  <cd:Attribute name="ACC_Samples_Rejected">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="List_of_DSDs">
@@ -779,7 +776,7 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Time timeformat="float(.) * 0.001 - 63113904000">
         <cd:Float>
           <cd:NativeType>double</cd:NativeType>
@@ -797,15 +794,15 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Integer>
         <cd:NativeType>uint16</cd:NativeType>
         <cd:Unit>-</cd:Unit>
       </cd:Integer>
       <cd:Description>Synchronization status</cd:Description>
     </cd:Array>
-  </cd:Field>
-  <cd:Field name="x0">
+  </cd:Field>  
+  <cd:Field name="a_Sun">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -813,16 +810,33 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m/s2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Acceleration due to Solar radiation pressure, S/C frame</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="e_Sun">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
       <cd:Float>
         <cd:NativeType>double</cd:NativeType>
         <cd:Unit>-</cd:Unit>
       </cd:Float>
-      <cd:Description>Estimate of the x position of the image center. Sensor order: H, V</cd:Description>
+      <cd:Description>Direction to the Sun, unit vector, S/C frame</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="y0">
+  <cd:Field name="A_head">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -830,16 +844,134 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Cross section of the S/C, orbit frame, front</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_down">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Cross section of the S/C, orbit frame, right (+Y)</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_left">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Cross section of the S/C, orbit frame, left (-Y)</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="A_right">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Cross section of the S/C, orbit frame, down</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="K_Earth">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Downward optical reflectrivity normal</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="m_SC">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>kg</cd:Unit>
+      </cd:Float>
+      <cd:Description>Mass of S/C</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="r_CoG">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m</cd:Unit>
+      </cd:Float>
+      <cd:Description>Position of Center of gravity, S/C frame</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="P_Gas">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
       <cd:Dimension>2</cd:Dimension>
       <cd:Float>
         <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
+        <cd:Unit>Pa</cd:Unit>
       </cd:Float>
-      <cd:Description>Estimate of the y position of the image center. Sensor order: H, V</cd:Description>
+      <cd:Description>Pressure of gas tanks</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="phi0">
+  <cd:Field name="T_Gas">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -847,16 +979,16 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Dimension>2</cd:Dimension>
       <cd:Float>
         <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>deg</cd:Unit>
+        <cd:Unit>degC</cd:Unit>
       </cd:Float>
-      <cd:Description>Estimate of mean azimuthal position of data points. Sensor order: H, V</cd:Description>
+      <cd:Description>Temperature of gas tanks</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="r0">
+  <cd:Field name="Flags_Platform">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -864,67 +996,15 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Float>
-      <cd:Description>Radius of best-fit circle. Sensor order: H, V</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="rms">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Float>
-      <cd:Description>Goodness of fit (rms error). Sensor order: H, V</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="Samples">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>uint32</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Integer>
-      <cd:Description>Number of data points used in fit. Sensor order: H, V</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="Success">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Integer>
         <cd:NativeType>uint16</cd:NativeType>
         <cd:Unit>-</cd:Unit>
       </cd:Integer>
-      <cd:Description>Flag indicating whether fit succeeded or not, 1 = success. Sensor order: H, V</cd:Description>
+      <cd:Description>Flags related to the S/C platform (indicates if all inputs were available or one or more was missing)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="r1">
+  <cd:Field name="dt_thr">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -932,16 +1012,16 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>12</cd:Dimension>
       <cd:Float>
         <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
+        <cd:Unit>s</cd:Unit>
       </cd:Float>
-      <cd:Description>Average of r1</cd:Description>
+      <cd:Description>Thruster on-time in seconds (Start of on-time at "Timestamp"), field with 12 colmns (column 1 = ACT 1,... , column 9 = OCT 1,...)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="r1_r1">
+  <cd:Field name="thr_set">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -949,84 +1029,15 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Float>
-      <cd:Description>Average of r1*r1. Sensor order: H, V</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="r1_y2">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Float>
-      <cd:Description>Average of r1*y2. Sensor order: H, V</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="U_SC">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Float>
-      <cd:Description>Average of spacecraft potential</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="dVgf">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Float>
-      <cd:Description>Average of (Vg-Vf), deflection minus faceplate voltage</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="Qram">
-    <cd:Array>
-      <cd:Attribute name="DESCRIPTION">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="UNITS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>uint32</cd:NativeType>
+        <cd:NativeType>uint16</cd:NativeType>
         <cd:Unit>-</cd:Unit>
       </cd:Integer>
-      <cd:Description>Number of samples used in r1_r1 and r1_y2 averages</cd:Description>
+      <cd:Description>Flag indicating which thruster branch was active (= 0 for no thrusters powered, = 1 for main units powered, = 2 for redundant units powered, = 3 for both main and redundant units powered)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="r1_samples">
+  <cd:Field name="f_thr">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
         <cd:Text/>
@@ -1034,13 +1045,47 @@
       <cd:Attribute name="UNITS">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
-      <cd:Dimension>2</cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>uint32</cd:NativeType>
-        <cd:Unit>-</cd:Unit>
-      </cd:Integer>
-      <cd:Description>Average of r1*y2. Sensor order: H, V</cd:Description>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>N</cd:Unit>
+      </cd:Float>
+      <cd:Description>Nominal thrust force of activated thrusters*(combined force), field with 3 columns</cd:Description>
     </cd:Array>
   </cd:Field>
+  <cd:Field name="a_centr">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m/s2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Centrifugal acceleration, S/C frame</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="a_GG">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>m/s2</cd:Unit>
+      </cd:Float>
+      <cd:Description>Gravity gradient acceleration, S/C frame</cd:Description>
+    </cd:Array>
+  </cd:Field>  
 </cd:Record>

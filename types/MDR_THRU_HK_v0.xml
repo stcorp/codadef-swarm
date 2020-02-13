@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="MDR_THRU_HK" last-modified="2015-06-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="MDR_THRU_HK_v0" last-modified="2018-01-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="MDR_ID">
     <cd:Integer>
       <cd:Description>Data Set Record identifier</cd:Description>

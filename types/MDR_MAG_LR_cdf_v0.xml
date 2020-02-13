@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2017-02-22" name="MDR_MAG_LR_cdf_v0">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2018-10-16" name="MDR_MAG_LR_cdf_v0">
   <cd:Attribute name="TITLE">
     <cd:Text/>
   </cd:Attribute>
@@ -89,6 +89,7 @@
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_1">
     <cd:Text/>
+    <cd:Optional/>    
   </cd:Attribute>
   <cd:Attribute name="Maneuver_Id_2">
     <cd:Text/>
@@ -391,6 +392,206 @@
     <cd:Text/>
     <cd:Optional/>
   </cd:Attribute>
+  <cd:Attribute name="File_Name_51">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_52">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_53">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_54">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_55">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_56">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_57">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_58">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_59">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_60">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_61">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_62">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_63">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_64">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_65">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_66">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_67">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_68">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_69">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_70">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_71">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_72">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_73">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_74">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_75">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_76">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_77">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_78">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_79">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_80">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_81">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_82">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_83">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_84">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_85">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_86">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_87">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_88">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_89">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_90">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_91">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_92">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_93">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_94">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_95">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_96">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_97">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_98">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_99">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="File_Name_100">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>  
   <cd:Attribute name="Data_Set_Name_1">
     <cd:Text/>
     <cd:Optional/>
@@ -591,6 +792,206 @@
     <cd:Text/>
     <cd:Optional/>
   </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_51">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_52">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_53">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_54">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_55">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_56">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_57">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_58">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_59">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_60">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_61">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_62">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_63">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_64">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_65">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_66">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_67">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_68">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_69">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_70">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_71">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_72">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_73">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_74">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_75">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_76">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_77">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_78">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_79">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_80">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_81">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_82">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_83">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_84">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_85">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_86">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_87">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_88">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_89">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_90">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_91">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_92">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_93">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_94">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_95">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_96">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_97">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_98">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_99">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Name_100">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>  
   <cd:Attribute name="Data_Set_Type_1">
     <cd:Text/>
     <cd:Optional/>
@@ -791,6 +1192,206 @@
     <cd:Text/>
     <cd:Optional/>
   </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_51">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_52">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_53">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_54">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_55">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_56">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_57">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_58">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_59">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_60">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_61">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_62">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_63">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_64">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_65">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_66">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_67">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_68">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_69">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_70">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_71">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_72">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_73">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_74">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_75">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_76">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_77">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_78">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_79">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_80">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_81">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_82">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_83">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_84">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_85">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_86">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_87">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_88">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_89">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_90">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_91">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_92">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_93">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_94">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_95">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_96">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_97">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_98">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_99">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>
+  <cd:Attribute name="Data_Set_Type_100">
+    <cd:Text/>
+    <cd:Optional/>
+  </cd:Attribute>  
   <cd:Field name="Timestamp">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">

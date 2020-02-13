@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SC_CDYN_1B_MDR_SC_DYN_v1" format="cdf" last-modified="2020-02-04">
+  <cd:NamedType id="MDR_SC_DYN_cdf_v1"/>
+</cd:ProductDefinition>

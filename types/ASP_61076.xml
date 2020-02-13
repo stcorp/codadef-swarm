@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="ASP_61076" last-modified="2017-01-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="ASP_61076" last-modified="2019-10-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Annotated Source Packet for SWARM STR HK</cd:Description>
   <cd:Field name="sensing_time">
     <cd:Time timeformat="binary_envisat_datetime">
@@ -88,40 +88,143 @@
           </cd:Field>
           <cd:Field name="S1T00069B">
             <cd:Integer>
-              <cd:Description>STRE_A_TempCpu</cd:Description>
+              <cd:Description>STRE_B_TempCpu</cd:Description>
               <cd:BitSize>8</cd:BitSize>
               <cd:NativeType>int8</cd:NativeType>
             </cd:Integer>
           </cd:Field>
           <cd:Field name="S1T00071B">
             <cd:Integer>
-              <cd:Description>STRE_A_TempChu1</cd:Description>
+              <cd:Description>STRE_B_TempChu1</cd:Description>
               <cd:BitSize>8</cd:BitSize>
               <cd:NativeType>int8</cd:NativeType>
             </cd:Integer>
           </cd:Field>
           <cd:Field name="S1T00073B">
             <cd:Integer>
-              <cd:Description>STRE_A_TempChu2</cd:Description>
+              <cd:Description>STRE_B_TempChu2</cd:Description>
               <cd:BitSize>8</cd:BitSize>
               <cd:NativeType>int8</cd:NativeType>
             </cd:Integer>
           </cd:Field>
           <cd:Field name="S1T00075B">
             <cd:Integer>
-              <cd:Description>STRE_A_TempChu3</cd:Description>
+              <cd:Description>STRE_B_TempChu3</cd:Description>
               <cd:BitSize>8</cd:BitSize>
               <cd:NativeType>int8</cd:NativeType>
             </cd:Integer>
           </cd:Field>
-          <cd:Field name="Spare_47">
-            <cd:Raw>
-              <cd:BitSize>24</cd:BitSize>
-            </cd:Raw>
-            <cd:Hidden/>
+          <cd:Field name="MST10104">
+            <cd:Integer>
+              <cd:Description>ASM_MagID</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
           </cd:Field>
-    </cd:Record>
-   </cd:Field>
+          <cd:Field name="MST10114a">
+            <cd:Integer>
+              <cd:Description>ASM_LevelofSignalLa1 (1)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="MST10114b">
+            <cd:Integer>
+              <cd:Description>ASM_LevelofSignalLa1 (2)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>          
+          <cd:Field name="MST10141">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>ASM_HighLevelSupState</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="MST10142">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>ASM_SubLevelMagAsicState</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="MST10170">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>ASM_AcquisitionState</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00317">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>n/a</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00318">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>n/a</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00319">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>PCDU__AsmHtrAStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00320">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>PCDU__AsmHtrBStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00321">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>PCDU__ObHtrAStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00322">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>PCDU__ObHtrBStat</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>          
+          <cd:Field name="PHT00323">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>n/a</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="PHT00324">
+            <cd:Available><![CDATA[int(../../packet_length) == 29]]></cd:Available>
+            <cd:Integer>
+              <cd:Description>n/a</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
       <cd:Field name="crc">
         <cd:Integer>
           <cd:BitSize>16</cd:BitSize>

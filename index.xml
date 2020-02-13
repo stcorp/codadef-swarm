@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="SWARM" last-modified="2017-02-22">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="SWARM" last-modified="2020-02-12">
   <cd:Description>SWARM products</cd:Description>
   <cd:ProductType name="ACCANOM_0_">
     <cd:Description>Science Data, Standard measurement mode, Satellite A (DBL)</cd:Description>
@@ -1572,6 +1572,16 @@
         <cd:MatchFilename offset="8">EFIA_LP_1A</cd:MatchFilename>
         <cd:MatchFilename offset="51">05</cd:MatchFilename>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIA_LP_1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">06</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIA_LP_1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">07</cd:MatchFilename>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="EFIA_LP_1A_HDR">
@@ -1615,6 +1625,16 @@
         <cd:MatchFilename offset="8">EFIB_LP_1A</cd:MatchFilename>
         <cd:MatchFilename offset="51">05</cd:MatchFilename>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIB_LP_1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">06</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIB_LP_1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">07</cd:MatchFilename>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="EFIB_LP_1A_HDR">
@@ -1657,6 +1677,16 @@
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">EFIC_LP_1A</cd:MatchFilename>
         <cd:MatchFilename offset="51">05</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIC_LP_1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">06</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIC_LP_1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">07</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1785,11 +1815,45 @@
   </cd:ProductType>
   <cd:ProductType name="HK_AAOCS1A">
     <cd:Description>AOCS housekeeping data, 1 Hz (Mag_HK and Thru_HK) and 1/32 Hz (Prop_HK), Satellite A (DBL)</cd:Description>
-    <cd:ProductDefinition id="HK_AAOCS1A" format="binary" version="0">
+    <cd:ProductDefinition id="HK_AAOCS1A_v0" format="binary" version="0">
       <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">01</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">02</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">03</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="HK_AAOCS1A_v1" format="binary" version="1">
+      <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003 amended by SW-PDGSE-60</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">04</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">05</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">06</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_AAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">07</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1804,11 +1868,45 @@
   </cd:ProductType>
   <cd:ProductType name="HK_BAOCS1A">
     <cd:Description>AOCS housekeeping data, 1 Hz (Mag_HK and Thru_HK) and 1/32 Hz (Prop_HK), Satellite B (DBL)</cd:Description>
-    <cd:ProductDefinition id="HK_BAOCS1A" format="binary" version="0">
+    <cd:ProductDefinition id="HK_BAOCS1A_v0" format="binary" version="0">
       <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">01</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">02</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">03</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="HK_BAOCS1A_v1" format="binary" version="1">
+      <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003 amended by SW-PDGSE-60</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">04</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">05</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">06</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_BAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">07</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1823,11 +1921,45 @@
   </cd:ProductType>
   <cd:ProductType name="HK_CAOCS1A">
     <cd:Description>AOCS housekeeping data, 1 Hz (Mag_HK and Thru_HK) and 1/32 Hz (Prop_HK), Satellite C (DBL)</cd:Description>
-    <cd:ProductDefinition id="HK_CAOCS1A" format="binary" version="0">
+    <cd:ProductDefinition id="HK_CAOCS1A_v0" format="binary" version="0">
       <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">01</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">02</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">03</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="HK_CAOCS1A_v1" format="binary" version="1">
+      <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003 amended by SW-PDGSE-60</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">04</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">05</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">06</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">HK_CAOCS1A</cd:MatchFilename>
+        <cd:MatchFilename offset="51">07</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -3230,8 +3362,25 @@
   </cd:ProductType>
   <cd:ProductType name="ACCA_PR_1B_MDR_ACC_PR">
     <cd:Description>Acceleration product, MDR_ACC_PR, Satellite A (DBL)</cd:Description>
-    <cd:ProductDefinition id="ACCA_PR_1B_MDR_ACC_PR" format="cdf" version="0">
+    <cd:ProductDefinition id="ACCA_PR_1B_MDR_ACC_PR_v0" format="cdf" version="0">
       <cd:Description>This definition is based on version 3.10 of the SWARM L1B CDF DATA FORMAT (SW-ID-GMV-GS-0006)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">ACCA_PR_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_Sun"></cd:MatchData>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ACCA_PR_1B_MDR_ACC_PR_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">ACCA_PR_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ACCA_PR_1B_MDR_ACC_PR_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx with removed fields a_GG, a_centr, Flags_Platform, and Flags_ACC</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">ACCA_PR_1B</cd:MatchFilename>
@@ -3278,8 +3427,25 @@
   </cd:ProductType>
   <cd:ProductType name="ACCB_PR_1B_MDR_ACC_PR">
     <cd:Description>Acceleration product, MDR_ACC_PR, Satellite B (DBL)</cd:Description>
-    <cd:ProductDefinition id="ACCB_PR_1B_MDR_ACC_PR" format="cdf" version="0">
+    <cd:ProductDefinition id="ACCB_PR_1B_MDR_ACC_PR_v0" format="cdf" version="0">
       <cd:Description>This definition is based on version 3.10 of the SWARM L1B CDF DATA FORMAT (SW-ID-GMV-GS-0006)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">ACCB_PR_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_Sun"></cd:MatchData>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ACCB_PR_1B_MDR_ACC_PR_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">ACCB_PR_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ACCB_PR_1B_MDR_ACC_PR_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx with removed fields a_GG, a_centr, Flags_Platform, and Flags_ACC</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">ACCB_PR_1B</cd:MatchFilename>
@@ -3326,8 +3492,25 @@
   </cd:ProductType>
   <cd:ProductType name="ACCC_PR_1B_MDR_ACC_PR">
     <cd:Description>Acceleration product, MDR_ACC_PR, Satellite C (DBL)</cd:Description>
-    <cd:ProductDefinition id="ACCC_PR_1B_MDR_ACC_PR" format="cdf" version="0">
+    <cd:ProductDefinition id="ACCC_PR_1B_MDR_ACC_PR_v0" format="cdf" version="0">
       <cd:Description>This definition is based on version 3.10 of the SWARM L1B CDF DATA FORMAT (SW-ID-GMV-GS-0006)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">ACCC_PR_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_Sun"></cd:MatchData>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ACCC_PR_1B_MDR_ACC_PR_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">ACCC_PR_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ACCC_PR_1B_MDR_ACC_PR_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx with removed fields a_GG, a_centr, Flags_Platform, and Flags_ACC</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">ACCC_PR_1B</cd:MatchFilename>
@@ -3654,6 +3837,228 @@
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">TIIC_DC_1B</cd:MatchFilename>
         <cd:MatchFilename offset="56">MDR_TII_DC</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SC_ADYN_1B_HDR">
+    <cd:Description>Spacecraft Dynamics Product, with auxiliary data needed for precise orbit determination and non-gravitational force modelling, Satellite A (HDR)</cd:Description>
+    <cd:ProductDefinition id="SC_ADYN_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SC_ADYN_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SC_ADYN_1B_MDR_SC_DYN">
+    <cd:Description>Spacecraft Dynamics product, MDR_SC_DYN, Satellite A (cdf)</cd:Description>
+    <cd:ProductDefinition id="SC_ADYN_1B_MDR_SC_DYN_v0" format="cdf" version="0">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_ADYN_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SC_ADYN_1B_MDR_SC_DYN_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx and SW-PDGSE-92</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_ADYN_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_centr"></cd:MatchData>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
+  </cd:ProductType>
+  <cd:ProductType name="SC_BDYN_1B_HDR">
+    <cd:Description>Spacecraft Dynamics Product, with auxiliary data needed for precise orbit determination and non-gravitational force modelling, Satellite B (HDR)</cd:Description>
+    <cd:ProductDefinition id="SC_BDYN_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SC_BDYN_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SC_BDYN_1B_MDR_SC_DYN">
+    <cd:Description>Spacecraft Dynamics product, MDR_SC_DYN, Satellite B (cdf)</cd:Description>
+    <cd:ProductDefinition id="SC_BDYN_1B_MDR_SC_DYN_v0" format="cdf" version="0">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_BDYN_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SC_BDYN_1B_MDR_SC_DYN_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx and SW-PDGSE-92</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_BDYN_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_centr"></cd:MatchData>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>        
+  </cd:ProductType>
+  <cd:ProductType name="SC_CDYN_1B_HDR">
+    <cd:Description>Spacecraft Dynamics Product, with auxiliary data needed for precise orbit determination and non-gravitational force modelling, Satellite C (HDR)</cd:Description>
+    <cd:ProductDefinition id="SC_CDYN_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SC_CDYN_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SC_CDYN_1B_MDR_SC_DYN">
+    <cd:Description>Spacecraft Dynamics product, MDR_SC_DYN, Satellite C (cdf)</cd:Description>
+    <cd:ProductDefinition id="SC_CDYN_1B_MDR_SC_DYN_v0" format="cdf" version="0">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_CDYN_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SC_CDYN_1B_MDR_SC_DYN_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx and SW-PDGSE-92</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_CDYN_1B</cd:MatchFilename>
+        <cd:MatchData path="/a_centr"></cd:MatchData>
+        <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIA_LP_1B_HDR">
+    <cd:Description>Langmuir Probe product, Satellite A (HDR)</cd:Description>
+    <cd:ProductDefinition id="EFIA_LP_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 5.13 of the Level 1b Product Definition SW-RS-DSC-SY-0007</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">EFIA_LP_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIA_LP_1B_MDR_EFI_LP">
+    <cd:Description>Langmuir Probe product, MDR_EFI_LP, Satellite A (DBL)</cd:Description>
+    <cd:ProductDefinition id="EFIA_LP_1B_MDR_EFI_LP_v0" format="cdf" version="0">
+      <cd:Description>This definition is based on the l1b product format specification SW-RS-DSC-SY-0007 issue 5.22 with nonconformance U_orbit=1 element vector instead of scalar</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIA_LP_1B</cd:MatchFilename>
+        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIA_LP_1B_MDR_EFI_LP_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on the l1b product format specification SW-RS-DSC-SY-0007 issue 5.22</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIA_LP_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIB_LP_1B_HDR">
+    <cd:Description>Langmuir Probe product, Satellite B (HDR)</cd:Description>
+    <cd:ProductDefinition id="EFIB_LP_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 5.13 of the Level 1b Product Definition SW-RS-DSC-SY-0007</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">EFIB_LP_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIB_LP_1B_MDR_EFI_LP">
+    <cd:Description>Langmuir Probe product, MDR_EFI_LP, Satellite B (DBL)</cd:Description>
+    <cd:ProductDefinition id="EFIB_LP_1B_MDR_EFI_LP_v0" format="cdf" version="0">
+      <cd:Description>This definition is based on the l1b product format specification SW-RS-DSC-SY-0007 issue 5.22 with nonconformance U_orbit=1 element vector instead of scalar</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIB_LP_1B</cd:MatchFilename>
+        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIB_LP_1B_MDR_EFI_LP_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on the l1b product format specification SW-RS-DSC-SY-0007 issue 5.22</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIB_LP_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIC_LP_1B_HDR">
+    <cd:Description>Langmuir Probe product, Satellite C (HDR)</cd:Description>
+    <cd:ProductDefinition id="EFIC_LP_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 5.13 of the Level 1b Product Definition SW-RS-DSC-SY-0007</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">EFIC_LP_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIC_LP_1B_MDR_EFI_LP">
+    <cd:Description>Langmuir Probe product, MDR_EFI_LP, Satellite C (DBL)</cd:Description>
+    <cd:ProductDefinition id="EFIC_LP_1B_MDR_EFI_LP_v0" format="cdf" version="0">
+      <cd:Description>This definition is based on the l1b product format specification SW-RS-DSC-SY-0007 issue 5.22 with nonconformance U_orbit=1 element vector instead of scalar</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIC_LP_1B</cd:MatchFilename>
+        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIC_LP_1B_MDR_EFI_LP_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on the l1b product format specification SW-RS-DSC-SY-0007 issue 5.22</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIC_LP_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIALPI_1B_HDR">
+    <cd:Description>Langmuir Probe interpolated product, Satellite A (HDR)</cd:Description>
+    <cd:ProductDefinition id="EFIALPI_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 5.13 of the Level 1b Product Definition SW-RS-DSC-SY-0007</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">EFIALPI_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIALPI_1B_MDR_EFILPI">
+    <cd:Description>Langmuir Probe interpolated product, MDR_EFI_LP, Satellite A (DBL)</cd:Description>
+    <cd:ProductDefinition id="EFIALPI_1B_MDR_EFILPI" format="cdf" version="0">
+      <cd:Description>This definition is based on version 1dA of the LP L1b products definition (SW-TN-IRF-GS-009)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIALPI_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIBLPI_1B_HDR">
+    <cd:Description>Langmuir Probe interpolated product, Satellite B (HDR)</cd:Description>
+    <cd:ProductDefinition id="EFIBLPI_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 5.13 of the Level 1b Product Definition SW-RS-DSC-SY-0007</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">EFIBLPI_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFIBLPI_1B_MDR_EFILPI">
+    <cd:Description>Langmuir Probe interpolated product, MDR_EFI_LP, Satellite B (DBL)</cd:Description>
+    <cd:ProductDefinition id="EFIBLPI_1B_MDR_EFILPI" format="cdf" version="0">
+      <cd:Description>This definition is based on version 1dA of the LP L1b products definition (SW-TN-IRF-GS-009)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIBLPI_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFICLPI_1B_HDR">
+    <cd:Description>Langmuir Probe interpolated product, Satellite C (HDR)</cd:Description>
+    <cd:ProductDefinition id="EFICLPI_1B_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 5.13 of the Level 1b Product Definition SW-RS-DSC-SY-0007</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">EFICLPI_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="EFICLPI_1B_MDR_EFILPI">
+    <cd:Description>Langmuir Probe interpolated product, MDR_EFI_LP, Satellite C (DBL)</cd:Description>
+    <cd:ProductDefinition id="EFICLPI_1B_MDR_EFILPI" format="cdf" version="0">
+      <cd:Description>This definition is based on version 1dA of the LP L1b products definition (SW-TN-IRF-GS-009)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFICLPI_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -6472,7 +6877,7 @@
         <cd:MatchFilename offset="8">ACCC_FMi2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-  </cd:ProductType>  
+  </cd:ProductType>
   <cd:ProductType name="IBIATMS_2F_HDR">
     <cd:Description>CAT-2: Ionospheric bubble index, Satellite A (HDR)</cd:Description>
     <cd:ProductDefinition id="IBIATMS_2F_HDR" format="xml" version="0">
@@ -7119,7 +7524,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-  <cd:ProductType name="DNSAPOD_2__HDR">     
+  <cd:ProductType name="DNSAPOD_2__HDR">
     <cd:Description>CAT-1: Thermospheric density at the satellite location estimated from non-gravitational accelerations (ACCxPOD_2_) that are based on precise orbit determination data only, Satellite A (HDR)</cd:Description>
     <cd:ProductDefinition id="DNSAPOD_2__HDR" format="xml" version="0">
       <cd:Description>This definition is based on version 2S of the Product Specification for L2 Products and Auxiliary Products SW-DS-DTU-GS-0001</cd:Description>
@@ -7175,7 +7580,7 @@
         <cd:MatchFilename offset="8">DNSCPOD_2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-  </cd:ProductType>  
+  </cd:ProductType>
   <cd:ProductType name="TDWAVAL_2__HDR">
     <cd:Description>CAT-1: Validation report for DNSxWND_2_, Satellite A (HDR)</cd:Description>
     <cd:ProductDefinition id="TDWAVAL_2__HDR" format="xml" version="0">
@@ -7232,7 +7637,7 @@
         <cd:MatchFilename offset="8">TDWCVAL_2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-  </cd:ProductType>  
+  </cd:ProductType>
   <cd:ProductType name="ACCAVAL_2__HDR">
     <cd:Description>CAT-1: Validation report for measured, modeled and POD accelerations ACCxCAL_2_, ACCx_FMi2_ and ACCxPOD_2_, Satellite A (HDR)</cd:Description>
     <cd:ProductDefinition id="ACCAVAL_2__HDR" format="xml" version="0">
@@ -7289,7 +7694,7 @@
         <cd:MatchFilename offset="8">ACCCVAL_2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-  </cd:ProductType>  
+  </cd:ProductType>
   <cd:ProductType name="MAG_QL__2__HDR">
     <cd:Description>Quick Look of magnetic field products MAGx_LR_1B (HDR)</cd:Description>
     <cd:ProductDefinition id="MAG_QL__2__HDR" format="xml" version="0">
