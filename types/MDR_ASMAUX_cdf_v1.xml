@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2018-01-10" name="MDR_ASMAUX_cdf_v0">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="cdf" last-modified="2020-07-22" name="MDR_ASMAUX_cdf_v1">
   <cd:Attribute name="TITLE">
     <cd:Text/>
   </cd:Attribute>
@@ -815,6 +815,23 @@
         <cd:Unit>-</cd:Unit>
       </cd:Integer>
       <cd:Description>Synchronization status</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dB_Sun">
+    <cd:Array>
+      <cd:Attribute name="DESCRIPTION">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="UNITS">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:Unit>nT</cd:Unit>
+      </cd:Float>
+      <cd:Description>Magnetic stray field correction intensity of Sun ASM frame</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="dB_AOCS">
