@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="MAGC_CA_1B_MDR_MAG_CA_v0" format="cdf" last-modified="2016-04-20">
+  <cd:NamedType id="MDR_MAG_CA_cdf_v0"/>
+</cd:ProductDefinition>
