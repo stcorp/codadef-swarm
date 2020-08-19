@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="SWARM" last-modified="2020-07-22">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="SWARM" last-modified="2020-08-19">
   <cd:Description>SWARM products</cd:Description>
   <cd:ProductType name="ACCANOM_0_">
     <cd:Description>Science Data, Standard measurement mode, Satellite A (DBL)</cd:Description>
@@ -3945,6 +3945,14 @@
         <cd:MatchData path="/a_GG"></cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SC_ADYN_1B_MDR_SC_DYN_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx, SW-PDGSE-92 and SW-PDGSE-115</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_ADYN_1B</cd:MatchFilename>
+        <cd:MatchData path="/Flags_q"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SC_BDYN_1B_HDR">
     <cd:Description>Spacecraft Dynamics Product, with auxiliary data needed for precise orbit determination and non-gravitational force modelling, Satellite B (HDR)</cd:Description>
@@ -3973,6 +3981,14 @@
         <cd:MatchData path="/a_GG"></cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SC_BDYN_1B_MDR_SC_DYN_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx, SW-PDGSE-92 and SW-PDGSE-115</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_BDYN_1B</cd:MatchFilename>
+        <cd:MatchData path="/Flags_q"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SC_CDYN_1B_HDR">
     <cd:Description>Spacecraft Dynamics Product, with auxiliary data needed for precise orbit determination and non-gravitational force modelling, Satellite C (HDR)</cd:Description>
@@ -3999,6 +4015,14 @@
         <cd:MatchFilename offset="8">SC_CDYN_1B</cd:MatchFilename>
         <cd:MatchData path="/a_centr"></cd:MatchData>
         <cd:MatchData path="/a_GG"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SC_CDYN_1B_MDR_SC_DYN_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on split_ACCx_PR_1b_product.docx, SW-PDGSE-92 and SW-PDGSE-115</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SC_CDYN_1B</cd:MatchFilename>
+        <cd:MatchData path="/Flags_q"></cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
