@@ -231,6 +231,7 @@
   <ct:Test name="FixedValueMDRID0801" criticality="Error" description="The MDR ID should be '0801'"><![CDATA[int(.) == 0801]]></ct:Test>
   <ct:Test name="FixedValueMDRID0802" criticality="Error" description="The MDR ID should be '0802'"><![CDATA[int(.) == 0802]]></ct:Test>
   <ct:Test name="FixedValueMDRID0803" criticality="Error" description="The MDR ID should be '0803'"><![CDATA[int(.) == 0803]]></ct:Test>
+  <ct:Test name="FixedValueMDRID0804" criticality="Error" description="The MDR ID should be '0804'"><![CDATA[int(.) == 0804]]></ct:Test>
   <ct:Test name="FixedValueMDRID0901" criticality="Error" description="The MDR ID should be '0901'"><![CDATA[int(.) == 0901]]></ct:Test>
   <ct:Test name="FixedValueMDRID0902" criticality="Error" description="The MDR ID should be '0902'"><![CDATA[int(.) == 0902]]></ct:Test>
   <ct:Test name="FixedValueMDRID5101" criticality="Error" description="The MDR ID should be '5101'"><![CDATA[int(.) == 5101]]></ct:Test>
