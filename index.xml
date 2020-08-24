@@ -1833,7 +1833,7 @@
         <cd:MatchFilename offset="51">03</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    <cd:ProductDefinition id="HK_AAOCS1A_v2" format="binary" version="2">
+    <cd:ProductDefinition id="HK_AAOCS1A_v1" format="binary" version="1">
       <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003 amended by SW-PDGSE-60 and SW-PDGSE-116</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
@@ -1886,7 +1886,7 @@
         <cd:MatchFilename offset="51">03</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    <cd:ProductDefinition id="HK_BAOCS1A_v2" format="binary" version="2">
+    <cd:ProductDefinition id="HK_BAOCS1A_v1" format="binary" version="1">
       <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003 amended by SW-PDGSE-60 and SW-PDGSE-116</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
@@ -1939,7 +1939,7 @@
         <cd:MatchFilename offset="51">03</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    <cd:ProductDefinition id="HK_CAOCS1A_v2" format="binary" version="2">
+    <cd:ProductDefinition id="HK_CAOCS1A_v1" format="binary" version="1">
       <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003 amended by SW-PDGSE-60 and SW-PDGSE-116</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>

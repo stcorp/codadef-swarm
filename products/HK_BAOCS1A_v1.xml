@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="HK_BAOCS1A_v1" format="binary" last-modified="2018-01-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="HK_BAOCS1A_v2" format="binary" last-modified="2020-08-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record>
     <cd:Field name="MDR_MAG_HK">
       <cd:Array>
@@ -19,6 +19,12 @@
         <cd:NamedType id="MDR_PROP_HK"/>
       </cd:Array>
     </cd:Field>
+    <cd:Field name="MDR_ASMINFO_HK">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_dsr4]]></cd:Dimension>
+        <cd:NamedType id="MDR_ASMINFO_HK"/>
+      </cd:Array>
+    </cd:Field>
   </cd:Record>
   <cd:ProductVariable name="num_dsr1">
     <cd:Init><![CDATA[$num_dsr1 = unboundindex(/MDR_MAG_HK, byteoffset(.) + 2 >= filesize() || int(./MDR_ID) != 801)]]></cd:Init>
@@ -28,6 +34,9 @@
   </cd:ProductVariable>
   <cd:ProductVariable name="num_dsr3">
     <cd:Init><![CDATA[$num_dsr3 = unboundindex(/MDR_PROP_HK, byteoffset(.) + 2 >= filesize() || int(./MDR_ID) != 803)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr4">
+    <cd:Init><![CDATA[$num_dsr4 = unboundindex(/MDR_ASMINFO_HK, byteoffset(.) + 2 >= filesize() || int(./MDR_ID) != 804)]]></cd:Init>
   </cd:ProductVariable>
   <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
 </cd:ProductDefinition>
