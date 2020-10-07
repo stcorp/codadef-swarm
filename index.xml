@@ -1314,8 +1314,8 @@
   </cd:ProductType>
   <cd:ProductType name="ASMASCI_1A">
     <cd:Description>ASM scientific data, 1 Hz, Satellite A (DBL)</cd:Description>
-    <cd:ProductDefinition id="ASMASCI_1A" format="binary" version="0">
-      <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
+    <cd:ProductDefinition id="ASMASCI_1A_v1" format="binary" version="0">
+      <cd:Description>This definition is based on version 3.11 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">ASMASCI_1A</cd:MatchFilename>
@@ -1333,8 +1333,8 @@
   </cd:ProductType>
   <cd:ProductType name="ASMBSCI_1A">
     <cd:Description>ASM scientific data, 1 Hz, Satellite B (DBL)</cd:Description>
-    <cd:ProductDefinition id="ASMBSCI_1A" format="binary" version="0">
-      <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
+    <cd:ProductDefinition id="ASMBSCI_1A_v1" format="binary" version="0">
+      <cd:Description>This definition is based on version 3.11 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">ASMBSCI_1A</cd:MatchFilename>
@@ -1352,8 +1352,8 @@
   </cd:ProductType>
   <cd:ProductType name="ASMCSCI_1A">
     <cd:Description>ASM scientific data, 1 Hz, Satellite C (DBL)</cd:Description>
-    <cd:ProductDefinition id="ASMCSCI_1A" format="binary" version="0">
-      <cd:Description>This definition is based on version 3.7 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
+    <cd:ProductDefinition id="ASMCSCI_1A_v1" format="binary" version="0">
+      <cd:Description>This definition is based on version 3.11 of the Level 1a Product Definition SW-ID-GMV-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">ASMCSCI_1A</cd:MatchFilename>
