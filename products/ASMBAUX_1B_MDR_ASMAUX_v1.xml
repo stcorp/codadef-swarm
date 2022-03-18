@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="ASMBAUX_1B_MDR_ASMAUX_v1" format="cdf" last-modified="2020-07-22">
-  <cd:NamedType id="MDR_ASMAUX_cdf_v1"/>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="ASMBAUX_1B_MDR_ASMAUX_v1" format="cdf" last-modified="2022-03-18">
+  <cd:NamedType id="MDR_ASMAUX_cdf_v2"/>
 </cd:ProductDefinition>

@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="VFMAAUX_1B_MDR_VFMAUX" format="cdf" last-modified="2016-04-20">
-  <cd:NamedType id="MDR_VFMAUX_cdf_v0"/>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="VFMAAUX_1B_MDR_VFMAUX" format="cdf" last-modified="2022-03-18">
+  <cd:NamedType id="MDR_VFMAUX_cdf_v1"/>
 </cd:ProductDefinition>
