@@ -3176,6 +3176,25 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="STRBEPF_1B">
+    <cd:Description>TODO</cd:Description>
+    <cd:ProductDefinition id="STRBEPF_1B" format="cdf" version="0">
+      <cd:Description>TODO</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">STRBEPF_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="STRBEPF_1B_HDR">
+    <cd:Description>TODO</cd:Description>
+    <cd:ProductDefinition id="STRBEPF_1B_HDR" format="xml" version="0">
+      <cd:Description>TODO</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">STRBEPF_1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="STRCATT_1B">
     <cd:Description>Attitude of S/C, 1Hz, Satellite C (DBL)</cd:Description>
     <cd:ProductDefinition id="STRCATT_1B" format="binary" version="0">

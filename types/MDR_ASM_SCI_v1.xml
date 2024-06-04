@@ -82,25 +82,11 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="Fill_1">
-    <cd:Raw>
-      <cd:Description>Filler</cd:Description>
-      <cd:BitSize>8</cd:BitSize>
-    </cd:Raw>
-    <cd:Hidden/>
-  </cd:Field>
   <cd:Field name="fromBurst">
     <cd:Integer>
       <cd:Description>0 = not in burst mode, 1 = in burst mode</cd:Description>
       <cd:BitSize>8</cd:BitSize>
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
-  </cd:Field>
-  <cd:Field name="Fill_2">
-    <cd:Raw>
-      <cd:Description>Filler</cd:Description>
-      <cd:BitSize>24</cd:BitSize>
-    </cd:Raw>
-    <cd:Hidden/>
   </cd:Field>
 </cd:Record>
