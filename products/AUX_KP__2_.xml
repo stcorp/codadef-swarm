@@ -6,7 +6,7 @@
         <cd:Dimension>$num_header_lines</cd:Dimension>
         <cd:Record>
           <cd:Field name="line">
-            <cd:AsciiLine/>            
+            <cd:AsciiLine/>
           </cd:Field>
           <cd:Field name="newline">
             <cd:AsciiLineSeparator/>
@@ -16,12 +16,12 @@
       </cd:Array>
     </cd:Field>
     <cd:Field name="column_header">
-      <cd:AsciiLine/>            
+      <cd:AsciiLine/>
     </cd:Field>
     <cd:Field name="newline_1">
       <cd:AsciiLineSeparator/>
       <cd:Hidden/>
-    </cd:Field>    
+    </cd:Field>
     <cd:Field name="data">
       <cd:Array>
         <cd:Dimension>numelements(asciiline) - $num_header_lines - 1</cd:Dimension>
@@ -43,6 +43,10 @@
               <cd:ByteSize>4</cd:ByteSize>
               <cd:NativeType>int16</cd:NativeType>
             </cd:Integer>
+          </cd:Field>
+          <cd:Field name="spaces">
+            <cd:AsciiWhiteSpace/>
+            <cd:Hidden/>
           </cd:Field>
           <cd:Field name="newline">
             <cd:AsciiLineSeparator/>
