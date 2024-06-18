@@ -1040,7 +1040,7 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int64</cd:NativeType>
+        <cd:NativeType>int32</cd:NativeType>
         <cd:Unit>-</cd:Unit>
       </cd:Integer>
       <cd:Description>Detailed indication of the source and anomalies</cd:Description>
@@ -1056,7 +1056,7 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int64</cd:NativeType>
+        <cd:NativeType>int32</cd:NativeType>
         <cd:Unit>-</cd:Unit>
       </cd:Integer>
       <cd:Description>Detailed indication of the source and anomalies</cd:Description>
