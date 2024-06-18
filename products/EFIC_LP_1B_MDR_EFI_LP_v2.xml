@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="EFIB_LP_1B_MDR_EFI_LP_v2" format="cdf" last-modified="2024-06-07">
+  <cd:NamedType id="MDR_EFI_LP_cdf_v3"/>
+</cd:ProductDefinition>

@@ -4077,6 +4077,14 @@
         <cd:MatchFilename offset="8">EFIA_LP_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIA_LP_1B_MDR_EFI_LP_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on the l1b product format specification </cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIA_LP_1B</cd:MatchFilename>
+        <cd:MatchData path="/N_ion"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>  
   </cd:ProductType>
   <cd:ProductType name="EFIB_LP_1B_HDR">
     <cd:Description>Langmuir Probe product, Satellite B (HDR)</cd:Description>
@@ -4102,6 +4110,14 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">EFIB_LP_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIB_LP_1B_MDR_EFI_LP_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on the l1b product format specification </cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIB_LP_1B</cd:MatchFilename>
+        <cd:MatchData path="/N_ion"></cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -4131,6 +4147,14 @@
         <cd:MatchFilename offset="8">EFIC_LP_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIC_LP_1B_MDR_EFI_LP_v2" format="cdf" version="2">
+      <cd:Description>This definition is based on the l1b product format specification </cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIC_LP_1B</cd:MatchFilename>
+        <cd:MatchData path="/N_ion"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="EFIALPI_1B_HDR">
     <cd:Description>Langmuir Probe interpolated product, Satellite A (HDR)</cd:Description>
@@ -4148,6 +4172,14 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">EFIALPI_1B</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIALPI_1B_MDR_EFILPI_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on version 1dA of the LP L1b products definition </cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIALPI_1B</cd:MatchFilename>
+        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -4169,6 +4201,14 @@
         <cd:MatchFilename offset="8">EFIBLPI_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFIBLPI_1B_MDR_EFILPI_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on version 1dA of the LP L1b products definition </cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFIBLPI_1B</cd:MatchFilename>
+        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="EFICLPI_1B_HDR">
     <cd:Description>Langmuir Probe interpolated product, Satellite C (HDR)</cd:Description>
@@ -4188,8 +4228,15 @@
         <cd:MatchFilename offset="8">EFICLPI_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="EFICLPI_1B_MDR_EFILPI_v1" format="cdf" version="1">
+      <cd:Description>This definition is based on version 1dA of the LP L1b products definition </cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">EFICLPI_1B</cd:MatchFilename>
+        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
-
   <cd:ProductType name="MPLAORBPRE">
     <cd:Description>FOS Predicted Orbit File, Satellite A (EEF)</cd:Description>
     <cd:ProductDefinition id="MPLAORBPRE" format="xml" version="0">
