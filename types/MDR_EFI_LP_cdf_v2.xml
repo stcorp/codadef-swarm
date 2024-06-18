@@ -1173,4 +1173,5 @@
       </cd:Float>
       <cd:Description>Sun inclination angle related to left-side solar-panel normal</cd:Description>
     </cd:Array>
+  </cd:Field>
 </cd:Record>
