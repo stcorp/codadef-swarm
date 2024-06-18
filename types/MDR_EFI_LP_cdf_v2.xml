@@ -862,6 +862,7 @@
         <cd:Text/>
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Float>
         <cd:NativeType>double</cd:NativeType>
         <cd:Unit>m/s</cd:Unit>
