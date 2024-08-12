@@ -332,6 +332,7 @@
   <ct:Test name="FixedValueSTRARED_0_" criticality="Error" description="The value should be 'STRARED_0_'"><![CDATA[str(.) == "STRARED_0_"]]></ct:Test>
   <ct:Test name="FixedValueSTRASCI_1A" criticality="Error" description="The value should be 'STRASCI_1A'"><![CDATA[str(.) == "STRASCI_1A"]]></ct:Test>
   <ct:Test name="FixedValueSTRBATT_1B" criticality="Error" description="The value should be 'STRBATT_1B'"><![CDATA[str(.) == "STRBATT_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSTRBEPF_1B" criticality="Error" description="The value should be 'STRBEPF_1B'"><![CDATA[str(.) == "STRBEPF_1B"]]></ct:Test>
   <ct:Test name="FixedValueSTRBNOM_0_" criticality="Error" description="The value should be 'STRBNOM_0_'"><![CDATA[str(.) == "STRBNOM_0_"]]></ct:Test>
   <ct:Test name="FixedValueSTRBRED_0_" criticality="Error" description="The value should be 'STRBRED_0_'"><![CDATA[str(.) == "STRBRED_0_"]]></ct:Test>
   <ct:Test name="FixedValueSTRBSCI_1A" criticality="Error" description="The value should be 'STRBSCI_1A'"><![CDATA[str(.) == "STRBSCI_1A"]]></ct:Test>
