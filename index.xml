@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="SWARM" last-modified="2020-08-29">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="SWARM" last-modified="2024-08-27">
   <cd:Description>SWARM products</cd:Description>
   <cd:ProductType name="ACCANOM_0_">
     <cd:Description>Science Data, Standard measurement mode, Satellite A (DBL)</cd:Description>
@@ -4217,7 +4217,7 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">EFIALPI_1B</cd:MatchFilename>
-        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+        <cd:MatchExpression>exists(/@dN_ion)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -4244,7 +4244,7 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">EFIBLPI_1B</cd:MatchFilename>
-        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+        <cd:MatchExpression>exists(/@dN_ion)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -4271,7 +4271,7 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">SW_</cd:MatchFilename>
         <cd:MatchFilename offset="8">EFICLPI_1B</cd:MatchFilename>
-        <cd:MatchExpression><![CDATA[numdims(/U_orbit)==2]]></cd:MatchExpression>
+        <cd:MatchExpression>exists(/@dN_ion)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
