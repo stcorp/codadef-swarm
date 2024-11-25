@@ -114,7 +114,7 @@
           <cd:Integer format="ascii">
             <cd:Description>sus</cd:Description>
             <cd:NativeType>uint32</cd:NativeType>
-            <cd:ByteSize>5</cd:ByteSize>
+            <cd:ByteSize>6</cd:ByteSize>
           </cd:Integer>
         </cd:Type>
       </cd:Field>

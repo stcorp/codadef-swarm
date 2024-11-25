@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="MPH_L2" format="xml" namexml="MPH" last-modified="2014-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="MPH_L2_CAT2" format="xml" namexml="MPH" last-modified="2014-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Level 2 Main Product Header</cd:Description>
   <cd:Field name="Product">
     <cd:Text namexml="Product">
@@ -49,6 +49,7 @@
         <cd:Mapping string="false" value="0"/>
         <cd:Mapping string="True" value="1"/>
         <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="ProductErrCheck"/>
       </cd:Integer>
     </cd:Type>
   </cd:Field>

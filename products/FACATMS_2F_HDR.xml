@@ -20,7 +20,7 @@
           <cd:Record namexml="Variable_Header">
             <cd:Description>Variable Header Section</cd:Description>
             <cd:Field name="MPH">
-              <cd:NamedType id="MPH_L2"/>
+              <cd:NamedType id="MPH_L2_CAT2"/>
             </cd:Field>
             <cd:Field name="SPH">
               <cd:NamedType id="SPH_L2_CAT2"/>
