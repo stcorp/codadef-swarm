@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="xml" last-modified="2024-08-13" name="SPH_STRXEPF_1B" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="xml" last-modified="2025-01-10" name="SPH_STRXEPF_1B" namexml="SPH" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Specific Product Header for STRxEPF_1B products</cd:Description>
   <cd:Field name="SPH_Descriptor">
     <cd:Text namexml="SPH_Descriptor"> </cd:Text>
