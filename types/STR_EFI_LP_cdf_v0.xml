@@ -6,7 +6,6 @@
   <cd:Attribute name="CREATOR">
     <cd:Text/>
   </cd:Attribute>
-  
   <cd:Field name="Timestamp">
     <cd:Array>
       <cd:Attribute name="DESCRIPTION">
